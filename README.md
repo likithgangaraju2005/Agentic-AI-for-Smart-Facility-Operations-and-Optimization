@@ -1,78 +1,83 @@
-# Agentic-AI-for-Smart-Facility-Operations-and-Optimization
-Agentic AI for Smart Facility Operations uses AI agents to monitor temperature, occupancy, energy usage, HVAC, and equipment. It detects problems, makes smart decisions, and suggests or triggers actions. The system follows safety rules, reduces energy waste, lowers costs, and improves facility efficiency.
-
 # Agentic AI for Smart Facility Operations and Optimization
 
-## 📌 Project Overview
+An Agentic AI-based smart facility management system designed to monitor,
+analyze, optimize, and automate building operations using AI agents.
 
-Agentic AI for Smart Facility Operations and Optimization is an AI-based system designed to make facility management smarter and more efficient. It monitors important facility data such as temperature, occupancy, energy consumption, HVAC status, and equipment conditions. The AI agent analyzes the data, identifies problems, makes decisions, and suggests or triggers suitable actions.
+## 🎯 Project Objective
 
-## 🎯 Problem Statement
+The system combines IoT/utility data, Machine Learning, analytics, and
+AI agents to improve energy efficiency, facility monitoring, maintenance,
+occupancy management, and security operations.
 
-Traditional facility management requires continuous manual monitoring of different systems. This can lead to energy waste, delayed problem detection, higher operational costs, and inefficient maintenance.
+## 🏗️ Project Architecture
 
-## 💡 Solution
+IoT / Utility Data
+        ↓
+Data Processing & Analytics
+        ↓
+AI / ML Models
+        ↓
+Specialized AI Agents
+        ↓
+Facility Intelligence Engine
+        ↓
+Recommendations & Decisions
+        ↓
+Dashboard / Deployment
 
-Our system uses Agentic AI to continuously monitor facility conditions, detect unusual situations, analyze problems, and make suitable decisions. It also follows safety rules and monitors the results of its actions to improve facility operations.
+## 🚀 Milestones
 
-## ✨ Key Features
+### Milestone 1 – Energy Intelligence & Monitoring
+- Integrate utility and IoT energy data
+- Preprocess and analyze energy consumption
+- Detect abnormal energy usage using ML
+- Build the Energy Agent
+- Generate energy-efficiency recommendations
+- Develop live energy monitoring dashboard
 
-* Real-time facility monitoring
-* Energy consumption optimization
-* HVAC monitoring and optimization
-* Anomaly and problem detection
-* Predictive maintenance support
-* AI-based decision making
-* Safety constraint handling
-* Action recommendation and automation
-* Continuous monitoring and feedback
+### Milestone 2 – Predictive Maintenance
+- Integrate equipment and maintenance data
+- Develop Maintenance Agent
+- Detect equipment abnormalities
+- Predict possible equipment failures
+- Generate maintenance recommendations
 
-## 🔄 Working Flow
+### Milestone 3 – Occupancy & Security Intelligence
+- Integrate occupancy and facility activity data
+- Develop Occupancy Agent
+- Optimize facility usage based on occupancy
+- Develop Security Agent
+- Detect unusual facility/security events
 
+### Milestone 4 – Multi-Agent Intelligence & Deployment
+- Integrate all specialized agents
+- Develop Facility Intelligence Engine
+- Enable communication between agents
+- Implement intelligent decision-making
+- Add centralized monitoring and alerts
+- Deploy the complete system
 
-Facility Data
-     ↓
-Data Processing
-     ↓
-AI Agent
-     ↓
-Analyze & Reason
-     ↓
-Make Decision
-     ↓
-Recommend / Trigger Action
-     ↓
-Monitor Result
-     ↓
-Feedback
+## 🤖 AI Agents
 
+- Energy Agent – Energy monitoring and optimization
+- Maintenance Agent – Predictive maintenance and fault detection
+- Occupancy Agent – Occupancy analysis and space optimization
+- Security Agent – Facility security monitoring
+- Facility Intelligence Engine – Coordinates all agents
 
 ## 🛠️ Technologies
 
-* Python
-* Machine Learning
-* Artificial Intelligence
-* Agentic AI
-* Data Analytics
-* IoT / Sensor Data
-* APIs
-* Cloud Technologies
+Python • Pandas • NumPy • Scikit-learn • Plotly • Matplotlib
+Streamlit • HTML • CSS • JavaScript • Git • GitHub
 
-## 🎯 Expected Benefits
+## 📊 Current Progress
 
-* Reduce energy consumption
-* Reduce operational costs
-* Improve equipment performance
-* Detect problems early
-* Improve facility management
-* Support faster decision making
+Milestone 1 is under development with data preprocessing,
+energy analytics, anomaly detection, model evaluation,
+and live dashboard monitoring implemented.
 
-## 👨‍💻 Project
+## 🌐 Deployment
 
-**Internship:** Infosys Internship – 45 Days
-**Project:** Agentic AI for Smart Facility Operations and Optimization
-
-## 📄 License
-
-This project is developed for educational and internship purposes.
-
+The final system will be deployed as a centralized smart facility
+platform providing real-time monitoring, AI-driven recommendations,
+and intelligent facility-management decisions.
