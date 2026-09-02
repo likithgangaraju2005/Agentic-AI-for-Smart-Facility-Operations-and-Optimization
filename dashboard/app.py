@@ -1,3 +1,8 @@
+# ============================================================
+# AGENTIC AI FOR SMART FACILITY OPERATIONS AND OPTIMIZATION
+# ENERGY INTELLIGENCE & MONITORING DASHBOARD
+# ============================================================
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -5,30 +10,33 @@ import plotly.express as px
 import plotly.graph_objects as go
 from pathlib import Path
 from datetime import datetime
-import time
+from streamlit_autorefresh import st_autorefresh
+
 
 # ============================================================
-# ENERGY INTELLIGENCE DASHBOARD
-# Infosys Virtual Internship 7.0
-# Milestone 1 - Energy Intelligence & Monitoring
+# PAGE CONFIGURATION
 # ============================================================
 
 st.set_page_config(
-    page_title="Energy Intelligence Dashboard",
+    page_title="Smart Facility Energy Intelligence",
     page_icon="⚡",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
+
 # ============================================================
-# PATH CONFIGURATION
+# PROJECT PATHS
 # ============================================================
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-PROCESSED_FILE = BASE_DIR / "data" / "processed" / "energy_processed.csv"
-ANOMALY_FILE = BASE_DIR / "data" / "processed" / "energy_anomaly_results.csv"
-RAW_FILE = BASE_DIR / "data" / "energy_dataset.csv.xlsx"
+DATA_DIR = BASE_DIR / "data"
+PROCESSED_DIR = DATA_DIR / "processed"
+
+PROCESSED_FILE = PROCESSED_DIR / "energy_processed.csv"
+ANOMALY_FILE = PROCESSED_DIR / "energy_anomaly_results.csv"
+
 
 # ============================================================
 # CUSTOM CSS
@@ -36,1443 +44,2463 @@ RAW_FILE = BASE_DIR / "data" / "energy_dataset.csv.xlsx"
 
 st.markdown(
     """
-    <style>
+<style>
 
-    /* Main background */
-    .stApp {
-        background:
-            radial-gradient(circle at 10% 10%, rgba(0, 255, 200, 0.08), transparent 25%),
-            radial-gradient(circle at 90% 20%, rgba(0, 150, 255, 0.08), transparent 25%),
-            linear-gradient(135deg, #06141f 0%, #081c2b 45%, #031018 100%);
-        color: #eafcff;
-    }
+/* ============================================================
+   MAIN APPLICATION
+   ============================================================ */
 
-    /* Main container */
-    .block-container {
-        padding-top: 1.5rem;
-        padding-bottom: 3rem;
-        max-width: 1500px;
-    }
-
-    /* Sidebar */
-    section[data-testid="stSidebar"] {
-        background:
-            linear-gradient(180deg, #06141f 0%, #071d2c 100%);
-        border-right: 1px solid rgba(0, 255, 210, 0.15);
-    }
-
-    /* Titles */
-    .main-title {
-        font-size: 42px;
-        font-weight: 800;
-        letter-spacing: -1px;
-        margin-bottom: 0;
-        background: linear-gradient(90deg, #62fff0, #55bfff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .subtitle {
-        color: #8da9b7;
-        font-size: 16px;
-        margin-top: 5px;
-        margin-bottom: 25px;
-    }
-
-    /* Live indicator */
-    .live-container {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 16px;
-        border-radius: 30px;
-        background: rgba(0, 255, 190, 0.07);
-        border: 1px solid rgba(0, 255, 190, 0.22);
-        width: fit-content;
-        margin-bottom: 15px;
-    }
-
-    .live-dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: #00ffc3;
-        box-shadow: 0 0 12px #00ffc3;
-        animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-        0% {
-            transform: scale(0.8);
-            opacity: 0.6;
-        }
-        50% {
-            transform: scale(1.25);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(0.8);
-            opacity: 0.6;
-        }
-    }
-
-    /* Cards */
-    .metric-card {
-        background:
-            linear-gradient(
-                145deg,
-                rgba(13, 45, 60, 0.95),
-                rgba(5, 25, 38, 0.95)
-            );
-        border: 1px solid rgba(70, 220, 220, 0.16);
-        border-radius: 18px;
-        padding: 22px;
-        min-height: 145px;
-        box-shadow:
-            0 10px 35px rgba(0, 0, 0, 0.25),
-            inset 0 1px rgba(255, 255, 255, 0.03);
-        transition: all 0.3s ease;
-        animation: cardAppear 0.7s ease;
-    }
-
-    .metric-card:hover {
-        transform: translateY(-5px);
-        border-color: rgba(0, 255, 220, 0.4);
-        box-shadow:
-            0 15px 40px rgba(0, 255, 220, 0.12);
-    }
-
-    @keyframes cardAppear {
-        from {
-            opacity: 0;
-            transform: translateY(15px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .metric-label {
-        color: #89a8b7;
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-
-    .metric-value {
-        color: #eaffff;
-        font-size: 31px;
-        font-weight: 750;
-    }
-
-    .metric-unit {
-        color: #6d8e9d;
-        font-size: 13px;
-    }
-
-    .metric-icon {
-        font-size: 25px;
-        float: right;
-    }
-
-    /* Section headers */
-    .section-title {
-        font-size: 23px;
-        font-weight: 700;
-        margin-top: 30px;
-        margin-bottom: 8px;
-        color: #dffcff;
-    }
-
-    .section-description {
-        color: #7894a2;
-        margin-bottom: 18px;
-    }
-
-    /* Recommendation */
-    .recommendation {
-        padding: 18px;
-        margin: 10px 0;
-        border-radius: 14px;
-        background: rgba(0, 255, 200, 0.055);
-        border-left: 4px solid #00e6bd;
-        color: #c8e9ed;
-    }
-
-    /* Status */
-    .status-good {
-        color: #00ffc3;
-        font-weight: 700;
-    }
-
-    .status-warning {
-        color: #ffc857;
-        font-weight: 700;
-    }
-
-    .status-danger {
-        color: #ff657a;
-        font-weight: 700;
-    }
-
-    /* Buttons */
-    .stButton > button {
-        border-radius: 12px;
-        border: 1px solid rgba(0, 255, 220, 0.25);
-        background: linear-gradient(
+.stApp {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(0, 255, 200, 0.10),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(0, 150, 255, 0.12),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(0, 255, 180, 0.05),
+            transparent 30%
+        ),
+        linear-gradient(
             135deg,
-            rgba(0, 180, 170, 0.25),
-            rgba(0, 100, 160, 0.25)
+            #04101b 0%,
+            #071a29 45%,
+            #031019 100%
         );
-        color: #dfffff;
-        font-weight: 650;
-        transition: all 0.25s ease;
+
+    color: #e8f7ff;
+}
+
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+
+.block-container {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    max-width: 1500px;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.main-title {
+    font-size: 38px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #00ffd5,
+            #00bfff,
+            #7cecff
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 0px;
+}
+
+.sub-title {
+    color: #91a9b8;
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+
+/* ============================================================
+   LIVE STATUS
+   ============================================================ */
+
+.live-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: rgba(0, 255, 180, 0.08);
+
+    border: 1px solid rgba(0, 255, 180, 0.28);
+
+    border-radius: 25px;
+
+    padding: 8px 16px;
+
+    color: #71ffe1;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 0 18px rgba(0, 255, 180, 0.05);
+}
+
+.live-dot {
+    width: 9px;
+    height: 9px;
+
+    background: #00ffb3;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 12px #00ffb3;
+
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(1);
+        opacity: 1;
     }
 
-    .stButton > button:hover {
-        transform: translateY(-2px);
-        border-color: #00ffc3;
-        box-shadow: 0 8px 25px rgba(0, 255, 210, 0.12);
+    50% {
+        transform: scale(1.5);
+        opacity: 0.45;
     }
 
-    /* Expander */
-    div[data-testid="stExpander"] {
-        background: rgba(6, 29, 42, 0.8);
-        border: 1px solid rgba(80, 210, 220, 0.13);
-        border-radius: 15px;
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
+}
 
-    /* Dataframe */
-    div[data-testid="stDataFrame"] {
-        border-radius: 12px;
-    }
 
-    /* Footer */
-    .footer {
-        text-align: center;
-        color: #557481;
-        padding: 30px 0 10px 0;
-        font-size: 13px;
-    }
+/* ============================================================
+   SECTION TITLES
+   ============================================================ */
 
-    </style>
-    """,
+.section-title {
+    font-size: 23px;
+    font-weight: 750;
+
+    color: #e9fbff;
+
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.section-description {
+    color: #78909f;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+
+/* ============================================================
+   METRIC CARDS
+   ============================================================ */
+
+.metric-card {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 42, 60, 0.94),
+            rgba(5, 20, 32, 0.96)
+        );
+
+    border: 1px solid rgba(0, 210, 220, 0.20);
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    min-height: 145px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.30),
+        inset 0 0 25px rgba(0, 200, 255, 0.025);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(0, 255, 220, 0.50);
+
+    box-shadow:
+        0 15px 40px rgba(0, 255, 220, 0.10);
+}
+
+.metric-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.metric-label {
+    color: #8da8b8;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.metric-value {
+    color: #f2fbff;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-top: 5px;
+}
+
+.metric-small {
+    color: #6fead2;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* ============================================================
+   INFORMATION BOX
+   ============================================================ */
+
+.info-box {
+    background:
+        rgba(0, 180, 220, 0.07);
+
+    border:
+        1px solid rgba(0, 210, 220, 0.20);
+
+    border-radius: 14px;
+
+    padding: 16px;
+
+    color: #b8d4df;
+
+    margin-bottom: 15px;
+}
+
+
+/* ============================================================
+   RECOMMENDATION CARDS
+   ============================================================ */
+
+.recommendation {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 200, 170, 0.10),
+            rgba(0, 130, 255, 0.07)
+        );
+
+    border-left:
+        4px solid #00e6bd;
+
+    border-top:
+        1px solid rgba(0, 220, 200, 0.08);
+
+    border-right:
+        1px solid rgba(0, 220, 200, 0.08);
+
+    border-bottom:
+        1px solid rgba(0, 220, 200, 0.08);
+
+    border-radius: 12px;
+
+    padding: 17px 20px;
+
+    margin-bottom: 12px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.recommendation:hover {
+    transform: translateX(4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 220, 190, 0.08);
+}
+
+.recommendation-title {
+    color: #74ffe3;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+.recommendation-text {
+    color: #aac2ce;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+div[data-testid="stRadio"] > div {
+
+    background:
+        rgba(5, 25, 38, 0.88);
+
+    border:
+        1px solid rgba(0, 210, 220, 0.20);
+
+    border-radius: 14px;
+
+    padding: 6px;
+}
+
+div[data-testid="stRadio"] label {
+
+    color: #a9c5d1 !important;
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.stButton > button {
+
+    border-radius: 12px;
+
+    border:
+        1px solid rgba(0, 235, 200, 0.35);
+
+    background:
+        rgba(0, 180, 160, 0.10);
+
+    color: #75ffe6;
+
+    font-weight: 700;
+
+    transition:
+        all 0.25s ease;
+}
+
+.stButton > button:hover {
+
+    background:
+        rgba(0, 235, 200, 0.18);
+
+    border-color:
+        #00e6bd;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 235, 200, 0.08);
+}
+
+
+/* ============================================================
+   DATAFRAME
+   ============================================================ */
+
+div[data-testid="stDataFrame"] {
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+
+    text-align: center;
+
+    color: #536c79;
+
+    font-size: 12px;
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.06);
+}
+
+</style>
+""",
     unsafe_allow_html=True
 )
 
+
 # ============================================================
-# DATA LOADING
+# LOAD ENERGY DATA
 # ============================================================
 
-@st.cache_data(ttl=30)
-def load_processed_data():
+@st.cache_data
+def load_energy_data():
+
     if not PROCESSED_FILE.exists():
-        return None
+        return pd.DataFrame()
 
-    df = pd.read_csv(PROCESSED_FILE)
+    data = pd.read_csv(PROCESSED_FILE)
 
-    if "Timestamp" in df.columns:
-        df["Timestamp"] = pd.to_datetime(
-            df["Timestamp"],
-            errors="coerce"
-        )
-
-    return df
+    return data
 
 
-@st.cache_data(ttl=30)
+# ============================================================
+# LOAD ANOMALY DATA
+# ============================================================
+
+@st.cache_data
 def load_anomaly_data():
+
     if not ANOMALY_FILE.exists():
-        return None
+        return pd.DataFrame()
 
-    df = pd.read_csv(ANOMALY_FILE)
+    data = pd.read_csv(ANOMALY_FILE)
 
-    if "Timestamp" in df.columns:
-        df["Timestamp"] = pd.to_datetime(
-            df["Timestamp"],
-            errors="coerce"
-        )
-
-    return df
+    return data
 
 
-df = load_processed_data()
+df = load_energy_data()
+
 anomaly_df = load_anomaly_data()
 
+
 # ============================================================
-# DATA CHECK
+# CHECK DATASET
 # ============================================================
 
-if df is None:
+if df.empty:
+
     st.error(
-        "energy_processed.csv was not found.\n\n"
-        "Please run:\n\n"
-        "python scripts/preprocess_data.py"
+        "Energy dataset was not found.\n\n"
+        "Expected file:\n"
+        "data/processed/energy_processed.csv"
     )
+
     st.stop()
+
+
+# ============================================================
+# FIND DATASET COLUMNS
+# ============================================================
+
+def find_column(possible_names):
+
+    for name in possible_names:
+
+        if name in df.columns:
+            return name
+
+    return None
+
+
+energy_col = find_column([
+    "Energy_Consumption_kWh",
+    "Energy Consumption",
+    "Energy_Consumption",
+    "energy_consumption"
+])
+
+
+power_col = find_column([
+    "Power_Demand_kW",
+    "Power Demand",
+    "Power_Demand",
+    "power_demand"
+])
+
+
+hvac_col = find_column([
+    "HVAC_Usage_kWh",
+    "HVAC Usage",
+    "HVAC_Usage"
+])
+
+
+lighting_col = find_column([
+    "Lighting_Usage_kWh",
+    "Lighting Usage",
+    "Lighting_Usage"
+])
+
+
+water_col = find_column([
+    "Water_Consumption_L",
+    "Water Consumption",
+    "Water_Consumption"
+])
+
+
+temperature_col = find_column([
+    "Temperature_C",
+    "Temperature",
+    "temperature"
+])
+
+
+humidity_col = find_column([
+    "Humidity_Percent",
+    "Humidity",
+    "humidity"
+])
+
+
+occupancy_col = find_column([
+    "Occupancy_Count",
+    "Occupancy",
+    "occupancy"
+])
+
+
+building_col = find_column([
+    "Building_ID",
+    "Building",
+    "building"
+])
+
+
+timestamp_col = find_column([
+    "Timestamp",
+    "timestamp",
+    "Date"
+])
+
+
+# ============================================================
+# PREPARE TIMESTAMP
+# ============================================================
+
+if timestamp_col:
+
+    df[timestamp_col] = pd.to_datetime(
+        df[timestamp_col],
+        errors="coerce"
+    )
+
+    df = (
+        df
+        .sort_values(timestamp_col)
+        .reset_index(drop=True)
+    )
+
 
 # ============================================================
 # SESSION STATE
 # ============================================================
 
 if "current_index" not in st.session_state:
+
     st.session_state.current_index = 0
 
-if "last_update" not in st.session_state:
-    st.session_state.last_update = datetime.now()
-
-if "auto_mode" not in st.session_state:
-    st.session_state.auto_mode = True
 
 # ============================================================
-# SIDEBAR
+# 15-MINUTE AUTO REFRESH
 # ============================================================
 
-with st.sidebar:
+refresh_count = st_autorefresh(
+    interval=15 * 60 * 1000,
+    key="energy_15_minute_refresh"
+)
 
-    st.markdown(
-        """
-        <div style="
-            font-size:26px;
-            font-weight:800;
-            color:#63fff0;
-            margin-bottom:5px;">
-            ⚡ ENERGY AI
-        </div>
-        <div style="
-            color:#7795a4;
-            font-size:13px;
-            margin-bottom:25px;">
-            Smart Facility Intelligence
-        </div>
-        """,
-        unsafe_allow_html=True
+
+# ============================================================
+# MOVE TO NEXT READING AUTOMATICALLY
+# ============================================================
+
+if refresh_count > 0:
+
+    st.session_state.current_index = (
+        refresh_count % len(df)
     )
 
-    st.markdown("### 🎛️ Monitoring Controls")
 
-    building_options = ["All Buildings"]
+# ============================================================
+# CURRENT INDEX
+# ============================================================
 
-    if "Building_ID" in df.columns:
-        building_options += sorted(
-            df["Building_ID"].dropna().unique().tolist()
-        )
+current_index = st.session_state.current_index
 
-    selected_building = st.selectbox(
-        "Select Building",
-        building_options
-    )
 
-    st.markdown("---")
+if current_index >= len(df):
 
-    st.session_state.auto_mode = st.toggle(
-        "🔄 Auto Monitoring",
-        value=True
-    )
+    current_index = 0
 
-    refresh_seconds = st.slider(
-        "Simulation refresh interval",
-        min_value=5,
-        max_value=60,
-        value=15,
-        step=5,
-        help="Used for dashboard simulation. Dataset readings represent 15-minute intervals."
-    )
+    st.session_state.current_index = 0
 
-    st.markdown("---")
 
-    st.markdown("### 📊 Dataset Information")
+current_record = df.iloc[current_index]
 
-    st.write(f"Records: **{len(df):,}**")
-
-    if "Building_ID" in df.columns:
-        st.write(
-            f"Buildings: **{df['Building_ID'].nunique()}**"
-        )
-
-    if "Timestamp" in df.columns:
-        st.write(
-            f"Time range: **{df['Timestamp'].min().date()} → "
-            f"{df['Timestamp'].max().date()}**"
-        )
-
-    st.markdown("---")
-
-    if st.button("🔄 Reset Monitoring", use_container_width=True):
-        st.session_state.current_index = 0
-        st.rerun()
 
 # ============================================================
 # HEADER
 # ============================================================
 
-st.markdown(
-    '<div class="main-title">Energy Intelligence Dashboard</div>',
-    unsafe_allow_html=True
+header_left, header_right = st.columns(
+    [7, 2]
 )
 
-st.markdown(
-    '<div class="subtitle">'
-    'AI-powered smart facility energy monitoring, analytics and anomaly intelligence'
-    '</div>',
-    unsafe_allow_html=True
-)
 
-# ============================================================
-# LIVE STATUS
-# ============================================================
-
-if st.session_state.auto_mode:
+with header_left:
 
     st.markdown(
         """
-        <div class="live-container">
-            <div class="live-dot"></div>
-            <span style="color:#8ffff0;font-weight:700;">
+        <div class="main-title">
+            ⚡ Smart Facility Energy Intelligence
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="sub-title">
+            Agentic AI for Smart Facility Operations and Optimization
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+with header_right:
+
+    st.markdown(
+        """
+        <div style="
+            text-align:right;
+            margin-top:15px;
+        ">
+            <span class="live-box">
+                <span class="live-dot"></span>
                 LIVE MONITORING
-            </span>
-            <span style="color:#6c8d99;">
-                • Simulated IoT stream
             </span>
         </div>
         """,
         unsafe_allow_html=True
+    )
+
+
+# ============================================================
+# CURRENT TIME
+# ============================================================
+
+if (
+    timestamp_col
+    and pd.notna(current_record[timestamp_col])
+):
+
+    display_time = (
+        current_record[timestamp_col]
+        .strftime("%d %b %Y  |  %H:%M")
     )
 
 else:
 
-    st.markdown(
-        """
-        <div class="live-container">
-            <div style="
-                width:12px;
-                height:12px;
-                border-radius:50%;
-                background:#ffc857;">
-            </div>
-            <span style="color:#ffc857;font-weight:700;">
-                MONITORING PAUSED
-            </span>
-        </div>
-        """,
-        unsafe_allow_html=True
+    display_time = datetime.now().strftime(
+        "%d %b %Y  |  %H:%M"
     )
 
-# ============================================================
-# BUILD CURRENT VIEW
-# ============================================================
 
-display_df = df.copy()
-
-if selected_building != "All Buildings":
-    display_df = display_df[
-        display_df["Building_ID"] == selected_building
-    ].copy()
-
-if display_df.empty:
-    st.warning("No data available for the selected building.")
-    st.stop()
-
-# ============================================================
-# CURRENT READING
-# ============================================================
-
-# Keep global index inside bounds
-st.session_state.current_index = (
-    st.session_state.current_index % len(display_df)
+st.caption(
+    f"Monitoring interval: 15 minutes  •  "
+    f"Current reading: {display_time}"
 )
 
-current_row = display_df.iloc[
-    st.session_state.current_index
-]
 
 # ============================================================
-# CONTROL BUTTONS
+# TOP NAVIGATION
 # ============================================================
 
-button_col1, button_col2, button_col3 = st.columns(
-    [1, 1, 2]
+st.markdown(
+    """
+    <div class="section-title">
+        Navigation
+    </div>
+    """,
+    unsafe_allow_html=True
 )
 
-with button_col1:
+
+page = st.radio(
+    "Select Dashboard Section",
+
+    [
+        "Overview",
+        "Energy Distribution",
+        "Advanced Analytics",
+        "Anomaly Detection",
+        "Recommendations"
+    ],
+
+    horizontal=True,
+
+    label_visibility="collapsed"
+)
+
+
+# ============================================================
+# CONTROL AREA
+# ============================================================
+
+control_col1, control_col2, control_col3 = st.columns(
+    [2, 2, 6]
+)
+
+
+with control_col1:
 
     if st.button(
         "⚡ Next 15-Min Reading",
         use_container_width=True
     ):
+
         st.session_state.current_index = (
             st.session_state.current_index + 1
-        )
-        st.session_state.last_update = datetime.now()
+        ) % len(df)
+
         st.rerun()
 
-with button_col2:
 
-    if st.button(
-        "⏭️ Next Reading",
-        use_container_width=True
-    ):
-        st.session_state.current_index = (
-            st.session_state.current_index + 1
+with control_col2:
+
+    st.metric(
+        "Reading",
+        f"{current_index + 1} / {len(df)}"
+    )
+
+
+# ============================================================
+# HELPER FUNCTION
+# ============================================================
+
+def get_current_value(column):
+
+    if column is None:
+        return 0.0
+
+    try:
+
+        return float(
+            current_record[column]
         )
-        st.session_state.last_update = datetime.now()
-        st.rerun()
 
-with button_col3:
+    except:
 
-    timestamp_text = (
-        current_row["Timestamp"].strftime(
-            "%d %b %Y • %H:%M"
-        )
-        if "Timestamp" in current_row
-        and pd.notna(current_row["Timestamp"])
-        else "Unknown"
-    )
+        return 0.0
 
-    st.info(
-        f"Current simulated timestamp: **{timestamp_text}**"
-    )
 
 # ============================================================
-# KPI VALUES
+# CURRENT VALUES
 # ============================================================
 
-energy = float(
-    current_row.get(
-        "Energy_Consumption_kWh",
-        0
-    )
+current_energy = get_current_value(
+    energy_col
 )
 
-power = float(
-    current_row.get(
-        "Power_Demand_kW",
-        0
-    )
+current_power = get_current_value(
+    power_col
 )
 
-hvac = float(
-    current_row.get(
-        "HVAC_Usage_kWh",
-        0
-    )
+current_hvac = get_current_value(
+    hvac_col
 )
 
-lighting = float(
-    current_row.get(
-        "Lighting_Usage_kWh",
-        0
-    )
+current_lighting = get_current_value(
+    lighting_col
 )
 
-water = float(
-    current_row.get(
-        "Water_Consumption_L",
-        0
-    )
+current_water = get_current_value(
+    water_col
 )
 
-temperature = float(
-    current_row.get(
-        "Temperature_C",
-        0
-    )
+current_temperature = get_current_value(
+    temperature_col
 )
 
-humidity = float(
-    current_row.get(
-        "Humidity_Percent",
-        0
-    )
+current_humidity = get_current_value(
+    humidity_col
 )
 
-occupancy = int(
-    current_row.get(
-        "Occupancy_Count",
-        0
-    )
+current_occupancy = get_current_value(
+    occupancy_col
 )
+
 
 # ============================================================
-# KPI CARDS
+# PAGE 1 — OVERVIEW
 # ============================================================
 
-st.markdown(
-    '<div class="section-title">⚡ Live Facility Status</div>',
-    unsafe_allow_html=True
-)
+if page == "Overview":
 
-k1, k2, k3, k4 = st.columns(4)
-
-with k1:
     st.markdown(
-        f"""
-        <div class="metric-card">
-            <div class="metric-icon">⚡</div>
-            <div class="metric-label">
-                CURRENT ENERGY
-            </div>
-            <div class="metric-value">
-                {energy:.2f}
-            </div>
-            <div class="metric-unit">
-                kWh
-            </div>
+        """
+        <div class="section-title">
+            Energy Overview
+        </div>
+
+        <div class="section-description">
+            Real-time simulated facility energy monitoring
+            using the processed energy dataset.
         </div>
         """,
         unsafe_allow_html=True
     )
 
-with k2:
-    st.markdown(
-        f"""
-        <div class="metric-card">
-            <div class="metric-icon">🔌</div>
-            <div class="metric-label">
-                POWER DEMAND
-            </div>
-            <div class="metric-value">
-                {power:.2f}
-            </div>
-            <div class="metric-unit">
-                kW
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
 
-with k3:
-    st.markdown(
-        f"""
-        <div class="metric-card">
-            <div class="metric-icon">❄️</div>
-            <div class="metric-label">
-                HVAC USAGE
-            </div>
-            <div class="metric-value">
-                {hvac:.2f}
-            </div>
-            <div class="metric-unit">
-                kWh
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    # ========================================================
+    # MAIN METRICS
+    # ========================================================
 
-with k4:
-    st.markdown(
-        f"""
-        <div class="metric-card">
-            <div class="metric-icon">👥</div>
-            <div class="metric-label">
-                OCCUPANCY
-            </div>
-            <div class="metric-value">
-                {occupancy}
-            </div>
-            <div class="metric-unit">
-                people
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    c1, c2, c3, c4 = st.columns(4)
 
-k5, k6, k7, k8 = st.columns(4)
-
-with k5:
-    st.markdown(
-        f"""
-        <div class="metric-card">
-            <div class="metric-icon">💡</div>
-            <div class="metric-label">
-                LIGHTING
-            </div>
-            <div class="metric-value">
-                {lighting:.2f}
-            </div>
-            <div class="metric-unit">
-                kWh
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-with k6:
-    st.markdown(
-        f"""
-        <div class="metric-card">
-            <div class="metric-icon">🌡️</div>
-            <div class="metric-label">
-                TEMPERATURE
-            </div>
-            <div class="metric-value">
-                {temperature:.1f}
-            </div>
-            <div class="metric-unit">
-                °C
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-with k7:
-    st.markdown(
-        f"""
-        <div class="metric-card">
-            <div class="metric-icon">💧</div>
-            <div class="metric-label">
-                WATER
-            </div>
-            <div class="metric-value">
-                {water:.1f}
-            </div>
-            <div class="metric-unit">
-                Litres
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-with k8:
-
-    if energy > display_df["Energy_Consumption_kWh"].quantile(0.9):
-        status = "HIGH"
-        status_class = "status-warning"
-    else:
-        status = "NORMAL"
-        status_class = "status-good"
-
-    st.markdown(
-        f"""
-        <div class="metric-card">
-            <div class="metric-icon">🟢</div>
-            <div class="metric-label">
-                ENERGY STATUS
-            </div>
-            <div class="metric-value">
-                <span class="{status_class}">
-                    {status}
-                </span>
-            </div>
-            <div class="metric-unit">
-                current condition
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
-# ============================================================
-# MAIN ENERGY TREND
-# ============================================================
-
-st.markdown(
-    '<div class="section-title">📈 Energy Consumption Monitoring</div>',
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    '<div class="section-description">'
-    'Real-time simulated energy consumption across the facility.'
-    '</div>',
-    unsafe_allow_html=True
-)
-
-chart_df = display_df.copy()
-
-if len(chart_df) > 100:
-    chart_df = chart_df.tail(100)
-
-fig_line = px.line(
-    chart_df,
-    x="Timestamp",
-    y="Energy_Consumption_kWh",
-    markers=True,
-    title="Energy Consumption Over Time"
-)
-
-fig_line.update_traces(
-    line=dict(width=3),
-    marker=dict(size=5)
-)
-
-fig_line.update_layout(
-    template="plotly_dark",
-    height=430,
-    margin=dict(l=20, r=20, t=60, b=20),
-    paper_bgcolor="rgba(0,0,0,0)",
-    plot_bgcolor="rgba(0,0,0,0)",
-    hovermode="x unified"
-)
-
-st.plotly_chart(
-    fig_line,
-    use_container_width=True
-)
-
-# ============================================================
-# BUILDING COMPARISON + ENERGY DISTRIBUTION
-# ============================================================
-
-st.markdown(
-    '<div class="section-title">🏢 Energy Distribution</div>',
-    unsafe_allow_html=True
-)
-
-col_a, col_b = st.columns(2)
-
-if "Building_ID" in df.columns:
-
-    building_energy = (
-        df.groupby("Building_ID")[
-            "Energy_Consumption_kWh"
-        ]
-        .sum()
-        .reset_index()
-    )
-
-    with col_a:
-
-        fig_bar = px.bar(
-            building_energy,
-            x="Building_ID",
-            y="Energy_Consumption_kWh",
-            title="Total Energy by Building",
-            text_auto=".1f"
-        )
-
-        fig_bar.update_layout(
-            template="plotly_dark",
-            height=400,
-            paper_bgcolor="rgba(0,0,0,0)",
-            plot_bgcolor="rgba(0,0,0,0)"
-        )
-
-        st.plotly_chart(
-            fig_bar,
-            use_container_width=True
-        )
-
-    with col_b:
-
-        fig_pie = px.pie(
-            building_energy,
-            names="Building_ID",
-            values="Energy_Consumption_kWh",
-            title="Energy Distribution by Building",
-            hole=0.48
-        )
-
-        fig_pie.update_layout(
-            template="plotly_dark",
-            height=400,
-            paper_bgcolor="rgba(0,0,0,0)"
-        )
-
-        st.plotly_chart(
-            fig_pie,
-            use_container_width=True
-        )
-
-# ============================================================
-# ENERGY COMPONENT DISTRIBUTION
-# ============================================================
-
-component_values = {
-    "HVAC": display_df["HVAC_Usage_kWh"].sum(),
-    "Lighting": display_df["Lighting_Usage_kWh"].sum(),
-    "Other Energy": max(
-        0,
-        display_df["Energy_Consumption_kWh"].sum()
-        - display_df["HVAC_Usage_kWh"].sum()
-        - display_df["Lighting_Usage_kWh"].sum()
-    )
-}
-
-component_df = pd.DataFrame(
-    {
-        "Component": list(component_values.keys()),
-        "Energy": list(component_values.values())
-    }
-)
-
-fig_component = px.pie(
-    component_df,
-    names="Component",
-    values="Energy",
-    title="Energy Component Distribution",
-    hole=0.42
-)
-
-fig_component.update_layout(
-    template="plotly_dark",
-    height=420,
-    paper_bgcolor="rgba(0,0,0,0)"
-)
-
-st.plotly_chart(
-    fig_component,
-    use_container_width=True
-)
-
-# ============================================================
-# ADVANCED ANALYTICS
-# ============================================================
-
-st.markdown(
-    '<div class="section-title">🔬 Advanced Analytics</div>',
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    '<div class="section-description">'
-    'Explore deeper relationships between energy, occupancy, HVAC, temperature and power demand.'
-    '</div>',
-    unsafe_allow_html=True
-)
-
-with st.expander(
-    "🚀 Open Advanced Energy Analytics",
-    expanded=False
-):
-
-    # --------------------------------------------------------
-    # ENERGY VS OCCUPANCY
-    # --------------------------------------------------------
-
-    c1, c2 = st.columns(2)
 
     with c1:
 
-        fig_scatter = px.scatter(
-            display_df,
-            x="Occupancy_Count",
-            y="Energy_Consumption_kWh",
-            size="Power_Demand_kW",
-            color="Temperature_C",
-            hover_data=[
-                "Timestamp",
-                "Building_ID"
-            ],
-            title="Energy vs Occupancy"
+        st.html(
+            f"""
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    ⚡
+                </div>
+
+                <div class="metric-label">
+                    CURRENT ENERGY
+                </div>
+
+                <div class="metric-value">
+                    {current_energy:.2f}
+                </div>
+
+                <div class="metric-small">
+                    kWh consumption
+                </div>
+
+            </div>
+            """
         )
+
+
+    with c2:
+
+        st.html(
+            f"""
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    🔌
+                </div>
+
+                <div class="metric-label">
+                    POWER DEMAND
+                </div>
+
+                <div class="metric-value">
+                    {current_power:.2f}
+                </div>
+
+                <div class="metric-small">
+                    kW demand
+                </div>
+
+            </div>
+            """
+        )
+
+
+    with c3:
+
+        st.html(
+            f"""
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    🌡️
+                </div>
+
+                <div class="metric-label">
+                    TEMPERATURE
+                </div>
+
+                <div class="metric-value">
+                    {current_temperature:.1f}°C
+                </div>
+
+                <div class="metric-small">
+                    Building temperature
+                </div>
+
+            </div>
+            """
+        )
+
+
+    with c4:
+
+        st.html(
+            f"""
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    👥
+                </div>
+
+                <div class="metric-label">
+                    OCCUPANCY
+                </div>
+
+                <div class="metric-value">
+                    {current_occupancy:.0f}
+                </div>
+
+                <div class="metric-small">
+                    People detected
+                </div>
+
+            </div>
+            """
+        )
+
+
+    # ========================================================
+    # FACILITY USAGE
+    # ========================================================
+
+    st.markdown(
+        """
+        <div class="section-title">
+            Facility Usage
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+    c1, c2, c3, c4 = st.columns(4)
+
+
+    with c1:
+
+        st.html(
+            f"""
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    ❄️
+                </div>
+
+                <div class="metric-label">
+                    HVAC USAGE
+                </div>
+
+                <div class="metric-value">
+                    {current_hvac:.2f}
+                </div>
+
+                <div class="metric-small">
+                    kWh
+                </div>
+
+            </div>
+            """
+        )
+
+
+    with c2:
+
+        st.html(
+            f"""
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    💡
+                </div>
+
+                <div class="metric-label">
+                    LIGHTING
+                </div>
+
+                <div class="metric-value">
+                    {current_lighting:.2f}
+                </div>
+
+                <div class="metric-small">
+                    kWh
+                </div>
+
+            </div>
+            """
+        )
+
+
+    with c3:
+
+        st.html(
+            f"""
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    💧
+                </div>
+
+                <div class="metric-label">
+                    WATER USAGE
+                </div>
+
+                <div class="metric-value">
+                    {current_water:.2f}
+                </div>
+
+                <div class="metric-small">
+                    Litres
+                </div>
+
+            </div>
+            """
+        )
+
+
+    with c4:
+
+        st.html(
+            f"""
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    💦
+                </div>
+
+                <div class="metric-label">
+                    HUMIDITY
+                </div>
+
+                <div class="metric-value">
+                    {current_humidity:.1f}%
+                </div>
+
+                <div class="metric-small">
+                    Relative humidity
+                </div>
+
+            </div>
+            """
+        )
+
+
+    # ========================================================
+    # ENERGY TREND
+    # ========================================================
+
+    st.markdown(
+        """
+        <div class="section-title">
+            Energy Consumption Trend
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+    if energy_col:
+
+        chart_df = df.tail(100).copy()
+
+
+        if timestamp_col:
+
+            fig = px.line(
+                chart_df,
+                x=timestamp_col,
+                y=energy_col,
+                title="Energy Consumption Over Time",
+                markers=True
+            )
+
+        else:
+
+            chart_df["Reading"] = range(
+                len(chart_df)
+            )
+
+            fig = px.line(
+                chart_df,
+                x="Reading",
+                y=energy_col,
+                title="Energy Consumption Over Readings",
+                markers=True
+            )
+
+
+        fig.update_layout(
+            template="plotly_dark",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(5,20,30,0.5)",
+            height=430,
+            margin=dict(
+                l=20,
+                r=20,
+                t=60,
+                b=20
+            )
+        )
+
+
+        st.plotly_chart(
+            fig,
+            use_container_width=True
+        )
+
+
+# ============================================================
+# PAGE 2 — ENERGY DISTRIBUTION
+# ============================================================
+
+elif page == "Energy Distribution":
+
+    st.markdown(
+        """
+        <div class="section-title">
+            Energy Distribution Analytics
+        </div>
+
+        <div class="section-description">
+            Analyze how energy is distributed across
+            different facility systems.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+    # ========================================================
+    # COMPONENT DISTRIBUTION
+    # ========================================================
+
+    component_values = {}
+
+
+    if hvac_col:
+
+        component_values["HVAC"] = (
+            df[hvac_col].sum()
+        )
+
+
+    if lighting_col:
+
+        component_values["Lighting"] = (
+            df[lighting_col].sum()
+        )
+
+
+    if component_values:
+
+        distribution_df = pd.DataFrame(
+            {
+                "Component":
+                    list(component_values.keys()),
+
+                "Energy":
+                    list(component_values.values())
+            }
+        )
+
+
+        col1, col2 = st.columns(2)
+
+
+        with col1:
+
+            fig_pie = px.pie(
+                distribution_df,
+                names="Component",
+                values="Energy",
+                hole=0.55,
+                title="Energy Distribution"
+            )
+
+
+            fig_pie.update_layout(
+                template="plotly_dark",
+                paper_bgcolor="rgba(0,0,0,0)",
+                height=430
+            )
+
+
+            st.plotly_chart(
+                fig_pie,
+                use_container_width=True
+            )
+
+
+        with col2:
+
+            fig_bar = px.bar(
+                distribution_df,
+                x="Component",
+                y="Energy",
+                title="Energy Usage by System",
+                text_auto=".2f"
+            )
+
+
+            fig_bar.update_layout(
+                template="plotly_dark",
+                paper_bgcolor="rgba(0,0,0,0)",
+                plot_bgcolor="rgba(5,20,30,0.5)",
+                height=430
+            )
+
+
+            st.plotly_chart(
+                fig_bar,
+                use_container_width=True
+            )
+
+
+    # ========================================================
+    # BUILDING-WISE ENERGY
+    # ========================================================
+
+    if building_col and energy_col:
+
+        st.markdown(
+            """
+            <div class="section-title">
+                Building-wise Energy Consumption
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+        building_energy = (
+            df
+            .groupby(building_col)[energy_col]
+            .sum()
+            .reset_index()
+            .sort_values(
+                energy_col,
+                ascending=False
+            )
+        )
+
+
+        fig_building = px.bar(
+            building_energy,
+            x=building_col,
+            y=energy_col,
+            title="Total Energy Consumption by Building",
+            text_auto=".2f"
+        )
+
+
+        fig_building.update_layout(
+            template="plotly_dark",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(5,20,30,0.5)",
+            height=450
+        )
+
+
+        st.plotly_chart(
+            fig_building,
+            use_container_width=True
+        )
+
+
+    # ========================================================
+    # ENERGY STATISTICS
+    # ========================================================
+
+    if energy_col:
+
+        st.markdown(
+            """
+            <div class="section-title">
+                Energy Statistics
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+        avg_energy = df[energy_col].mean()
+
+        max_energy = df[energy_col].max()
+
+        min_energy = df[energy_col].min()
+
+        total_energy = df[energy_col].sum()
+
+
+        s1, s2, s3, s4 = st.columns(4)
+
+
+        with s1:
+
+            st.metric(
+                "Average Energy",
+                f"{avg_energy:.2f} kWh"
+            )
+
+
+        with s2:
+
+            st.metric(
+                "Maximum Energy",
+                f"{max_energy:.2f} kWh"
+            )
+
+
+        with s3:
+
+            st.metric(
+                "Minimum Energy",
+                f"{min_energy:.2f} kWh"
+            )
+
+
+        with s4:
+
+            st.metric(
+                "Total Energy",
+                f"{total_energy:.2f} kWh"
+            )
+
+
+# ============================================================
+# PAGE 3 — ADVANCED ANALYTICS
+# ============================================================
+
+elif page == "Advanced Analytics":
+
+    st.markdown(
+        """
+        <div class="section-title">
+            Advanced Analytics
+        </div>
+
+        <div class="section-description">
+            Explore relationships between energy,
+            occupancy, temperature and facility usage.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+    # ========================================================
+    # ENERGY VS OCCUPANCY
+    # ========================================================
+
+    if energy_col and occupancy_col:
+
+        st.markdown(
+            """
+            <div class="section-title">
+                Energy vs Occupancy
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+        hover_columns = []
+
+        if building_col:
+            hover_columns.append(
+                building_col
+            )
+
+        if temperature_col:
+            hover_columns.append(
+                temperature_col
+            )
+
+        if humidity_col:
+            hover_columns.append(
+                humidity_col
+            )
+
+
+        fig_scatter = px.scatter(
+            df,
+            x=occupancy_col,
+            y=energy_col,
+            size=power_col
+            if power_col
+            else None,
+            hover_data=hover_columns,
+            title="Relationship Between Occupancy and Energy"
+        )
+
 
         fig_scatter.update_layout(
             template="plotly_dark",
-            height=430,
-            paper_bgcolor="rgba(0,0,0,0)"
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(5,20,30,0.5)",
+            height=450
         )
+
 
         st.plotly_chart(
             fig_scatter,
             use_container_width=True
         )
 
-    # --------------------------------------------------------
-    # HVAC VS TEMPERATURE
-    # --------------------------------------------------------
 
-    with c2:
+    # ========================================================
+    # TEMPERATURE VS ENERGY
+    # ========================================================
 
-        fig_hvac = px.scatter(
-            display_df,
-            x="Temperature_C",
-            y="HVAC_Usage_kWh",
-            size="Occupancy_Count",
-            color="Humidity_Percent",
-            title="HVAC Usage vs Temperature"
+    if energy_col and temperature_col:
+
+        st.markdown(
+            """
+            <div class="section-title">
+                Temperature vs Energy
+            </div>
+            """,
+            unsafe_allow_html=True
         )
 
-        fig_hvac.update_layout(
+
+        fig_temp = px.scatter(
+            df,
+            x=temperature_col,
+            y=energy_col,
+            color=occupancy_col
+            if occupancy_col
+            else None,
+            title="Temperature and Energy Relationship"
+        )
+
+
+        fig_temp.update_layout(
             template="plotly_dark",
-            height=430,
-            paper_bgcolor="rgba(0,0,0,0)"
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(5,20,30,0.5)",
+            height=450
         )
+
 
         st.plotly_chart(
-            fig_hvac,
+            fig_temp,
             use_container_width=True
         )
 
-    # --------------------------------------------------------
-    # HOURLY ENERGY
-    # --------------------------------------------------------
 
-    if "Hour" in display_df.columns:
+    # ========================================================
+    # HEXAGON DENSITY
+    # ========================================================
 
-        hourly_energy = (
-            display_df.groupby("Hour")[
-                "Energy_Consumption_kWh"
-            ]
-            .mean()
-            .reset_index()
+    if energy_col and occupancy_col:
+
+        st.markdown(
+            """
+            <div class="section-title">
+                Hexagon Density Analysis
+            </div>
+            """,
+            unsafe_allow_html=True
         )
 
-    else:
 
-        hourly_energy = (
-            display_df.assign(
-                Hour=display_df["Timestamp"].dt.hour
+        st.html(
+            """
+            <div class="info-box">
+                The hexagon density visualization shows
+                where energy consumption is concentrated
+                across different occupancy levels.
+            </div>
+            """
+        )
+
+
+        hex_fig = go.Figure()
+
+
+        hex_fig.add_trace(
+            go.Histogram2d(
+                x=df[occupancy_col],
+                y=df[energy_col],
+                colorscale="Viridis",
+                nbinsx=12,
+                nbinsy=12,
+                colorbar=dict(
+                    title="Records"
+                )
             )
-            .groupby("Hour")[
-                "Energy_Consumption_kWh"
-            ]
-            .mean()
-            .reset_index()
         )
 
-    fig_hour = px.bar(
-        hourly_energy,
-        x="Hour",
-        y="Energy_Consumption_kWh",
-        title="Average Energy Consumption by Hour"
-    )
 
-    fig_hour.update_layout(
-        template="plotly_dark",
-        height=400,
-        paper_bgcolor="rgba(0,0,0,0)"
-    )
+        hex_fig.update_layout(
+            title="Energy Concentration by Occupancy",
 
-    st.plotly_chart(
-        fig_hour,
-        use_container_width=True
-    )
+            xaxis_title="Occupancy Count",
 
-    # --------------------------------------------------------
-    # HEATMAP / HEXAGON-STYLE ANALYSIS
-    # --------------------------------------------------------
+            yaxis_title="Energy Consumption (kWh)",
 
-    st.markdown("### 🔷 Energy Density / Hexbin Analysis")
-
-    hex_df = display_df[
-        [
-            "Temperature_C",
-            "Occupancy_Count",
-            "Energy_Consumption_kWh"
-        ]
-    ].dropna()
-
-    if len(hex_df) > 10:
-
-        fig_hex = px.density_heatmap(
-            hex_df,
-            x="Temperature_C",
-            y="Occupancy_Count",
-            z="Energy_Consumption_kWh",
-            nbinsx=12,
-            nbinsy=12,
-            histfunc="avg",
-            title="Energy Density by Temperature and Occupancy",
-            color_continuous_scale="Turbo"
-        )
-
-        fig_hex.update_layout(
             template="plotly_dark",
-            height=500,
-            paper_bgcolor="rgba(0,0,0,0)"
+
+            paper_bgcolor="rgba(0,0,0,0)",
+
+            plot_bgcolor="rgba(5,20,30,0.5)",
+
+            height=500
         )
+
 
         st.plotly_chart(
-            fig_hex,
+            hex_fig,
             use_container_width=True
         )
 
-    # --------------------------------------------------------
-    # POWER DEMAND TREND
-    # --------------------------------------------------------
 
-    power_df = display_df.tail(100)
-
-    fig_power = px.area(
-        power_df,
-        x="Timestamp",
-        y="Power_Demand_kW",
-        title="Power Demand Trend"
-    )
-
-    fig_power.update_layout(
-        template="plotly_dark",
-        height=400,
-        paper_bgcolor="rgba(0,0,0,0)"
-    )
-
-    st.plotly_chart(
-        fig_power,
-        use_container_width=True
-    )
-
-    # --------------------------------------------------------
-    # HVAC + LIGHTING COMPARISON
-    # --------------------------------------------------------
-
-    usage_df = display_df[
-        [
-            "Timestamp",
-            "HVAC_Usage_kWh",
-            "Lighting_Usage_kWh"
-        ]
-    ].tail(100)
-
-    fig_usage = go.Figure()
-
-    fig_usage.add_trace(
-        go.Scatter(
-            x=usage_df["Timestamp"],
-            y=usage_df["HVAC_Usage_kWh"],
-            mode="lines",
-            name="HVAC"
-        )
-    )
-
-    fig_usage.add_trace(
-        go.Scatter(
-            x=usage_df["Timestamp"],
-            y=usage_df["Lighting_Usage_kWh"],
-            mode="lines",
-            name="Lighting"
-        )
-    )
-
-    fig_usage.update_layout(
-        title="HVAC vs Lighting Energy Usage",
-        template="plotly_dark",
-        height=420,
-        paper_bgcolor="rgba(0,0,0,0)"
-    )
-
-    st.plotly_chart(
-        fig_usage,
-        use_container_width=True
-    )
-
-    # --------------------------------------------------------
+    # ========================================================
     # CORRELATION MATRIX
-    # --------------------------------------------------------
+    # ========================================================
 
-    numeric_cols = [
-        "Energy_Consumption_kWh",
-        "Power_Demand_kW",
-        "HVAC_Usage_kWh",
-        "Lighting_Usage_kWh",
-        "Water_Consumption_L",
-        "Temperature_C",
-        "Humidity_Percent",
-        "Occupancy_Count"
-    ]
+    st.markdown(
+        """
+        <div class="section-title">
+            Correlation Analysis
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-    numeric_cols = [
-        c for c in numeric_cols
-        if c in display_df.columns
-    ]
 
-    if len(numeric_cols) >= 2:
+    numeric_df = df.select_dtypes(
+        include=np.number
+    )
 
-        correlation = display_df[
-            numeric_cols
-        ].corr()
+
+    if not numeric_df.empty:
+
+        correlation = numeric_df.corr()
+
 
         fig_corr = px.imshow(
             correlation,
             text_auto=".2f",
             aspect="auto",
-            title="Energy Feature Correlation Matrix",
-            color_continuous_scale="RdBu_r"
+            title="Feature Correlation Matrix"
         )
+
 
         fig_corr.update_layout(
             template="plotly_dark",
-            height=600,
-            paper_bgcolor="rgba(0,0,0,0)"
+            paper_bgcolor="rgba(0,0,0,0)",
+            height=600
         )
+
 
         st.plotly_chart(
             fig_corr,
             use_container_width=True
         )
 
-# ============================================================
-# ANOMALY MONITORING
-# ============================================================
-
-st.markdown(
-    '<div class="section-title">🚨 Energy Anomaly Monitoring</div>',
-    unsafe_allow_html=True
-)
-
-if anomaly_df is not None:
-
-    anomaly_status_column = None
-
-    possible_status_columns = [
-        "Status",
-        "Anomaly",
-        "Anomaly_Status"
-    ]
-
-    for column in possible_status_columns:
-
-        if column in anomaly_df.columns:
-            anomaly_status_column = column
-            break
-
-    if anomaly_status_column:
-
-        abnormal = anomaly_df[
-            anomaly_df[anomaly_status_column]
-            .astype(str)
-            .str.lower()
-            .isin(
-                [
-                    "abnormal",
-                    "anomaly",
-                    "true",
-                    "1"
-                ]
-            )
-        ]
-
-        normal_count = len(
-            anomaly_df
-        ) - len(abnormal)
-
-        abnormal_count = len(abnormal)
-
-    else:
-
-        normal_count = len(anomaly_df)
-        abnormal_count = 0
-
-    a1, a2, a3 = st.columns(3)
-
-    with a1:
-
-        st.metric(
-            "Normal Records",
-            f"{normal_count:,}"
-        )
-
-    with a2:
-
-        st.metric(
-            "Abnormal Records",
-            f"{abnormal_count:,}"
-        )
-
-    with a3:
-
-        anomaly_percentage = (
-            abnormal_count / len(anomaly_df) * 100
-            if len(anomaly_df) > 0
-            else 0
-        )
-
-        st.metric(
-            "Anomaly Rate",
-            f"{anomaly_percentage:.2f}%"
-        )
-
-    if abnormal_count > 0:
-
-        if "Energy_Consumption_kWh" in abnormal.columns:
-
-            fig_anomaly = px.scatter(
-                anomaly_df,
-                x="Timestamp",
-                y="Energy_Consumption_kWh",
-                color=anomaly_status_column,
-                title="Energy Anomaly Detection Timeline",
-                hover_data=[
-                    c for c in [
-                        "Building_ID",
-                        "Power_Demand_kW",
-                        "HVAC_Usage_kWh",
-                        "Occupancy_Count"
-                    ]
-                    if c in anomaly_df.columns
-                ]
-            )
-
-            fig_anomaly.update_layout(
-                template="plotly_dark",
-                height=430,
-                paper_bgcolor="rgba(0,0,0,0)"
-            )
-
-            st.plotly_chart(
-                fig_anomaly,
-                use_container_width=True
-            )
-
-            st.markdown("### ⚠️ Detected Abnormal Records")
-
-            st.dataframe(
-                abnormal.tail(25),
-                use_container_width=True,
-                hide_index=True
-            )
-
-    else:
-
-        st.success(
-            "No abnormal energy records detected."
-        )
-
-else:
-
-    st.info(
-        "Anomaly results file is not available. "
-        "Run the anomaly detection script first."
-    )
 
 # ============================================================
-# ENERGY EFFICIENCY ANALYSIS
+# PAGE 4 — ANOMALY DETECTION
 # ============================================================
 
-st.markdown(
-    '<div class="section-title">🌱 Energy Efficiency Recommendations</div>',
-    unsafe_allow_html=True
-)
-
-avg_energy = display_df[
-    "Energy_Consumption_kWh"
-].mean()
-
-avg_hvac = display_df[
-    "HVAC_Usage_kWh"
-].mean()
-
-avg_lighting = display_df[
-    "Lighting_Usage_kWh"
-].mean()
-
-avg_occupancy = display_df[
-    "Occupancy_Count"
-].mean()
-
-recommendations = []
-
-if avg_hvac > avg_energy * 0.35:
-
-    recommendations.append(
-        "❄️ HVAC consumption is relatively high. "
-        "Review HVAC schedules and temperature setpoints."
-    )
-
-if avg_lighting > avg_energy * 0.20:
-
-    recommendations.append(
-        "💡 Lighting contributes significantly to energy usage. "
-        "Consider occupancy-based lighting control."
-    )
-
-if avg_occupancy < 20:
-
-    recommendations.append(
-        "👥 Average occupancy is low. "
-        "Consider automatic HVAC and lighting setback during low-occupancy periods."
-    )
-
-if temperature > 27:
-
-    recommendations.append(
-        "🌡️ Current temperature is relatively high. "
-        "Review cooling requirements and HVAC efficiency."
-    )
-
-if not recommendations:
-
-    recommendations.append(
-        "✅ Current operating conditions appear reasonably efficient. "
-        "Continue monitoring energy trends and anomalies."
-    )
-
-for recommendation in recommendations:
+elif page == "Anomaly Detection":
 
     st.markdown(
-        f"""
-        <div class="recommendation">
-            {recommendation}
+        """
+        <div class="section-title">
+            🚨 Energy Anomaly Detection
+        </div>
+
+        <div class="section-description">
+            Identify abnormal energy consumption patterns
+            and monitor unusual facility behavior.
         </div>
         """,
         unsafe_allow_html=True
     )
 
-# ============================================================
-# CURRENT DATA RECORD
-# ============================================================
 
-with st.expander(
-    "📋 View Current 15-Minute Sensor Record"
-):
+    # ========================================================
+    # DETERMINE ANOMALY COUNTS
+    # ========================================================
 
-    current_display = current_row.to_frame().T
+    if not anomaly_df.empty:
 
-    st.dataframe(
-        current_display,
-        use_container_width=True,
-        hide_index=True
+        anomaly_col = None
+
+
+        for col in anomaly_df.columns:
+
+            lower = col.lower()
+
+
+            if (
+                "anomaly" in lower
+                or "outlier" in lower
+                or "abnormal" in lower
+            ):
+
+                anomaly_col = col
+
+                break
+
+
+        if anomaly_col:
+
+            values = anomaly_df[
+                anomaly_col
+            ]
+
+
+            def check_anomaly(value):
+
+                if isinstance(
+                    value,
+                    str
+                ):
+
+                    value_lower = (
+                        value.lower()
+                    )
+
+
+                    return (
+                        "anomaly"
+                        in value_lower
+                        or
+                        "abnormal"
+                        in value_lower
+                        or
+                        value_lower
+                        in [
+                            "1",
+                            "true",
+                            "yes"
+                        ]
+                    )
+
+
+                return value == 1
+
+
+            mask = values.apply(
+                check_anomaly
+            )
+
+
+            abnormal_count = int(
+                mask.sum()
+            )
+
+
+            normal_count = (
+                len(anomaly_df)
+                - abnormal_count
+            )
+
+
+        else:
+
+            abnormal_count = 0
+
+            normal_count = len(
+                anomaly_df
+            )
+
+
+    else:
+
+        if energy_col:
+
+            threshold = (
+                df[energy_col].mean()
+                +
+                2 * df[energy_col].std()
+            )
+
+
+            abnormal_count = int(
+                (
+                    df[energy_col]
+                    > threshold
+                ).sum()
+            )
+
+
+            normal_count = (
+                len(df)
+                -
+                abnormal_count
+            )
+
+        else:
+
+            abnormal_count = 0
+
+            normal_count = len(df)
+
+
+    # ========================================================
+    # ANOMALY CARDS
+    # ========================================================
+
+    a1, a2, a3 = st.columns(3)
+
+
+    with a1:
+
+        st.html(
+            f"""
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    🟢
+                </div>
+
+                <div class="metric-label">
+                    NORMAL RECORDS
+                </div>
+
+                <div class="metric-value">
+                    {normal_count}
+                </div>
+
+                <div class="metric-small">
+                    Normal energy behavior
+                </div>
+
+            </div>
+            """
+        )
+
+
+    with a2:
+
+        st.html(
+            f"""
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    🔴
+                </div>
+
+                <div class="metric-label">
+                    ABNORMAL RECORDS
+                </div>
+
+                <div class="metric-value">
+                    {abnormal_count}
+                </div>
+
+                <div class="metric-small">
+                    Potential anomalies
+                </div>
+
+            </div>
+            """
+        )
+
+
+    with a3:
+
+        total_records = (
+            normal_count
+            +
+            abnormal_count
+        )
+
+
+        if total_records > 0:
+
+            anomaly_rate = (
+                abnormal_count
+                /
+                total_records
+            ) * 100
+
+        else:
+
+            anomaly_rate = 0
+
+
+        st.html(
+            f"""
+            <div class="metric-card">
+
+                <div class="metric-icon">
+                    📊
+                </div>
+
+                <div class="metric-label">
+                    ANOMALY RATE
+                </div>
+
+                <div class="metric-value">
+                    {anomaly_rate:.2f}%
+                </div>
+
+                <div class="metric-small">
+                    Of monitored records
+                </div>
+
+            </div>
+            """
+        )
+
+
+    # ========================================================
+    # ANOMALY PIE CHART
+    # ========================================================
+
+    anomaly_chart_df = pd.DataFrame(
+        {
+            "Status":
+                [
+                    "Normal",
+                    "Abnormal"
+                ],
+
+            "Records":
+                [
+                    normal_count,
+                    abnormal_count
+                ]
+        }
     )
 
+
+    fig_anomaly = px.pie(
+        anomaly_chart_df,
+        names="Status",
+        values="Records",
+        hole=0.55,
+        title="Normal vs Abnormal Energy Records"
+    )
+
+
+    fig_anomaly.update_layout(
+        template="plotly_dark",
+        paper_bgcolor="rgba(0,0,0,0)",
+        height=420
+    )
+
+
+    st.plotly_chart(
+        fig_anomaly,
+        use_container_width=True
+    )
+
+
+    # ========================================================
+    # ANOMALY TREND
+    # ========================================================
+
+    if energy_col:
+
+        st.markdown(
+            """
+            <div class="section-title">
+                Energy Anomaly Trend
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+        anomaly_plot_df = df.copy()
+
+
+        threshold = (
+            anomaly_plot_df[energy_col].mean()
+            +
+            2
+            *
+            anomaly_plot_df[energy_col].std()
+        )
+
+
+        anomaly_plot_df[
+            "Threshold"
+        ] = threshold
+
+
+        if timestamp_col:
+
+            fig_anomaly_line = go.Figure()
+
+
+            fig_anomaly_line.add_trace(
+                go.Scatter(
+                    x=anomaly_plot_df[
+                        timestamp_col
+                    ],
+
+                    y=anomaly_plot_df[
+                        energy_col
+                    ],
+
+                    mode="lines",
+
+                    name="Energy"
+                )
+            )
+
+
+            fig_anomaly_line.add_trace(
+                go.Scatter(
+                    x=anomaly_plot_df[
+                        timestamp_col
+                    ],
+
+                    y=anomaly_plot_df[
+                        "Threshold"
+                    ],
+
+                    mode="lines",
+
+                    name="Anomaly Threshold",
+
+                    line=dict(
+                        dash="dash"
+                    )
+                )
+            )
+
+
+            fig_anomaly_line.update_layout(
+                title=
+                    "Energy Consumption "
+                    "and Anomaly Threshold",
+
+                xaxis_title="Time",
+
+                yaxis_title=
+                    "Energy (kWh)",
+
+                template="plotly_dark",
+
+                paper_bgcolor=
+                    "rgba(0,0,0,0)",
+
+                plot_bgcolor=
+                    "rgba(5,20,30,0.5)",
+
+                height=470
+            )
+
+
+            st.plotly_chart(
+                fig_anomaly_line,
+                use_container_width=True
+            )
+
+
+    # ========================================================
+    # ANOMALY RESULTS TABLE
+    # ========================================================
+
+    if not anomaly_df.empty:
+
+        st.markdown(
+            """
+            <div class="section-title">
+                Anomaly Detection Results
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+        st.dataframe(
+            anomaly_df.head(100),
+
+            use_container_width=True,
+
+            height=400
+        )
+
+
 # ============================================================
-# MONITORING INFORMATION
+# PAGE 5 — RECOMMENDATIONS
 # ============================================================
 
-st.markdown("---")
+elif page == "Recommendations":
 
-info1, info2, info3 = st.columns(3)
+    st.markdown(
+        """
+        <div class="section-title">
+            🤖 Energy Efficiency Recommendations
+        </div>
+
+        <div class="section-description">
+            AI-assisted recommendations based on energy
+            consumption, occupancy and environmental conditions.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+    # ========================================================
+    # AVERAGES
+    # ========================================================
+
+    avg_energy = (
+        df[energy_col].mean()
+        if energy_col
+        else 0
+    )
+
+
+    avg_occupancy = (
+        df[occupancy_col].mean()
+        if occupancy_col
+        else 0
+    )
+
+
+    avg_temperature = (
+        df[temperature_col].mean()
+        if temperature_col
+        else 0
+    )
+
+
+    avg_hvac = (
+        df[hvac_col].mean()
+        if hvac_col
+        else 0
+    )
+
+
+    # ========================================================
+    # RECOMMENDATION 1 — ENERGY
+    # ========================================================
+
+    if current_energy > avg_energy:
+
+        st.html(
+            f"""
+            <div class="recommendation">
+
+                <div class="recommendation-title">
+                    ⚡ High Energy Consumption Detected
+                </div>
+
+                <div class="recommendation-text">
+                    Current energy consumption is
+                    <b>{current_energy:.2f} kWh</b>,
+                    which is above the dataset average of
+                    <b>{avg_energy:.2f} kWh</b>.
+                    Consider checking HVAC operation,
+                    lighting schedules and unnecessary
+                    equipment loads.
+                </div>
+
+            </div>
+            """
+        )
+
+    else:
+
+        st.html(
+            f"""
+            <div class="recommendation">
+
+                <div class="recommendation-title">
+                    ✅ Energy Consumption is Within Normal Range
+                </div>
+
+                <div class="recommendation-text">
+                    Current consumption of
+                    <b>{current_energy:.2f} kWh</b>
+                    is at or below the average energy level.
+                    Continue monitoring facility usage.
+                </div>
+
+            </div>
+            """
+        )
+
+
+    # ========================================================
+    # RECOMMENDATION 2 — HVAC
+    # ========================================================
+
+    if current_hvac > avg_hvac:
+
+        st.html(
+            f"""
+            <div class="recommendation">
+
+                <div class="recommendation-title">
+                    ❄️ HVAC Optimization Recommended
+                </div>
+
+                <div class="recommendation-text">
+                    HVAC consumption is currently
+                    <b>{current_hvac:.2f} kWh</b>.
+                    Review temperature settings,
+                    HVAC schedules and occupied-zone
+                    requirements.
+                </div>
+
+            </div>
+            """
+        )
+
+    else:
+
+        st.html(
+            """
+            <div class="recommendation">
+
+                <div class="recommendation-title">
+                    ❄️ HVAC Performance Appears Stable
+                </div>
+
+                <div class="recommendation-text">
+                    HVAC consumption is within the
+                    observed operating range.
+                    Continue monitoring for unexpected
+                    increases.
+                </div>
+
+            </div>
+            """
+        )
+
+
+    # ========================================================
+    # RECOMMENDATION 3 — OCCUPANCY
+    # ========================================================
+
+    if occupancy_col:
+
+        if current_occupancy < (
+            avg_occupancy * 0.5
+        ):
+
+            st.html(
+                f"""
+                <div class="recommendation">
+
+                    <div class="recommendation-title">
+                        👥 Low Occupancy Detected
+                    </div>
+
+                    <div class="recommendation-text">
+                        Current occupancy is only
+                        <b>{current_occupancy:.0f}</b>.
+                        Consider reducing lighting and
+                        HVAC in unused areas.
+                    </div>
+
+                </div>
+                """
+            )
+
+        else:
+
+            st.html(
+                """
+                <div class="recommendation">
+
+                    <div class="recommendation-title">
+                        👥 Occupancy-Based Control
+                    </div>
+
+                    <div class="recommendation-text">
+                        Facility occupancy is within the
+                        normal operating range.
+                        Continue using occupancy information
+                        to optimize HVAC and lighting.
+                    </div>
+
+                </div>
+                """
+            )
+
+
+    # ========================================================
+    # RECOMMENDATION 4 — TEMPERATURE
+    # ========================================================
+
+    if temperature_col:
+
+        if current_temperature > (
+            avg_temperature + 2
+        ):
+
+            st.html(
+                f"""
+                <div class="recommendation">
+
+                    <div class="recommendation-title">
+                        🌡️ Elevated Temperature
+                    </div>
+
+                    <div class="recommendation-text">
+                        Current temperature is
+                        <b>{current_temperature:.1f}°C</b>,
+                        which is above the observed average.
+                        HVAC operation should be checked
+                        for efficient cooling.
+                    </div>
+
+                </div>
+                """
+            )
+
+        elif current_temperature < (
+            avg_temperature - 2
+        ):
+
+            st.html(
+                f"""
+                <div class="recommendation">
+
+                    <div class="recommendation-title">
+                        🌡️ Lower Temperature
+                    </div>
+
+                    <div class="recommendation-text">
+                        Current temperature is
+                        <b>{current_temperature:.1f}°C</b>.
+                        Avoid excessive heating or cooling
+                        to reduce unnecessary energy
+                        consumption.
+                    </div>
+
+                </div>
+                """
+            )
+
+        else:
+
+            st.html(
+                """
+                <div class="recommendation">
+
+                    <div class="recommendation-title">
+                        🌡️ Temperature Within Normal Range
+                    </div>
+
+                    <div class="recommendation-text">
+                        Environmental temperature is
+                        relatively stable compared with
+                        the observed dataset.
+                    </div>
+
+                </div>
+                """
+            )
+
+
+    # ========================================================
+    # GENERAL ENERGY SAVING ACTIONS
+    # ========================================================
+
+    st.markdown(
+        """
+        <div class="section-title">
+            General Energy Saving Actions
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+    recommendations = [
+
+        (
+            "💡 Smart Lighting",
+
+            "Use occupancy-based lighting control "
+            "and switch off lights in unoccupied zones."
+        ),
+
+        (
+            "❄️ HVAC Scheduling",
+
+            "Align HVAC operation with building "
+            "occupancy and working hours."
+        ),
+
+        (
+            "⚡ Peak Demand Management",
+
+            "Monitor high power-demand periods and "
+            "shift flexible loads away from peak periods."
+        ),
+
+        (
+            "📊 Continuous Monitoring",
+
+            "Continue monitoring energy consumption "
+            "at 15-minute intervals to identify "
+            "abnormal behavior."
+        ),
+
+        (
+            "🤖 Agentic Decision Support",
+
+            "Use the Energy Agent to analyze incoming "
+            "facility data and generate optimization "
+            "recommendations."
+        )
+    ]
+
+
+    for title, text in recommendations:
+
+        st.html(
+            f"""
+            <div class="recommendation">
+
+                <div class="recommendation-title">
+                    {title}
+                </div>
+
+                <div class="recommendation-text">
+                    {text}
+                </div>
+
+            </div>
+            """
+        )
+
+
+# ============================================================
+# DATASET INFORMATION
+# ============================================================
+
+st.markdown(
+    """
+    <div class="section-title">
+        Dataset Information
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+
+info1, info2, info3, info4 = st.columns(4)
+
 
 with info1:
 
-    st.write(
-        f"**Current record:** "
-        f"{st.session_state.current_index + 1} / {len(display_df)}"
+    st.metric(
+        "Total Records",
+        len(df)
     )
+
 
 with info2:
 
-    st.write(
-        f"**Last dashboard update:** "
-        f"{st.session_state.last_update.strftime('%H:%M:%S')}"
+    st.metric(
+        "Features",
+        len(df.columns)
     )
+
 
 with info3:
 
-    if "Timestamp" in current_row:
-
-        st.write(
-            f"**Dataset timestamp:** "
-            f"{current_row['Timestamp']}"
+    st.metric(
+        "Missing Values",
+        int(
+            df.isnull()
+            .sum()
+            .sum()
         )
-
-# ============================================================
-# AUTOMATIC SIMULATED MONITORING
-# ============================================================
-
-if st.session_state.auto_mode:
-
-    # Wait before automatically advancing.
-    # This simulates a live monitoring stream.
-    time.sleep(refresh_seconds)
-
-    st.session_state.current_index = (
-        st.session_state.current_index + 1
     )
 
-    st.session_state.last_update = datetime.now()
 
-    st.rerun()
+with info4:
+
+    st.metric(
+        "Duplicate Records",
+        int(
+            df.duplicated()
+            .sum()
+        )
+    )
+
+
+# ============================================================
+# CURRENT READING DETAILS
+# ============================================================
+
+with st.expander(
+    "🔎 View Current Energy Reading"
+):
+
+    current_display = (
+        current_record
+        .to_frame()
+        .T
+    )
+
+
+    st.dataframe(
+        current_display,
+        use_container_width=True
+    )
+
 
 # ============================================================
 # FOOTER
 # ============================================================
 
-st.markdown(
-    unsafe_allow_html=True
+st.html(
+    """
+    <div class="footer">
+
+        ⚡ Smart Facility Energy Intelligence
+        |
+
+        Agentic AI for Smart Facility Operations
+        and Optimization
+
+        |
+
+        Simulated 15-minute energy monitoring
+
+    </div>
+    """
 )
