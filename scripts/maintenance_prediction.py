@@ -97,9 +97,6 @@ X_train, X_test, y_train, y_test = train_test_split(
 print(f"\nTraining records: {len(X_train)}")
 print(f"Testing records: {len(X_test)}")
 
-# ---------------------------------------------------------
-# 5. Train Random Forest model
-# ---------------------------------------------------------
 
 print("\nTraining Random Forest model...")
 
@@ -116,13 +113,10 @@ model.fit(X_train, y_train)
 
 print("Model training completed ✓")
 
-# ---------------------------------------------------------
-# 6. Predictions
-# ---------------------------------------------------------
+
 
 y_probability = model.predict_proba(X_test)[:, 1]
 
-# Use 0.40 threshold
 threshold = 0.40
 
 y_pred = (y_probability >= threshold).astype(int)

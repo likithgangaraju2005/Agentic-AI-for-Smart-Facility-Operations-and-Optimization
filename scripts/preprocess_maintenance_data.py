@@ -28,7 +28,6 @@ df["Timestamp"] = pd.to_datetime(df["Timestamp"])
 df["Last_Maintenance_Date"] = pd.to_datetime(
     df["Last_Maintenance_Date"]
 )
-
 # Time-based features
 df["Hour"] = df["Timestamp"].dt.hour
 df["Day"] = df["Timestamp"].dt.day
