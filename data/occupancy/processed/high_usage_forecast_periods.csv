@@ -1,0 +1,2 @@
+Forecast_Timestamp,Building_ID,Forecast_Hour,Day_of_Week,Predicted_Occupancy,Forecast_Utilization_Percent,Forecast_Status,Usage_Category
+2026-01-16 13:45:00,BLDG_C,13,Friday,39.0,97.5,Normal,High Usage

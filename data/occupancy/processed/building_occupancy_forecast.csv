@@ -1,0 +1,4 @@
+Building_ID,Average_Predicted_Occupancy,Maximum_Predicted_Occupancy,Average_Forecast_Utilization,Maximum_Forecast_Utilization
+BLDG_A,3.44,13.5,17.95,59.09
+BLDG_B,3.2,13.25,18.43,62.5
+BLDG_C,5.45,39.0,22.12,97.5

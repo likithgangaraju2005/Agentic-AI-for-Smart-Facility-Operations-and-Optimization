@@ -1,0 +1,11 @@
+Building_ID,Room_ID,Room_Type,Room_Capacity,Overcrowded_Records,Maximum_Occupancy,Maximum_Utilization,Average_Overcrowding_Percent
+BLDG_A,A201,Lab,30,2,36,120.0,18.333333333333332
+BLDG_B,B201,Training Room,35,2,42,120.0,11.428571428571429
+BLDG_A,A101,Office,10,1,11,110.0,10.0
+BLDG_A,A202,Conference,25,1,26,104.0,4.0
+BLDG_B,B102,Office,15,1,18,120.0,20.0
+BLDG_B,B101,Office,8,1,9,112.5,12.5
+BLDG_B,B103,Meeting Room,18,1,21,116.67,16.666666666666664
+BLDG_C,C101,Office,10,1,11,110.0,10.0
+BLDG_C,C103,Meeting Room,20,1,24,120.0,20.0
+BLDG_C,C202,Training Room,40,1,43,107.5,7.5

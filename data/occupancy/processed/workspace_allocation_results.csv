@@ -1,0 +1,16 @@
+Building_ID,Room_ID,Room_Type,Room_Capacity,Average_Occupancy,Maximum_Occupancy,Average_Utilization,Maximum_Utilization,Overcrowded_Records,Average_Available_Spaces,Workspace_Status,Allocation_Recommendation
+BLDG_A,A101,Office,10,2.2388059701492535,11,22.388059701492537,110.0,1,7.7611940298507465,Overcrowded,Avoid allocation - redirect users to another room
+BLDG_A,A102,Office,12,2.656716417910448,12,22.138507462686565,100.0,0,9.343283582089551,Underutilized,High availability - preferred for allocation
+BLDG_A,A103,Meeting Room,20,3.537313432835821,13,17.686567164179106,65.0,0,16.46268656716418,Underutilized,High availability - preferred for allocation
+BLDG_A,A201,Lab,30,6.507462686567164,36,21.69134328358209,120.0,2,23.492537313432834,Overcrowded,Avoid allocation - redirect users to another room
+BLDG_A,A202,Conference,25,4.014925373134329,26,16.059701492537314,104.0,1,20.98507462686567,Overcrowded,Avoid allocation - redirect users to another room
+BLDG_B,B101,Office,8,1.8059701492537314,9,22.574626865671643,112.5,1,6.1940298507462686,Overcrowded,Avoid allocation - redirect users to another room
+BLDG_B,B102,Office,15,3.462686567164179,18,23.084328358208957,120.0,1,11.537313432835822,Overcrowded,Avoid allocation - redirect users to another room
+BLDG_B,B103,Meeting Room,18,3.582089552238806,21,19.900746268656714,116.67,1,14.417910447761194,Overcrowded,Avoid allocation - redirect users to another room
+BLDG_B,B201,Training Room,35,5.925373134328358,42,16.929552238805968,120.0,2,29.074626865671643,Overcrowded,Avoid allocation - redirect users to another room
+BLDG_B,B202,Conference,25,4.104477611940299,15,16.417910447761194,60.0,0,20.895522388059703,Underutilized,High availability - preferred for allocation
+BLDG_C,C101,Office,10,2.4696969696969697,11,24.696969696969695,110.0,1,7.53030303030303,Overcrowded,Avoid allocation - redirect users to another room
+BLDG_C,C102,Office,14,2.757575757575758,10,19.69712121212121,71.43,0,11.242424242424242,Underutilized,High availability - preferred for allocation
+BLDG_C,C103,Meeting Room,20,4.424242424242424,24,22.12121212121212,120.0,1,15.575757575757576,Overcrowded,Avoid allocation - redirect users to another room
+BLDG_C,C201,Lab,30,5.575757575757576,29,18.585757575757576,96.67,0,24.424242424242422,Underutilized,High availability - preferred for allocation
+BLDG_C,C202,Training Room,40,6.454545454545454,43,16.136363636363637,107.5,1,33.54545454545455,Overcrowded,Avoid allocation - redirect users to another room

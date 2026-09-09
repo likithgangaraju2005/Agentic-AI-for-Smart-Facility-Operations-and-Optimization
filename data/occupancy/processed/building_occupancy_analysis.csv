@@ -1,0 +1,4 @@
+Building_ID,Average_Occupancy,Maximum_Occupancy,Average_Utilization,Average_Available_Capacity,Overcrowded_Records
+BLDG_A,3.79,36,19.99,15.61,4
+BLDG_B,3.78,42,19.78,16.42,5
+BLDG_C,4.34,43,20.25,18.46,3
