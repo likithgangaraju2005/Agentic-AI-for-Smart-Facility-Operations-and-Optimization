@@ -1,73 +1,1001 @@
-Forecast_Timestamp,Building_ID,Predicted_Occupancy,Forecast_Utilization_Percent,Overcrowded_Records,Workspace_Status,Agent_Decision,Priority,Alert_Type,Agent_Recommendation
-2026-01-15 18:45:00,BLDG_A,0.0,0.0,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 19:45:00,BLDG_A,2.0,8.0,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 20:45:00,BLDG_A,0.57,3.06,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 21:45:00,BLDG_A,0.86,4.72,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 22:45:00,BLDG_A,0.33,2.38,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 23:45:00,BLDG_A,0.0,0.0,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 00:45:00,BLDG_A,0.64,3.35,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 01:45:00,BLDG_A,1.17,5.98,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 02:45:00,BLDG_A,0.75,4.17,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 03:45:00,BLDG_A,3.0,12.0,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 04:45:00,BLDG_A,1.11,5.7,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 05:45:00,BLDG_A,0.0,0.0,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 06:45:00,BLDG_A,0.75,3.45,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 07:45:00,BLDG_A,0.94,4.84,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 08:45:00,BLDG_A,4.44,23.85,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 09:45:00,BLDG_A,6.5,59.09,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 10:45:00,BLDG_A,11.67,46.67,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 11:45:00,BLDG_A,6.47,38.01,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 12:45:00,BLDG_A,6.74,34.26,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 13:45:00,BLDG_A,6.33,45.24,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 14:45:00,BLDG_A,13.5,49.09,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 15:45:00,BLDG_A,5.63,32.13,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 16:45:00,BLDG_A,7.62,36.53,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 17:45:00,BLDG_A,1.5,8.33,4,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 18:45:00,BLDG_B,0.83,4.2,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 19:45:00,BLDG_B,0.0,0.0,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 20:45:00,BLDG_B,0.25,1.08,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 21:45:00,BLDG_B,0.89,4.48,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 22:45:00,BLDG_B,0.95,5.42,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 23:45:00,BLDG_B,1.5,13.04,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 00:45:00,BLDG_B,0.0,0.0,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 01:45:00,BLDG_B,1.06,5.46,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 02:45:00,BLDG_B,1.29,6.8,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 03:45:00,BLDG_B,0.67,4.88,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 04:45:00,BLDG_B,0.5,1.67,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 05:45:00,BLDG_B,1.78,8.94,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 06:45:00,BLDG_B,1.17,5.88,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 07:45:00,BLDG_B,1.5,7.89,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 08:45:00,BLDG_B,3.0,12.0,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 09:45:00,BLDG_B,8.33,45.56,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 10:45:00,BLDG_B,5.0,62.5,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 11:45:00,BLDG_B,13.25,56.99,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 12:45:00,BLDG_B,4.28,21.57,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 13:45:00,BLDG_B,8.39,43.5,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 14:45:00,BLDG_B,6.5,56.52,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 15:45:00,BLDG_B,6.67,25.64,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 16:45:00,BLDG_B,4.79,28.0,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 17:45:00,BLDG_B,4.18,20.35,5,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 18:45:00,BLDG_C,2.0,5.71,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 19:45:00,BLDG_C,1.33,5.22,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 20:45:00,BLDG_C,2.58,11.57,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 21:45:00,BLDG_C,2.0,10.81,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 22:45:00,BLDG_C,0.0,0.0,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-15 23:45:00,BLDG_C,0.78,3.48,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 00:45:00,BLDG_C,1.0,10.0,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 01:45:00,BLDG_C,3.0,11.54,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 02:45:00,BLDG_C,0.94,4.23,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 03:45:00,BLDG_C,1.77,9.06,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 04:45:00,BLDG_C,0.5,4.17,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 05:45:00,BLDG_C,1.33,4.44,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 06:45:00,BLDG_C,0.68,3.15,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 07:45:00,BLDG_C,1.62,6.82,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 08:45:00,BLDG_C,4.0,27.27,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 09:45:00,BLDG_C,15.0,42.86,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 10:45:00,BLDG_C,6.49,28.45,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 11:45:00,BLDG_C,8.83,36.43,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 12:45:00,BLDG_C,9.5,51.35,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 13:45:00,BLDG_C,39.0,97.5,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 14:45:00,BLDG_C,8.08,39.59,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 15:45:00,BLDG_C,6.0,60.0,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 16:45:00,BLDG_C,10.75,41.35,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
-2026-01-16 17:45:00,BLDG_C,3.56,15.92,3,Overcrowded,Manage Overcrowding,MEDIUM,OCCUPANCY WARNING,Redistribute occupants to available workspace.
+Timestamp,Building_ID,Floor,Room_ID,Room_Type,Room_Capacity,Occupancy_Count,Predicted_Occupancy,Predicted_Utilization_Percent,Predicted_Occupancy_Status,Prediction_Error,Agent_Decision,Priority,Alert_Type,Agent_Recommendation,Historical_Overcrowding_Records
+2026-01-05 08:00:00,BLDG_A,1,A101,Office,10,3,2.6679325396825404,26.679325396825405,Low,0.3320674603174596,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 08:15:00,BLDG_A,1,A102,Office,12,1,1.933936507936508,16.116137566137564,Low,0.9339365079365078,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 08:30:00,BLDG_A,1,A103,Meeting Room,20,4,6.013415343915342,30.067076719576708,Low,2.0134153439153417,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 08:45:00,BLDG_A,2,A201,Lab,30,6,7.6166560846560865,25.38885361552029,Low,1.6166560846560865,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 09:00:00,BLDG_A,2,A202,Conference,25,12,13.017933862433866,52.07173544973547,Normal,1.017933862433866,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-05 09:15:00,BLDG_B,1,B101,Office,8,5,4.782515873015874,59.78144841269842,Normal,0.2174841269841261,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-05 09:30:00,BLDG_B,1,B102,Office,15,8,8.24833862433863,54.988924162257526,Normal,0.2483386243386292,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-05 09:45:00,BLDG_B,1,B103,Meeting Room,18,10,10.936293650793653,60.757186948853615,Normal,0.936293650793651,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-05 10:00:00,BLDG_B,2,B201,Training Room,35,13,17.567230158730162,50.19208616780047,Normal,4.567230158730162,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-05 10:15:00,BLDG_B,2,B202,Conference,25,11,10.75115476190476,43.00461904761904,Normal,0.2488452380952406,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-05 10:30:00,BLDG_C,1,C101,Office,10,7,7.166320105820108,71.66320105820108,High Usage,0.166320105820108,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-05 10:45:00,BLDG_C,1,C102,Office,14,7,7.222091301486038,51.58636643918598,Normal,0.2220913014860377,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-05 11:00:00,BLDG_C,1,C103,Meeting Room,20,12,11.312099206349204,56.56049603174602,Normal,0.6879007936507957,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-05 11:15:00,BLDG_C,2,C201,Lab,30,16,15.722317460317456,52.40772486772486,Normal,0.2776825396825426,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-05 11:30:00,BLDG_C,2,C202,Training Room,40,15,14.826244708994714,37.06561177248678,Low,0.1737552910052855,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-05 11:45:00,BLDG_A,1,A101,Office,10,5,6.014276455026455,60.14276455026455,Normal,1.0142764550264554,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-05 12:00:00,BLDG_A,1,A102,Office,12,5,5.751964285714288,47.93303571428573,Normal,0.7519642857142879,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-05 12:15:00,BLDG_A,1,A103,Meeting Room,20,6,6.857101851851845,34.28550925925923,Low,0.8571018518518452,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 12:30:00,BLDG_A,2,A201,Lab,30,6,11.17262037037037,37.24206790123456,Low,5.172620370370369,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 12:45:00,BLDG_A,2,A202,Conference,25,8,8.052198412698415,32.20879365079366,Low,0.0521984126984147,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 13:00:00,BLDG_B,1,B101,Office,8,4,5.03521916971917,62.94023962148962,Normal,1.03521916971917,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-05 13:15:00,BLDG_B,1,B102,Office,15,5,6.607202380952379,44.04801587301586,Normal,1.607202380952379,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-05 13:30:00,BLDG_B,1,B103,Meeting Room,18,5,6.317361111111111,35.09645061728395,Low,1.3173611111111103,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-05 13:45:00,BLDG_B,2,B201,Training Room,35,12,13.035198412698412,37.243424036281176,Low,1.0351984126984115,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-05 14:00:00,BLDG_B,2,B202,Conference,25,6,8.135801587301586,32.54320634920634,Low,2.135801587301586,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-05 14:15:00,BLDG_C,1,C101,Office,10,6,4.840527777777781,48.405277777777805,Normal,1.1594722222222194,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-05 14:30:00,BLDG_C,1,C102,Office,14,7,6.800829156223892,48.577351115884944,Normal,0.1991708437761081,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-05 14:45:00,BLDG_C,1,C103,Meeting Room,20,8,9.154929894179894,45.77464947089947,Normal,1.1549298941798938,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-05 15:00:00,BLDG_C,2,C201,Lab,30,15,14.25622751322752,47.52075837742507,Normal,0.74377248677248,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-05 15:15:00,BLDG_C,2,C202,Training Room,40,16,14.573485449735454,36.43371362433864,Low,1.426514550264546,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-05 15:30:00,BLDG_A,1,A101,Office,10,7,7.013223544973544,70.13223544973543,High Usage,0.0132235449735436,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-05 15:45:00,BLDG_A,1,A102,Office,12,7,6.986706349206352,58.222552910052926,Normal,0.0132936507936483,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-05 16:00:00,BLDG_A,1,A103,Meeting Room,20,13,10.310341269841272,51.55170634920636,Normal,2.689658730158728,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-05 16:15:00,BLDG_A,2,A201,Lab,30,12,14.227633597883596,47.425445326278656,Normal,2.227633597883596,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-05 16:30:00,BLDG_A,2,A202,Conference,25,7,8.13865476190476,32.55461904761904,Low,1.1386547619047604,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 16:45:00,BLDG_B,1,B101,Office,8,6,5.667880545380548,70.84850681725685,High Usage,0.3321194546194519,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-05 17:00:00,BLDG_B,1,B102,Office,15,1,2.73025,18.201666666666664,Low,1.7302499999999998,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-05 17:15:00,BLDG_B,1,B103,Meeting Room,18,21,10.192165343915343,56.62314079952968,Normal,10.807834656084657,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-05 17:30:00,BLDG_B,2,B201,Training Room,35,3,6.123843915343915,17.496696900982613,Low,3.1238439153439157,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-05 17:45:00,BLDG_B,2,B202,Conference,25,9,7.091489417989421,28.365957671957688,Low,1.908510582010579,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-05 18:00:00,BLDG_C,1,C101,Office,10,0,0.5150634920634923,5.150634920634924,Low,0.5150634920634923,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-05 18:15:00,BLDG_C,1,C102,Office,14,4,2.456805555555554,17.5486111111111,Low,1.543194444444446,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-05 18:30:00,BLDG_C,1,C103,Meeting Room,20,0,0.4499307528159519,2.24965376407976,Low,0.4499307528159519,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-05 18:45:00,BLDG_C,2,C201,Lab,30,1,1.0010473856209148,3.336824618736382,Low,0.0010473856209147,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-05 19:00:00,BLDG_C,2,C202,Training Room,40,3,1.4554616402116405,3.638654100529101,Low,1.5445383597883595,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-05 19:15:00,BLDG_A,1,A101,Office,10,0,0.5424939874939875,5.4249398749398745,Low,0.5424939874939875,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 19:30:00,BLDG_A,1,A102,Office,12,1,0.9568708885522612,7.9739240712688435,Low,0.0431291114477387,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 19:45:00,BLDG_A,1,A103,Meeting Room,20,3,2.202197936322936,11.01098968161468,Low,0.797802063677064,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 20:00:00,BLDG_A,2,A201,Lab,30,4,2.0486198830409355,6.828732943469785,Low,1.9513801169590643,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 20:15:00,BLDG_A,2,A202,Conference,25,1,2.237592592592593,8.950370370370374,Low,1.2375925925925937,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 20:30:00,BLDG_B,1,B101,Office,8,2,1.3921666666666668,17.402083333333334,Low,0.6078333333333332,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-05 20:45:00,BLDG_B,1,B102,Office,15,0,0.6383161375661376,4.255440917107585,Low,0.6383161375661376,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-05 21:00:00,BLDG_B,1,B103,Meeting Room,18,0,0.5026999259032368,2.7927773661290933,Low,0.5026999259032368,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-05 21:15:00,BLDG_B,2,B201,Training Room,35,1,0.9689680205415498,2.768480058690143,Low,0.0310319794584501,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-05 21:30:00,BLDG_B,2,B202,Conference,25,4,0.8363045440398383,3.345218176159354,Low,3.1636954559601618,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-05 21:45:00,BLDG_C,1,C101,Office,10,0,0.6427324929971989,6.42732492997199,Low,0.6427324929971989,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-05 22:00:00,BLDG_C,1,C102,Office,14,0,1.0479184303350968,7.485131645250691,Low,1.0479184303350968,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-05 22:15:00,BLDG_C,1,C103,Meeting Room,20,3,2.429507054673721,12.147535273368607,Low,0.5704929453262788,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-05 22:30:00,BLDG_C,2,C201,Lab,30,0,0.2280989729225023,0.7603299097416744,Low,0.2280989729225023,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-05 22:45:00,BLDG_C,2,C202,Training Room,40,3,0.9672037037037036,2.4180092592592586,Low,2.0327962962962967,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-05 23:00:00,BLDG_A,1,A101,Office,10,0,1.05133891435362,10.5133891435362,Low,1.05133891435362,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 23:15:00,BLDG_A,1,A102,Office,12,1,1.3168331517792309,10.973609598160255,Low,0.3168331517792306,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 23:30:00,BLDG_A,1,A103,Meeting Room,20,1,1.3724761904761902,6.86238095238095,Low,0.3724761904761902,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-05 23:45:00,BLDG_A,2,A201,Lab,30,0,1.8645000000000005,6.215000000000002,Low,1.8645000000000005,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 00:00:00,BLDG_A,2,A202,Conference,25,0,0.4964615440115441,1.9858461760461763,Low,0.4964615440115441,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 00:15:00,BLDG_B,1,B101,Office,8,0,0.4889960317460318,6.112450396825397,Low,0.4889960317460318,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 00:30:00,BLDG_B,1,B102,Office,15,0,1.4512605820105813,9.67507054673721,Low,1.4512605820105813,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 00:45:00,BLDG_B,1,B103,Meeting Room,18,0,1.4427447089947092,8.01524838330394,Low,1.4427447089947092,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 01:00:00,BLDG_B,2,B201,Training Room,35,0,1.2763928571428569,3.646836734693877,Low,1.2763928571428569,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 01:15:00,BLDG_B,2,B202,Conference,25,0,0.7023412698412698,2.809365079365079,Low,0.7023412698412698,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 01:30:00,BLDG_C,1,C101,Office,10,0,0.767329365079365,7.67329365079365,Low,0.767329365079365,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 01:45:00,BLDG_C,1,C102,Office,14,3,2.086818783068783,14.905848450491307,Low,0.9131812169312168,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 02:00:00,BLDG_C,1,C103,Meeting Room,20,2,1.044569184493097,5.222845922465487,Low,0.9554308155069028,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 02:15:00,BLDG_C,2,C201,Lab,30,1,1.736109788359788,5.78703262786596,Low,0.736109788359788,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 02:30:00,BLDG_C,2,C202,Training Room,40,0,0.5909163059163056,1.477290764790764,Low,0.5909163059163056,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 02:45:00,BLDG_A,1,A101,Office,10,1,1.061683201058201,10.616832010582009,Low,0.0616832010582009,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 03:00:00,BLDG_A,1,A102,Office,12,1,0.7971942039442039,6.643285032868366,Low,0.202805796055796,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 03:15:00,BLDG_A,1,A103,Meeting Room,20,0,0.621751270854212,3.10875635427106,Low,0.621751270854212,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 03:30:00,BLDG_A,2,A201,Lab,30,7,1.135384920634921,3.784616402116403,Low,5.864615079365079,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 03:45:00,BLDG_A,2,A202,Conference,25,0,1.1188452380952376,4.475380952380951,Low,1.1188452380952376,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 04:00:00,BLDG_B,1,B101,Office,8,1,1.0343690476190477,12.929613095238096,Low,0.0343690476190476,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 04:15:00,BLDG_B,1,B102,Office,15,2,1.502021352303611,10.013475682024072,Low,0.497978647696389,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 04:30:00,BLDG_B,1,B103,Meeting Room,18,0,0.4271465270317262,2.373036261287368,Low,0.4271465270317262,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 04:45:00,BLDG_B,2,B201,Training Room,35,0,0.9407592592592596,2.687883597883599,Low,0.9407592592592596,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 05:00:00,BLDG_B,2,B202,Conference,25,1,1.5943483645983636,6.377393458393454,Low,0.5943483645983636,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 05:15:00,BLDG_C,1,C101,Office,10,0,0.3850210683580249,3.850210683580249,Low,0.3850210683580249,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 05:30:00,BLDG_C,1,C102,Office,14,0,1.8113689273689275,12.938349481206629,Low,1.8113689273689275,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 05:45:00,BLDG_C,1,C103,Meeting Room,20,4,2.8031302910052904,14.01565145502645,Low,1.1968697089947096,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 06:00:00,BLDG_C,2,C201,Lab,30,0,1.9625197210197225,6.541732403399074,Low,1.9625197210197225,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 06:15:00,BLDG_C,2,C202,Training Room,40,0,0.5382780890133833,1.3456952225334582,Low,0.5382780890133833,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 06:30:00,BLDG_A,1,A101,Office,10,2,1.3749391534391533,13.749391534391531,Low,0.6250608465608467,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 06:45:00,BLDG_A,1,A102,Office,12,3,2.01455920227116,16.787993352259665,Low,0.9854407977288404,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 07:00:00,BLDG_A,1,A103,Meeting Room,20,0,0.5665037023348733,2.8325185116743667,Low,0.5665037023348733,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 07:15:00,BLDG_A,2,A201,Lab,30,4,3.525416666666666,11.751388888888888,Low,0.4745833333333333,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 07:30:00,BLDG_A,2,A202,Conference,25,0,0.4362325142178083,1.7449300568712331,Low,0.4362325142178083,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 07:45:00,BLDG_B,1,B101,Office,8,2,1.2990198412698422,16.237748015873027,Low,0.7009801587301578,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 08:00:00,BLDG_B,1,B102,Office,15,4,4.468801587301586,29.792010582010576,Low,0.468801587301586,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 08:15:00,BLDG_B,1,B103,Meeting Room,18,5,5.902660052910053,32.792555849500296,Low,0.9026600529100532,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 08:30:00,BLDG_B,2,B201,Training Room,35,2,5.972071428571426,17.06306122448979,Low,3.972071428571426,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 08:45:00,BLDG_B,2,B202,Conference,25,6,6.23324603174603,24.93298412698412,Low,0.2332460317460301,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 09:00:00,BLDG_C,1,C101,Office,10,6,6.012190476190475,60.12190476190475,Normal,0.0121904761904749,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-06 09:15:00,BLDG_C,1,C102,Office,14,9,6.812829365079365,48.66306689342403,Normal,2.1871706349206352,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-06 09:30:00,BLDG_C,1,C103,Meeting Room,20,12,11.27364682539682,56.368234126984106,Normal,0.7263531746031795,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-06 09:45:00,BLDG_C,2,C201,Lab,30,15,14.37613227513228,47.9204409171076,Normal,0.6238677248677202,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-06 10:00:00,BLDG_C,2,C202,Training Room,40,16,18.43042460317461,46.07606150793653,Normal,2.430424603174611,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-06 10:15:00,BLDG_A,1,A101,Office,10,5,5.277718253968253,52.777182539682535,Normal,0.2777182539682528,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-06 10:30:00,BLDG_A,1,A102,Office,12,6,6.293592592592592,52.446604938271605,Normal,0.2935925925925922,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-06 10:45:00,BLDG_A,1,A103,Meeting Room,20,13,10.976817460317456,54.88408730158728,Normal,2.023182539682544,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-06 11:00:00,BLDG_A,2,A201,Lab,30,22,18.18844576719577,60.628152557319225,Normal,3.8115542328042338,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-06 11:15:00,BLDG_A,2,A202,Conference,25,26,17.235599206349214,68.94239682539686,Normal,8.764400793650786,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-06 11:30:00,BLDG_B,1,B101,Office,8,3,5.147623015873013,64.34528769841266,Normal,2.1476230158730134,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-06 11:45:00,BLDG_B,1,B102,Office,15,9,9.362660052910057,62.417733686067045,Normal,0.3626600529100567,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-06 12:00:00,BLDG_B,1,B103,Meeting Room,18,5,6.226277777777777,34.590432098765426,Low,1.226277777777777,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 12:15:00,BLDG_B,2,B201,Training Room,35,12,13.158673280423278,37.59620937263794,Low,1.1586732804232778,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 12:30:00,BLDG_B,2,B202,Conference,25,7,7.283189153439154,29.132756613756616,Low,0.2831891534391539,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 12:45:00,BLDG_C,1,C101,Office,10,9,8.613473544973543,86.13473544973542,High Usage,0.3865264550264573,High Usage Monitoring,MEDIUM,HIGH USAGE WARNING,Monitor occupancy and prepare alternate workspace.,3
+2026-01-06 13:00:00,BLDG_C,1,C102,Office,14,4,5.115091269841269,36.53636621315192,Low,1.115091269841269,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 13:15:00,BLDG_C,1,C103,Meeting Room,20,8,8.858735449735454,44.29367724867726,Normal,0.8587354497354536,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-06 13:30:00,BLDG_C,2,C201,Lab,30,29,19.57660449735449,65.25534832451497,Normal,9.423395502645509,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-06 13:45:00,BLDG_C,2,C202,Training Room,40,7,10.577484126984128,26.44371031746032,Low,3.577484126984128,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 14:00:00,BLDG_A,1,A101,Office,10,5,5.885150793650796,58.85150793650797,Normal,0.8851507936507961,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-06 14:15:00,BLDG_A,1,A102,Office,12,7,6.86665455304929,57.22212127541076,Normal,0.1333454469507096,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-06 14:30:00,BLDG_A,1,A103,Meeting Room,20,6,7.921673280423279,39.60836640211639,Low,1.9216732804232783,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 14:45:00,BLDG_A,2,A201,Lab,30,10,11.858470899470898,39.52823633156966,Low,1.8584708994708985,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 15:00:00,BLDG_A,2,A202,Conference,25,11,10.414571428571437,41.65828571428575,Normal,0.5854285714285634,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-06 15:15:00,BLDG_B,1,B101,Office,8,3,3.934912337662338,49.18640422077922,Normal,0.9349123376623378,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-06 15:30:00,BLDG_B,1,B102,Office,15,9,8.624133597883601,57.49422398589067,Normal,0.3758664021163991,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-06 15:45:00,BLDG_B,1,B103,Meeting Room,18,13,11.209777777777784,62.27654320987656,Normal,1.7902222222222175,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-06 16:00:00,BLDG_B,2,B201,Training Room,35,11,13.222310846560848,37.778030990173846,Low,2.2223108465608465,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 16:15:00,BLDG_B,2,B202,Conference,25,8,12.77106746031746,51.08426984126984,Normal,4.771067460317461,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-06 16:30:00,BLDG_C,1,C101,Office,10,5,5.965380952380949,59.653809523809485,Normal,0.9653809523809488,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-06 16:45:00,BLDG_C,1,C102,Office,14,6,6.170807585202324,44.07719703715946,Normal,0.1708075852023238,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-06 17:00:00,BLDG_C,1,C103,Meeting Room,20,5,4.324388888888887,21.621944444444438,Low,0.6756111111111132,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 17:15:00,BLDG_C,2,C201,Lab,30,3,5.284674603174604,17.615582010582013,Low,2.2846746031746035,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 17:30:00,BLDG_C,2,C202,Training Room,40,13,10.546698412698406,26.36674603174601,Low,2.4533015873015938,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 17:45:00,BLDG_A,1,A101,Office,10,2,2.4265515873015877,24.26551587301587,Low,0.4265515873015872,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 18:00:00,BLDG_A,1,A102,Office,12,1,1.0634902597402591,8.862418831168826,Low,0.0634902597402591,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 18:15:00,BLDG_A,1,A103,Meeting Room,20,0,0.8552087547650066,4.276043773825033,Low,0.8552087547650066,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 18:30:00,BLDG_A,2,A201,Lab,30,4,3.0252605820105822,10.084201940035276,Low,0.9747394179894178,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 18:45:00,BLDG_A,2,A202,Conference,25,0,1.9715952380952384,7.886380952380953,Low,1.9715952380952384,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 19:00:00,BLDG_B,1,B101,Office,8,1,0.892420634920635,11.155257936507937,Low,0.107579365079365,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 19:15:00,BLDG_B,1,B102,Office,15,0,0.5383142533936652,3.5887616892911014,Low,0.5383142533936652,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 19:30:00,BLDG_B,1,B103,Meeting Room,18,1,0.870874377528789,4.83819098627105,Low,0.1291256224712109,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 19:45:00,BLDG_B,2,B201,Training Room,35,0,0.5422577030812324,1.5493077230892354,Low,0.5422577030812324,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 20:00:00,BLDG_B,2,B202,Conference,25,1,0.9919253302428828,3.967701320971531,Low,0.0080746697571172,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 20:15:00,BLDG_C,1,C101,Office,10,1,0.9884866101029782,9.884866101029782,Low,0.0115133898970217,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 20:30:00,BLDG_C,1,C102,Office,14,3,2.4065568783068776,17.18969198790627,Low,0.5934431216931224,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 20:45:00,BLDG_C,1,C103,Meeting Room,20,3,1.7640724275724275,8.820362137862139,Low,1.2359275724275725,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 21:00:00,BLDG_C,2,C201,Lab,30,0,0.870811157796452,2.902703859321507,Low,0.870811157796452,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 21:15:00,BLDG_C,2,C202,Training Room,40,2,1.5586693121693116,3.896673280423279,Low,0.4413306878306884,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-06 21:30:00,BLDG_A,1,A101,Office,10,0,0.5686406717276283,5.686406717276284,Low,0.5686406717276283,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 21:45:00,BLDG_A,1,A102,Office,12,0,0.4897212047212047,4.081010039343372,Low,0.4897212047212047,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 22:00:00,BLDG_A,1,A103,Meeting Room,20,3,2.3112301587301576,11.556150793650788,Low,0.6887698412698424,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 22:15:00,BLDG_A,2,A201,Lab,30,0,0.8090291005291005,2.696763668430335,Low,0.8090291005291005,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 22:30:00,BLDG_A,2,A202,Conference,25,0,0.8268269270671234,3.3073077082684934,Low,0.8268269270671234,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-06 22:45:00,BLDG_B,1,B101,Office,8,1,1.027357843137255,12.841973039215688,Low,0.0273578431372549,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 23:00:00,BLDG_B,1,B102,Office,15,2,1.2721255411255403,8.480836940836937,Low,0.7278744588744595,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 23:15:00,BLDG_B,1,B103,Meeting Room,18,1,1.2624255651755651,7.0134753620864725,Low,0.2624255651755651,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 23:30:00,BLDG_B,2,B201,Training Room,35,0,1.4292757936507934,4.083645124716552,Low,1.4292757936507934,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-06 23:45:00,BLDG_B,2,B202,Conference,25,0,0.94955057578587,3.79820230314348,Low,0.94955057578587,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 00:00:00,BLDG_C,1,C101,Office,10,1,0.6993107475313359,6.99310747531336,Low,0.300689252468664,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 00:15:00,BLDG_C,1,C102,Office,14,2,1.4834189584924882,10.595849703517771,Low,0.5165810415075118,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 00:30:00,BLDG_C,1,C103,Meeting Room,20,0,0.487123287726229,2.435616438631145,Low,0.487123287726229,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 00:45:00,BLDG_C,2,C201,Lab,30,0,1.2121865079365086,4.040621693121695,Low,1.2121865079365086,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 01:00:00,BLDG_C,2,C202,Training Room,40,0,1.2417050264550262,3.1042625661375656,Low,1.2417050264550262,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 01:15:00,BLDG_A,1,A101,Office,10,2,1.407493867243867,14.07493867243867,Low,0.592506132756133,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 01:30:00,BLDG_A,1,A102,Office,12,1,1.0046468253968253,8.372056878306877,Low,0.0046468253968252,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 01:45:00,BLDG_A,1,A103,Meeting Room,20,0,0.9510411856661858,4.755205928330929,Low,0.9510411856661858,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 02:00:00,BLDG_A,2,A201,Lab,30,7,1.9368835978835983,6.456278659611995,Low,5.0631164021164015,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 02:15:00,BLDG_A,2,A202,Conference,25,1,1.515603535353536,6.062414141414144,Low,0.515603535353536,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 02:30:00,BLDG_B,1,B101,Office,8,1,1.0912451899951905,13.640564874939882,Low,0.0912451899951904,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 02:45:00,BLDG_B,1,B102,Office,15,0,0.4192603698150924,2.795069132100616,Low,0.4192603698150924,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 03:00:00,BLDG_B,1,B103,Meeting Room,18,2,1.8184391534391544,10.102439741328634,Low,0.1815608465608458,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 03:15:00,BLDG_B,2,B201,Training Room,35,3,2.646246031746032,7.560702947845805,Low,0.3537539682539679,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 03:30:00,BLDG_B,2,B202,Conference,25,0,1.2935652539891669,5.174261015956668,Low,1.2935652539891669,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 03:45:00,BLDG_C,1,C101,Office,10,1,0.9611421356421356,9.611421356421356,Low,0.0388578643578643,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 04:00:00,BLDG_C,1,C102,Office,14,1,1.234986238452905,8.821330274663607,Low,0.2349862384529049,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 04:15:00,BLDG_C,1,C103,Meeting Room,20,0,0.85423215906333,4.27116079531665,Low,0.85423215906333,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 04:30:00,BLDG_C,2,C201,Lab,30,0,1.2619267181620124,4.206422393873375,Low,1.2619267181620124,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 04:45:00,BLDG_C,2,C202,Training Room,40,0,1.0405886243386242,2.6014715608465604,Low,1.0405886243386242,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 05:00:00,BLDG_A,1,A101,Office,10,0,0.2620252174958057,2.6202521749580576,Low,0.2620252174958057,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 05:15:00,BLDG_A,1,A102,Office,12,1,0.7839508217619898,6.532923514683249,Low,0.2160491782380101,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 05:30:00,BLDG_A,1,A103,Meeting Room,20,3,3.0951370851370865,15.475685425685432,Low,0.0951370851370865,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 05:45:00,BLDG_A,2,A201,Lab,30,6,3.683709956709959,12.279033189033196,Low,2.3162900432900413,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 06:00:00,BLDG_A,2,A202,Conference,25,0,1.1200910987139368,4.480364394855747,Low,1.1200910987139368,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 06:15:00,BLDG_B,1,B101,Office,8,0,0.2413032498902064,3.01629062362758,Low,0.2413032498902064,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 06:30:00,BLDG_B,1,B102,Office,15,1,1.1985807710807714,7.990538473871809,Low,0.1985807710807714,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 06:45:00,BLDG_B,1,B103,Meeting Room,18,4,2.2175492988811945,12.319718327117748,Low,1.7824507011188055,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 07:00:00,BLDG_B,2,B201,Training Room,35,1,1.7520476190476184,5.005850340136052,Low,0.7520476190476184,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 07:15:00,BLDG_B,2,B202,Conference,25,1,0.674103235653236,2.696412942612944,Low,0.3258967643467639,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 07:30:00,BLDG_C,1,C101,Office,10,0,0.433100529100529,4.331005291005289,Low,0.433100529100529,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 07:45:00,BLDG_C,1,C102,Office,14,1,1.0985707589026554,7.846933992161824,Low,0.0985707589026554,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 08:00:00,BLDG_C,1,C103,Meeting Room,20,5,5.388134920634922,26.940674603174607,Low,0.388134920634922,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 08:15:00,BLDG_C,2,C201,Lab,30,6,8.511958994708994,28.373196649029985,Low,2.511958994708994,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 08:30:00,BLDG_C,2,C202,Training Room,40,0,7.773619047619048,19.43404761904762,Low,7.773619047619048,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 08:45:00,BLDG_A,1,A101,Office,10,0,1.7820674603174609,17.82067460317461,Low,1.7820674603174609,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 09:00:00,BLDG_A,1,A102,Office,12,6,5.907776455026456,49.2314704585538,Normal,0.0922235449735442,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-07 09:15:00,BLDG_A,1,A103,Meeting Room,20,11,10.544726911976914,52.723634559884566,Normal,0.4552730880230857,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-07 09:30:00,BLDG_A,2,A201,Lab,30,17,14.345731481481486,47.81910493827162,Normal,2.654268518518513,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-07 09:45:00,BLDG_A,2,A202,Conference,25,10,11.83350396825397,47.33401587301588,Normal,1.8335039682539696,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-07 10:00:00,BLDG_B,1,B101,Office,8,4,4.942122655122656,61.7765331890332,Normal,0.942122655122656,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-07 10:15:00,BLDG_B,1,B102,Office,15,6,7.517354497354498,50.11569664902999,Normal,1.517354497354498,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-07 10:30:00,BLDG_B,1,B103,Meeting Room,18,8,8.914329365079366,49.52405202821871,Normal,0.9143293650793662,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-07 10:45:00,BLDG_B,2,B201,Training Room,35,14,16.38097222222222,46.80277777777777,Normal,2.380972222222219,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-07 11:00:00,BLDG_B,2,B202,Conference,25,9,10.15557611832612,40.62230447330448,Normal,1.1555761183261186,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-07 11:15:00,BLDG_C,1,C101,Office,10,10,7.808953703703702,78.08953703703703,High Usage,2.1910462962962978,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-07 11:30:00,BLDG_C,1,C102,Office,14,8,7.947632275132273,56.76880196523052,Normal,0.052367724867727,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-07 11:45:00,BLDG_C,1,C103,Meeting Room,20,10,9.814826118326115,49.074130591630585,Normal,0.185173881673883,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-07 12:00:00,BLDG_C,2,C201,Lab,30,3,13.018525132275132,43.395083774250445,Normal,10.018525132275132,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-07 12:15:00,BLDG_C,2,C202,Training Room,40,12,14.2250119047619,35.56252976190476,Low,2.225011904761901,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 12:30:00,BLDG_A,1,A101,Office,10,4,6.451887357282094,64.51887357282094,Normal,2.451887357282094,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-07 12:45:00,BLDG_A,1,A102,Office,12,12,8.788263227513225,73.23552689594354,High Usage,3.211736772486775,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-07 13:00:00,BLDG_A,1,A103,Meeting Room,20,2,6.556702380952383,32.78351190476192,Low,4.556702380952383,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 13:15:00,BLDG_A,2,A201,Lab,30,35,15.28272619047619,50.94242063492064,Normal,19.71727380952381,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-07 13:30:00,BLDG_A,2,A202,Conference,25,6,7.080810846560849,28.3232433862434,Low,1.0808108465608486,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 13:45:00,BLDG_B,1,B101,Office,8,2,4.290043650793649,53.62554563492061,Normal,2.290043650793649,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-07 14:00:00,BLDG_B,1,B102,Office,15,7,7.778320105820107,51.85546737213405,Normal,0.7783201058201072,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-07 14:15:00,BLDG_B,1,B103,Meeting Room,18,11,9.728457671957676,54.04698706643153,Normal,1.271542328042324,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-07 14:30:00,BLDG_B,2,B201,Training Room,35,15,12.681760582010575,36.23360166288737,Low,2.318239417989423,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 14:45:00,BLDG_B,2,B202,Conference,25,7,9.418964285714289,37.67585714285715,Low,2.418964285714287,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 15:00:00,BLDG_C,1,C101,Office,10,6,6.266547410192146,62.66547410192146,Normal,0.2665474101921461,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-07 15:15:00,BLDG_C,1,C102,Office,14,6,6.313028693528696,45.09306209663354,Normal,0.3130286935286959,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-07 15:30:00,BLDG_C,1,C103,Meeting Room,20,24,15.164396825396828,75.82198412698415,High Usage,8.835603174603172,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-07 15:45:00,BLDG_C,2,C201,Lab,30,14,13.743969576719577,45.813231922398586,Normal,0.2560304232804231,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-07 16:00:00,BLDG_C,2,C202,Training Room,40,43,27.01675264550264,67.54188161375659,Normal,15.983247354497362,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-07 16:15:00,BLDG_A,1,A101,Office,10,11,8.2275,82.27499999999999,High Usage,2.772500000000001,High Usage Monitoring,MEDIUM,HIGH USAGE WARNING,Monitor occupancy and prepare alternate workspace.,4
+2026-01-07 16:30:00,BLDG_A,1,A102,Office,12,7,7.296945767195767,60.80788139329806,Normal,0.2969457671957674,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-07 16:45:00,BLDG_A,1,A103,Meeting Room,20,11,11.683175925925934,58.415879629629664,Normal,0.6831759259259336,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-07 17:00:00,BLDG_A,2,A201,Lab,30,3,5.743314814814815,19.144382716049385,Low,2.7433148148148145,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 17:15:00,BLDG_A,2,A202,Conference,25,3,2.7662658730158727,11.06506349206349,Low,0.2337341269841273,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 17:30:00,BLDG_B,1,B101,Office,8,2,2.114956349206349,26.43695436507936,Low,0.1149563492063485,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 17:45:00,BLDG_B,1,B102,Office,15,2,3.6430396825396816,24.286931216931208,Low,1.6430396825396816,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 18:00:00,BLDG_B,1,B103,Meeting Room,18,0,0.8611395333062001,4.784108518367778,Low,0.8611395333062001,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 18:15:00,BLDG_B,2,B201,Training Room,35,1,1.2321333644568937,3.52038104130541,Low,0.2321333644568937,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 18:30:00,BLDG_B,2,B202,Conference,25,0,0.5652651821862349,2.26106072874494,Low,0.5652651821862349,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 18:45:00,BLDG_C,1,C101,Office,10,0,0.3023899857707954,3.023899857707954,Low,0.3023899857707954,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 19:00:00,BLDG_C,1,C102,Office,14,0,0.2913277008016138,2.0809121485829563,Low,0.2913277008016138,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 19:15:00,BLDG_C,1,C103,Meeting Room,20,4,0.4185298229548228,2.092649114774114,Low,3.581470177045177,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 19:30:00,BLDG_C,2,C201,Lab,30,1,1.3398201058201056,4.466067019400352,Low,0.3398201058201056,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 19:45:00,BLDG_C,2,C202,Training Room,40,2,1.895956349206349,4.739890873015872,Low,0.104043650793651,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 20:00:00,BLDG_A,1,A101,Office,10,1,0.8448349537882788,8.448349537882788,Low,0.1551650462117212,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 20:15:00,BLDG_A,1,A102,Office,12,0,0.41421302047389,3.45177517061575,Low,0.41421302047389,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 20:30:00,BLDG_A,1,A103,Meeting Room,20,1,0.8886309902093008,4.443154951046504,Low,0.1113690097906991,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 20:45:00,BLDG_A,2,A201,Lab,30,2,2.34671164021164,7.8223721340388,Low,0.3467116402116401,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 21:00:00,BLDG_A,2,A202,Conference,25,2,2.4430873015873016,9.772349206349206,Low,0.4430873015873016,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-07 21:15:00,BLDG_B,1,B101,Office,8,0,0.245175693925694,3.064696174071175,Low,0.245175693925694,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 21:30:00,BLDG_B,1,B102,Office,15,2,1.6382028218694875,10.921352145796586,Low,0.3617971781305122,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 21:45:00,BLDG_B,1,B103,Meeting Room,18,0,0.94356093579623,5.242005198867945,Low,0.94356093579623,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 22:00:00,BLDG_B,2,B201,Training Room,35,0,0.4764760143823612,1.361360041092461,Low,0.4764760143823612,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 22:15:00,BLDG_B,2,B202,Conference,25,0,0.8321776895943565,3.3287107583774262,Low,0.8321776895943565,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-07 22:30:00,BLDG_C,1,C101,Office,10,0,0.3090009167078132,3.090009167078133,Low,0.3090009167078132,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 22:45:00,BLDG_C,1,C102,Office,14,1,0.9816687026255994,7.011919304468567,Low,0.0183312973744006,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 23:00:00,BLDG_C,1,C103,Meeting Room,20,0,1.1738140320101105,5.869070160050552,Low,1.1738140320101105,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 23:15:00,BLDG_C,2,C201,Lab,30,5,3.459103174603176,11.530343915343918,Low,1.5408968253968245,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 23:30:00,BLDG_C,2,C202,Training Room,40,0,1.1809523809523812,2.952380952380953,Low,1.1809523809523812,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-07 23:45:00,BLDG_A,1,A101,Office,10,0,0.2907047221616188,2.907047221616188,Low,0.2907047221616188,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 00:00:00,BLDG_A,1,A102,Office,12,2,0.397234126984127,3.310284391534392,Low,1.602765873015873,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 00:15:00,BLDG_A,1,A103,Meeting Room,20,2,1.503901515151515,7.519507575757575,Low,0.496098484848485,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 00:30:00,BLDG_A,2,A201,Lab,30,1,1.610960317460317,5.369867724867724,Low,0.6109603174603171,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 00:45:00,BLDG_A,2,A202,Conference,25,0,2.226085137085137,8.904340548340548,Low,2.226085137085137,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 01:00:00,BLDG_B,1,B101,Office,8,0,0.6044685399685399,7.555856749606749,Low,0.6044685399685399,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 01:15:00,BLDG_B,1,B102,Office,15,0,0.960954314857256,6.406362099048373,Low,0.960954314857256,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 01:30:00,BLDG_B,1,B103,Meeting Room,18,0,0.2820330687830688,1.5668503821281603,Low,0.2820330687830688,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 01:45:00,BLDG_B,2,B201,Training Room,35,6,3.936222222222223,11.246349206349208,Low,2.0637777777777773,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 02:00:00,BLDG_B,2,B202,Conference,25,0,0.4675960380199511,1.8703841520798048,Low,0.4675960380199511,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 02:15:00,BLDG_C,1,C101,Office,10,1,0.3912390154129284,3.9123901541292847,Low,0.6087609845870716,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 02:30:00,BLDG_C,1,C102,Office,14,3,1.9428346833615373,13.87739059543955,Low,1.0571653166384627,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 02:45:00,BLDG_C,1,C103,Meeting Room,20,0,0.7701851292119835,3.8509256460599177,Low,0.7701851292119835,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 03:00:00,BLDG_C,2,C201,Lab,30,2,1.8972420634920624,6.324140211640208,Low,0.1027579365079374,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 03:15:00,BLDG_C,2,C202,Training Room,40,2,1.634151912901912,4.08537978225478,Low,0.365848087098088,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 03:30:00,BLDG_A,1,A101,Office,10,0,0.3182559523809524,3.182559523809524,Low,0.3182559523809524,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 03:45:00,BLDG_A,1,A102,Office,12,1,0.986234093520858,8.218617446007151,Low,0.0137659064791418,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 04:00:00,BLDG_A,1,A103,Meeting Room,20,3,1.9672276267598847,9.836138133799423,Low,1.0327723732401153,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 04:15:00,BLDG_A,2,A201,Lab,30,2,2.612380952380952,8.707936507936507,Low,0.6123809523809522,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 04:30:00,BLDG_A,2,A202,Conference,25,0,1.0215086580086576,4.086034632034631,Low,1.0215086580086576,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 04:45:00,BLDG_B,1,B101,Office,8,1,0.2621150793650793,3.2764384920634915,Low,0.7378849206349207,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 05:00:00,BLDG_B,1,B102,Office,15,3,1.6018256613756607,10.678837742504404,Low,1.3981743386243393,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 05:15:00,BLDG_B,1,B103,Meeting Room,18,1,0.6905199855699854,3.8362221420554743,Low,0.3094800144300146,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 05:30:00,BLDG_B,2,B201,Training Room,35,2,1.743964285714286,4.982755102040818,Low,0.2560357142857139,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 05:45:00,BLDG_B,2,B202,Conference,25,1,1.482066137566138,5.928264550264552,Low,0.4820661375661379,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 06:00:00,BLDG_C,1,C101,Office,10,0,0.5974762533218416,5.974762533218416,Low,0.5974762533218416,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 06:15:00,BLDG_C,1,C102,Office,14,0,1.0714044160979372,7.652888686413838,Low,1.0714044160979372,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 06:30:00,BLDG_C,1,C103,Meeting Room,20,2,1.793554083461341,8.967770417306706,Low,0.2064459165386589,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 06:45:00,BLDG_C,2,C201,Lab,30,4,3.504264550264549,11.680881834215166,Low,0.4957354497354505,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 07:00:00,BLDG_C,2,C202,Training Room,40,3,2.655611111111111,6.639027777777777,Low,0.3443888888888891,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 07:15:00,BLDG_A,1,A101,Office,10,1,0.8668539377289375,8.668539377289374,Low,0.1331460622710625,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 07:30:00,BLDG_A,1,A102,Office,12,1,0.971359129196086,8.094659409967383,Low,0.028640870803914,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 07:45:00,BLDG_A,1,A103,Meeting Room,20,0,0.6929198343216888,3.464599171608444,Low,0.6929198343216888,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 08:00:00,BLDG_A,2,A201,Lab,30,11,10.190342592592591,33.9678086419753,Low,0.8096574074074088,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 08:15:00,BLDG_A,2,A202,Conference,25,6,6.56954761904762,26.27819047619048,Low,0.5695476190476203,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 08:30:00,BLDG_B,1,B101,Office,8,3,2.663059523809524,33.288244047619045,Low,0.3369404761904762,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 08:45:00,BLDG_B,1,B102,Office,15,5,4.990136243386244,33.267574955908294,Low,0.0098637566137558,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 09:00:00,BLDG_B,1,B103,Meeting Room,18,9,10.990099206349212,61.05610670194008,Normal,1.990099206349212,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-08 09:15:00,BLDG_B,2,B201,Training Room,35,20,18.44092857142857,52.68836734693878,Normal,1.5590714285714284,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-08 09:30:00,BLDG_B,2,B202,Conference,25,9,11.21158465608466,44.84633862433864,Normal,2.2115846560846606,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-08 09:45:00,BLDG_C,1,C101,Office,10,7,6.851980399230398,68.51980399230399,Normal,0.1480196007696017,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-08 10:00:00,BLDG_C,1,C102,Office,14,9,6.157507529507528,43.98219663933949,Normal,2.842492470492472,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-08 10:15:00,BLDG_C,1,C103,Meeting Room,20,11,11.19606746031746,55.980337301587305,Normal,0.1960674603174599,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-08 10:30:00,BLDG_C,2,C201,Lab,30,15,13.580914021164018,45.26971340388005,Normal,1.419085978835982,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-08 10:45:00,BLDG_C,2,C202,Training Room,40,17,20.300783068783065,50.75195767195766,Normal,3.300783068783065,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-08 11:00:00,BLDG_A,1,A101,Office,10,7,6.5545806878306845,65.54580687830685,Normal,0.4454193121693155,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-08 11:15:00,BLDG_A,1,A102,Office,12,7,6.65179724369198,55.43164369743317,Normal,0.3482027563080203,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-08 11:30:00,BLDG_A,1,A103,Meeting Room,20,12,11.688559523809532,58.44279761904766,Normal,0.3114404761904676,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-08 11:45:00,BLDG_A,2,A201,Lab,30,14,14.477873015873014,48.25957671957672,Normal,0.4778730158730138,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-08 12:00:00,BLDG_A,2,A202,Conference,25,11,9.160315934065936,36.64126373626375,Low,1.839684065934064,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 12:15:00,BLDG_B,1,B101,Office,8,3,4.113277777777778,51.41597222222223,Normal,1.1132777777777785,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-08 12:30:00,BLDG_B,1,B102,Office,15,7,7.682535954785955,51.2169063652397,Normal,0.6825359547859549,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-08 12:45:00,BLDG_B,1,B103,Meeting Room,18,7,7.435427045177049,41.30792802876139,Normal,0.4354270451770494,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-08 13:00:00,BLDG_B,2,B201,Training Room,35,6,13.332678571428572,38.09336734693878,Low,7.332678571428572,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 13:15:00,BLDG_B,2,B202,Conference,25,8,9.922126984126985,39.68850793650793,Low,1.922126984126983,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 13:30:00,BLDG_C,1,C101,Office,10,5,6.11561111111111,61.1561111111111,Normal,1.11561111111111,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-08 13:45:00,BLDG_C,1,C102,Office,14,5,5.483014143264144,39.16438673760103,Low,0.4830141432641435,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 14:00:00,BLDG_C,1,C103,Meeting Room,20,7,9.77260846560847,48.863042328042354,Normal,2.772608465608471,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-08 14:15:00,BLDG_C,2,C201,Lab,30,14,13.482202380952378,44.9406746031746,Normal,0.5177976190476219,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-08 14:30:00,BLDG_C,2,C202,Training Room,40,21,17.094288359788354,42.73572089947088,Normal,3.9057116402116456,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-08 14:45:00,BLDG_A,1,A101,Office,10,7,6.820281746031746,68.20281746031746,Normal,0.1797182539682538,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-08 15:00:00,BLDG_A,1,A102,Office,12,7,7.1489841269841286,59.574867724867744,Normal,0.1489841269841285,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-08 15:15:00,BLDG_A,1,A103,Meeting Room,20,8,9.061937830687834,45.30968915343917,Normal,1.0619378306878335,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-08 15:30:00,BLDG_A,2,A201,Lab,30,13,13.77386243386243,45.91287477954143,Normal,0.7738624338624298,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-08 15:45:00,BLDG_A,2,A202,Conference,25,11,9.637383394383402,38.54953357753361,Low,1.3626166056165978,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 16:00:00,BLDG_B,1,B101,Office,8,7,6.611007936507932,82.63759920634915,High Usage,0.3889920634920676,High Usage Monitoring,MEDIUM,HIGH USAGE WARNING,Monitor occupancy and prepare alternate workspace.,5
+2026-01-08 16:15:00,BLDG_B,1,B102,Office,15,8,10.93764285714286,72.91761904761907,High Usage,2.93764285714286,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-08 16:30:00,BLDG_B,1,B103,Meeting Room,18,8,8.561673076923077,47.56485042735042,Normal,0.5616730769230767,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-08 16:45:00,BLDG_B,2,B201,Training Room,35,11,12.150328042328038,34.71522297808011,Low,1.150328042328038,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 17:00:00,BLDG_B,2,B202,Conference,25,5,4.307666666666669,17.230666666666675,Low,0.6923333333333312,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 17:15:00,BLDG_C,1,C101,Office,10,4,3.2461005291005285,32.461005291005286,Low,0.7538994708994715,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 17:30:00,BLDG_C,1,C102,Office,14,4,2.9059960317460303,20.757114512471645,Low,1.0940039682539695,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 17:45:00,BLDG_C,1,C103,Meeting Room,20,7,5.663238095238094,28.316190476190467,Low,1.3367619047619064,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 18:00:00,BLDG_C,2,C201,Lab,30,2,1.9353769841269843,6.451256613756614,Low,0.0646230158730156,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 18:15:00,BLDG_C,2,C202,Training Room,40,2,1.642650793650793,4.106626984126983,Low,0.3573492063492069,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 18:30:00,BLDG_A,1,A101,Office,10,0,0.2156507936507936,2.1565079365079365,Low,0.2156507936507936,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 18:45:00,BLDG_A,1,A102,Office,12,0,0.4084509296578262,3.4037577471485525,Low,0.4084509296578262,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 19:00:00,BLDG_A,1,A103,Meeting Room,20,0,0.9739645891690012,4.869822945845007,Low,0.9739645891690012,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 19:15:00,BLDG_A,2,A201,Lab,30,6,3.817839285714284,12.726130952380943,Low,2.182160714285716,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 19:30:00,BLDG_A,2,A202,Conference,25,0,0.6828284832451497,2.7313139329805987,Low,0.6828284832451497,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 19:45:00,BLDG_B,1,B101,Office,8,0,0.3122611832611832,3.903264790764791,Low,0.3122611832611832,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 20:00:00,BLDG_B,1,B102,Office,15,0,0.5253355687627926,3.5022371250852844,Low,0.5253355687627926,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 20:15:00,BLDG_B,1,B103,Meeting Room,18,1,1.3927218253968257,7.73734347442681,Low,0.3927218253968256,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 20:30:00,BLDG_B,2,B201,Training Room,35,0,0.710943907600254,2.031268307429297,Low,0.710943907600254,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 20:45:00,BLDG_B,2,B202,Conference,25,0,0.8063829618804044,3.225531847521617,Low,0.8063829618804044,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 21:00:00,BLDG_C,1,C101,Office,10,1,0.9316560846560846,9.316560846560847,Low,0.0683439153439153,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 21:15:00,BLDG_C,1,C102,Office,14,2,1.3052342712842715,9.323101937744797,Low,0.6947657287157285,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 21:30:00,BLDG_C,1,C103,Meeting Room,20,5,3.044184407096172,15.22092203548086,Low,1.955815592903828,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 21:45:00,BLDG_C,2,C201,Lab,30,0,1.0283386243386246,3.427795414462082,Low,1.0283386243386246,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 22:00:00,BLDG_C,2,C202,Training Room,40,0,0.7407692400192399,1.8519231000481,Low,0.7407692400192399,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-08 22:15:00,BLDG_A,1,A101,Office,10,0,0.195028083028083,1.9502808302808303,Low,0.195028083028083,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 22:30:00,BLDG_A,1,A102,Office,12,0,1.2048194833488954,10.040162361240796,Low,1.2048194833488954,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 22:45:00,BLDG_A,1,A103,Meeting Room,20,1,1.1305468409586057,5.652734204793028,Low,0.1305468409586054,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 23:00:00,BLDG_A,2,A201,Lab,30,0,1.6925793650793648,5.641931216931216,Low,1.6925793650793648,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 23:15:00,BLDG_A,2,A202,Conference,25,0,1.1832380952380952,4.732952380952381,Low,1.1832380952380952,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-08 23:30:00,BLDG_B,1,B101,Office,8,0,0.3070613912231558,3.838267390289448,Low,0.3070613912231558,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-08 23:45:00,BLDG_B,1,B102,Office,15,3,1.343109668109668,8.954064454064454,Low,1.656890331890332,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 00:00:00,BLDG_B,1,B103,Meeting Room,18,0,0.3246196587726,1.8034425487366668,Low,0.3246196587726,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 00:15:00,BLDG_B,2,B201,Training Room,35,0,0.5622879990379989,1.606537140108568,Low,0.5622879990379989,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 00:30:00,BLDG_B,2,B202,Conference,25,0,0.6883174603174602,2.753269841269841,Low,0.6883174603174602,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 00:45:00,BLDG_C,1,C101,Office,10,1,0.3926004005572971,3.926004005572972,Low,0.6073995994427028,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 01:00:00,BLDG_C,1,C102,Office,14,1,0.7956879839659252,5.683485599756609,Low,0.2043120160340747,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 01:15:00,BLDG_C,1,C103,Meeting Room,20,4,2.4778021284271285,12.38901064213564,Low,1.5221978715728717,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 01:30:00,BLDG_C,2,C201,Lab,30,6,3.690960317460317,12.303201058201058,Low,2.309039682539683,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 01:45:00,BLDG_C,2,C202,Training Room,40,1,1.8125925925925928,4.5314814814814826,Low,0.8125925925925932,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 02:00:00,BLDG_A,1,A101,Office,10,0,0.1861587301587301,1.8615873015873008,Low,0.1861587301587301,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 02:15:00,BLDG_A,1,A102,Office,12,2,0.7660769230769234,6.383974358974362,Low,1.233923076923077,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 02:30:00,BLDG_A,1,A103,Meeting Room,20,0,0.6391360488639902,3.1956802443199512,Low,0.6391360488639902,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 02:45:00,BLDG_A,2,A201,Lab,30,1,2.279096560846561,7.596988536155204,Low,1.2790965608465612,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 03:00:00,BLDG_A,2,A202,Conference,25,3,2.144556541606541,8.578226166426164,Low,0.8554434583934589,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 03:15:00,BLDG_B,1,B101,Office,8,0,0.3857566137566137,4.821957671957672,Low,0.3857566137566137,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 03:30:00,BLDG_B,1,B102,Office,15,0,0.3489210647740059,2.326140431826706,Low,0.3489210647740059,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 03:45:00,BLDG_B,1,B103,Meeting Room,18,2,1.6259430014430007,9.033016674683338,Low,0.3740569985569992,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 04:00:00,BLDG_B,2,B201,Training Room,35,0,0.6010393217893217,1.7172552051123475,Low,0.6010393217893217,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 04:15:00,BLDG_B,2,B202,Conference,25,1,1.1412145502645503,4.564858201058202,Low,0.1412145502645505,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 04:30:00,BLDG_C,1,C101,Office,10,1,0.2931512537382104,2.931512537382104,Low,0.7068487462617896,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 04:45:00,BLDG_C,1,C102,Office,14,0,1.097839947089947,7.841713907785334,Low,1.097839947089947,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 05:00:00,BLDG_C,1,C103,Meeting Room,20,1,1.6364398148148152,8.182199074074076,Low,0.6364398148148152,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 05:15:00,BLDG_C,2,C201,Lab,30,1,1.569165343915344,5.23055114638448,Low,0.5691653439153439,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 05:30:00,BLDG_C,2,C202,Training Room,40,2,1.841611111111112,4.604027777777779,Low,0.158388888888888,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 05:45:00,BLDG_A,1,A101,Office,10,0,0.245798740510697,2.457987405106971,Low,0.245798740510697,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 06:00:00,BLDG_A,1,A102,Office,12,0,0.2183506493506493,1.8195887445887449,Low,0.2183506493506493,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 06:15:00,BLDG_A,1,A103,Meeting Room,20,0,2.013171296296296,10.06585648148148,Low,2.013171296296296,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 06:30:00,BLDG_A,2,A201,Lab,30,3,2.2905276575276576,7.635092191758859,Low,0.7094723424723424,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 06:45:00,BLDG_A,2,A202,Conference,25,0,0.7385793650793651,2.95431746031746,Low,0.7385793650793651,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 07:00:00,BLDG_B,1,B101,Office,8,0,0.1659523809523809,2.074404761904762,Low,0.1659523809523809,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 07:15:00,BLDG_B,1,B102,Office,15,2,1.194508569443768,7.963390462958454,Low,0.805491430556232,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 07:30:00,BLDG_B,1,B103,Meeting Room,18,2,1.3019066293183934,7.232814607324407,Low,0.6980933706816066,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 07:45:00,BLDG_B,2,B201,Training Room,35,2,2.3027222222222203,6.579206349206344,Low,0.3027222222222203,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 08:00:00,BLDG_B,2,B202,Conference,25,3,5.642486772486774,22.569947089947096,Low,2.642486772486774,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 08:15:00,BLDG_C,1,C101,Office,10,3,2.802150793650794,28.021507936507938,Low,0.1978492063492058,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 08:30:00,BLDG_C,1,C102,Office,14,3,3.0220079365079355,21.585770975056683,Low,0.0220079365079355,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 08:45:00,BLDG_C,1,C103,Meeting Room,20,6,6.353255291005292,31.76627645502646,Low,0.3532552910052917,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 09:00:00,BLDG_C,2,C201,Lab,30,16,15.920822751322746,53.06940917107582,Normal,0.0791772486772544,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-09 09:15:00,BLDG_C,2,C202,Training Room,40,14,16.480825396825395,41.20206349206349,Normal,2.480825396825395,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-09 09:30:00,BLDG_A,1,A101,Office,10,5,5.435426841676843,54.354268416768434,Normal,0.4354268416768434,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-09 09:45:00,BLDG_A,1,A102,Office,12,8,7.025727513227512,58.547729276895936,Normal,0.974272486772488,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-09 10:00:00,BLDG_A,1,A103,Meeting Room,20,8,9.67864285714286,48.3932142857143,Normal,1.6786428571428598,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-09 10:15:00,BLDG_A,2,A201,Lab,30,16,16.94188095238096,56.47293650793653,Normal,0.9418809523809591,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-09 10:30:00,BLDG_A,2,A202,Conference,25,11,12.564108465608472,50.25643386243389,Normal,1.5641084656084718,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-09 10:45:00,BLDG_B,1,B101,Office,8,5,5.295629222629221,66.19536528286525,Normal,0.2956292226292207,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-09 11:00:00,BLDG_B,1,B102,Office,15,11,10.536015873015875,70.24010582010585,High Usage,0.4639841269841227,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-09 11:15:00,BLDG_B,1,B103,Meeting Room,18,11,12.607928571428566,70.04404761904759,High Usage,1.607928571428566,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-09 11:30:00,BLDG_B,2,B201,Training Room,35,16,15.494313492063496,44.26946712018142,Normal,0.5056865079365043,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-09 11:45:00,BLDG_B,2,B202,Conference,25,15,15.79434920634922,63.17739682539688,Normal,0.794349206349219,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-09 12:00:00,BLDG_C,1,C101,Office,10,4,4.342293650793651,43.422936507936505,Normal,0.3422936507936507,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-09 12:15:00,BLDG_C,1,C102,Office,14,4,4.796986365486364,34.2641883249026,Low,0.7969863654863643,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 12:30:00,BLDG_C,1,C103,Meeting Room,20,19,14.51395634920635,72.56978174603175,High Usage,4.4860436507936505,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-09 12:45:00,BLDG_C,2,C201,Lab,30,11,12.38756878306878,41.2918959435626,Normal,1.3875687830687795,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-09 13:00:00,BLDG_C,2,C202,Training Room,40,39,25.92456349206348,64.81140873015869,Normal,13.075436507936525,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-09 13:15:00,BLDG_A,1,A101,Office,10,5,5.562005082149819,55.62005082149819,Normal,0.5620050821498186,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-09 13:30:00,BLDG_A,1,A102,Office,12,5,6.250980158730162,52.09150132275134,Normal,1.2509801587301617,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-09 13:45:00,BLDG_A,1,A103,Meeting Room,20,9,9.122408730158726,45.61204365079363,Normal,0.1224087301587264,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-09 14:00:00,BLDG_A,2,A201,Lab,30,17,12.897473544973549,42.99157848324516,Normal,4.102526455026453,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-09 14:15:00,BLDG_A,2,A202,Conference,25,10,10.58874074074075,42.354962962963,Normal,0.5887407407407501,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-09 14:30:00,BLDG_B,1,B101,Office,8,4,4.706337301587298,58.829216269841226,Normal,0.7063373015872978,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-09 14:45:00,BLDG_B,1,B102,Office,15,9,8.323784391534389,55.4918959435626,Normal,0.6762156084656112,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-09 15:00:00,BLDG_B,1,B103,Meeting Room,18,6,7.946554029304031,44.1475223850224,Normal,1.946554029304031,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-09 15:15:00,BLDG_B,2,B201,Training Room,35,3,11.636880952380956,33.24823129251702,Low,8.636880952380956,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 15:30:00,BLDG_B,2,B202,Conference,25,11,11.378227513227522,45.51291005291009,Normal,0.3782275132275217,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-09 15:45:00,BLDG_C,1,C101,Office,10,6,5.873718253968256,58.73718253968255,Normal,0.1262817460317444,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-09 16:00:00,BLDG_C,1,C102,Office,14,7,7.125503759398495,50.89645542427497,Normal,0.1255037593984953,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-09 16:15:00,BLDG_C,1,C103,Meeting Room,20,9,9.120859788359793,45.60429894179895,Normal,0.120859788359791,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-09 16:30:00,BLDG_C,2,C201,Lab,30,14,12.792150793650796,42.64050264550265,Normal,1.207849206349204,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-09 16:45:00,BLDG_C,2,C202,Training Room,40,13,15.375421957671952,38.43855489417988,Low,2.375421957671952,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 17:00:00,BLDG_A,1,A101,Office,10,3,3.099350529100529,30.993505291005285,Low,0.0993505291005285,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 17:15:00,BLDG_A,1,A102,Office,12,1,1.8523571428571424,15.436309523809518,Low,0.8523571428571424,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 17:30:00,BLDG_A,1,A103,Meeting Room,20,0,2.4927579365079366,12.463789682539684,Low,2.4927579365079366,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 17:45:00,BLDG_A,2,A201,Lab,30,2,4.443396825396826,14.811322751322756,Low,2.4433968253968263,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 18:00:00,BLDG_A,2,A202,Conference,25,2,1.7494190065012645,6.997676026005058,Low,0.2505809934987355,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 18:15:00,BLDG_B,1,B101,Office,8,1,0.703749137336094,8.796864216701175,Low,0.296250862663906,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 18:30:00,BLDG_B,1,B102,Office,15,0,0.315031913088165,2.1002127539211,Low,0.315031913088165,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 18:45:00,BLDG_B,1,B103,Meeting Room,18,0,0.259825542316646,1.4434752350924778,Low,0.259825542316646,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 19:00:00,BLDG_B,2,B201,Training Room,35,0,0.7061823062558359,2.017663732159531,Low,0.7061823062558359,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 19:15:00,BLDG_B,2,B202,Conference,25,2,1.573251587301587,6.293006349206349,Low,0.4267484126984127,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 19:30:00,BLDG_C,1,C101,Office,10,0,0.1196603581603581,1.1966035816035816,Low,0.1196603581603581,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 19:45:00,BLDG_C,1,C102,Office,14,2,1.4155687146506113,10.111205104647224,Low,0.5844312853493887,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 20:00:00,BLDG_C,1,C103,Meeting Room,20,2,1.1064951499118172,5.532475749559087,Low,0.8935048500881828,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 20:15:00,BLDG_C,2,C201,Lab,30,7,4.009989417989419,13.366631393298064,Low,2.990010582010581,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 20:30:00,BLDG_C,2,C202,Training Room,40,3,2.431776455026456,6.079441137566138,Low,0.5682235449735447,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 20:45:00,BLDG_A,1,A101,Office,10,0,0.1511662421231386,1.5116624212313867,Low,0.1511662421231386,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 21:00:00,BLDG_A,1,A102,Office,12,2,0.9961111111111112,8.300925925925927,Low,1.0038888888888886,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 21:15:00,BLDG_A,1,A103,Meeting Room,20,0,0.7048403880070547,3.5242019400352738,Low,0.7048403880070547,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 21:30:00,BLDG_A,2,A201,Lab,30,0,1.158785714285714,3.862619047619046,Low,1.158785714285714,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 21:45:00,BLDG_A,2,A202,Conference,25,4,1.88850066137566,7.554002645502639,Low,2.1114993386243404,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-09 22:00:00,BLDG_B,1,B101,Office,8,1,0.8067578347578347,10.084472934472934,Low,0.1932421652421653,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 22:15:00,BLDG_B,1,B102,Office,15,2,2.037760582010581,13.585070546737208,Low,0.037760582010581,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 22:30:00,BLDG_B,1,B103,Meeting Room,18,0,0.5979246031746032,3.321803350970018,Low,0.5979246031746032,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 22:45:00,BLDG_B,2,B201,Training Room,35,0,1.0501481481481478,3.0004232804232798,Low,1.0501481481481478,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 23:00:00,BLDG_B,2,B202,Conference,25,3,2.2534877344877358,9.01395093795094,Low,0.7465122655122647,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-09 23:15:00,BLDG_C,1,C101,Office,10,2,0.6892936507936508,6.892936507936508,Low,1.310706349206349,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 23:30:00,BLDG_C,1,C102,Office,14,0,0.4769987604987604,3.4071340035625743,Low,0.4769987604987604,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-09 23:45:00,BLDG_C,1,C103,Meeting Room,20,0,0.6896500873853816,3.448250436926908,Low,0.6896500873853816,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 00:00:00,BLDG_C,2,C201,Lab,30,0,0.9796111111111112,3.265370370370371,Low,0.9796111111111112,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 00:15:00,BLDG_C,2,C202,Training Room,40,0,0.4746746031746031,1.186686507936508,Low,0.4746746031746031,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 00:30:00,BLDG_A,1,A101,Office,10,0,0.3446483516483516,3.4464835164835166,Low,0.3446483516483516,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 00:45:00,BLDG_A,1,A102,Office,12,0,0.6826772486772485,5.688977072310405,Low,0.6826772486772485,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 01:00:00,BLDG_A,1,A103,Meeting Room,20,0,0.9525238095238098,4.762619047619049,Low,0.9525238095238098,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 01:15:00,BLDG_A,2,A201,Lab,30,3,2.671526455026455,8.905088183421515,Low,0.3284735449735452,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 01:30:00,BLDG_A,2,A202,Conference,25,0,0.760923520923521,3.043694083694084,Low,0.760923520923521,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 01:45:00,BLDG_B,1,B101,Office,8,0,0.2203888888888887,2.7548611111111097,Low,0.2203888888888887,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 02:00:00,BLDG_B,1,B102,Office,15,2,1.8239047619047604,12.159365079365068,Low,0.1760952380952396,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 02:15:00,BLDG_B,1,B103,Meeting Room,18,3,1.9833327049856464,11.018515027698037,Low,1.0166672950143534,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 02:30:00,BLDG_B,2,B201,Training Room,35,0,1.1295780423280424,3.2273658352229786,Low,1.1295780423280424,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 02:45:00,BLDG_B,2,B202,Conference,25,0,0.620953703703704,2.483814814814816,Low,0.620953703703704,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 03:00:00,BLDG_C,1,C101,Office,10,0,0.2681190476190476,2.681190476190477,Low,0.2681190476190476,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 03:15:00,BLDG_C,1,C102,Office,14,0,0.6455427960927961,4.611019972091401,Low,0.6455427960927961,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 03:30:00,BLDG_C,1,C103,Meeting Room,20,2,0.6599608298137709,3.2998041490688546,Low,1.340039170186229,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 03:45:00,BLDG_C,2,C201,Lab,30,6,3.7507655122655112,12.502551707551705,Low,2.2492344877344888,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 04:00:00,BLDG_C,2,C202,Training Room,40,6,4.065376984126986,10.163442460317466,Low,1.9346230158730144,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 04:15:00,BLDG_A,1,A101,Office,10,0,0.4028083028083029,4.028083028083029,Low,0.4028083028083029,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 04:30:00,BLDG_A,1,A102,Office,12,1,0.8434259422995056,7.028549519162547,Low,0.1565740577004943,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 04:45:00,BLDG_A,1,A103,Meeting Room,20,1,0.8318680714710128,4.159340357355064,Low,0.1681319285289871,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 05:00:00,BLDG_A,2,A201,Lab,30,1,1.5942195767195773,5.314065255731924,Low,0.5942195767195773,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 05:15:00,BLDG_A,2,A202,Conference,25,8,4.394185185185184,17.576740740740735,Low,3.605814814814816,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 05:30:00,BLDG_B,1,B101,Office,8,0,0.1885835382954948,2.3572942286936853,Low,0.1885835382954948,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 05:45:00,BLDG_B,1,B102,Office,15,2,1.633772379037085,10.891815860247236,Low,0.3662276209629149,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 06:00:00,BLDG_B,1,B103,Meeting Room,18,3,2.289886904761905,12.72159391534392,Low,0.7101130952380945,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 06:15:00,BLDG_B,2,B201,Training Room,35,2,1.7501255411255416,5.00035868893012,Low,0.2498744588744583,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 06:30:00,BLDG_B,2,B202,Conference,25,0,0.7312324741344352,2.9249298965377406,Low,0.7312324741344352,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 06:45:00,BLDG_C,1,C101,Office,10,1,0.921759803921569,9.217598039215687,Low,0.078240196078431,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 07:00:00,BLDG_C,1,C102,Office,14,2,1.5412706500108462,11.009076071506044,Low,0.4587293499891538,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 07:15:00,BLDG_C,1,C103,Meeting Room,20,0,0.5729298941798942,2.864649470899471,Low,0.5729298941798942,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 07:30:00,BLDG_C,2,C201,Lab,30,3,2.801444444444443,9.338148148148145,Low,0.1985555555555569,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 07:45:00,BLDG_C,2,C202,Training Room,40,1,1.2614616402116403,3.153654100529101,Low,0.2614616402116405,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 08:00:00,BLDG_A,1,A101,Office,10,0,0.4416031746031748,4.416031746031748,Low,0.4416031746031748,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 08:15:00,BLDG_A,1,A102,Office,12,1,0.9412181148553695,7.843484290461414,Low,0.0587818851446303,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 08:30:00,BLDG_A,1,A103,Meeting Room,20,0,0.5112711640211641,2.5563558201058205,Low,0.5112711640211641,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 08:45:00,BLDG_A,2,A201,Lab,30,3,2.27681746031746,7.589391534391532,Low,0.7231825396825404,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 09:00:00,BLDG_A,2,A202,Conference,25,0,0.5446113756613756,2.1784455026455025,Low,0.5446113756613756,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 09:15:00,BLDG_B,1,B101,Office,8,1,0.7015374971244538,8.769218714055672,Low,0.2984625028755462,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 09:30:00,BLDG_B,1,B102,Office,15,1,0.5436987070005692,3.624658046670461,Low,0.4563012929994308,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 09:45:00,BLDG_B,1,B103,Meeting Room,18,1,1.3369049654049656,7.427249807805364,Low,0.3369049654049656,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 10:00:00,BLDG_B,2,B201,Training Room,35,3,2.57379761904762,7.353707482993199,Low,0.4262023809523803,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 10:15:00,BLDG_B,2,B202,Conference,25,3,1.705884433305486,6.8235377332219445,Low,1.294115566694514,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 10:30:00,BLDG_C,1,C101,Office,10,0,0.168595238095238,1.6859523809523806,Low,0.168595238095238,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 10:45:00,BLDG_C,1,C102,Office,14,0,0.5800027875884654,4.142877054203324,Low,0.5800027875884654,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 11:00:00,BLDG_C,1,C103,Meeting Room,20,2,1.1494414080110156,5.747207040055078,Low,0.8505585919889844,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 11:15:00,BLDG_C,2,C201,Lab,30,1,1.8627896825396828,6.209298941798943,Low,0.8627896825396828,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 11:30:00,BLDG_C,2,C202,Training Room,40,0,1.4750753968253971,3.6876884920634936,Low,1.4750753968253971,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 11:45:00,BLDG_A,1,A101,Office,10,0,0.2814876706945673,2.814876706945673,Low,0.2814876706945673,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 12:00:00,BLDG_A,1,A102,Office,12,3,2.1174040835707504,17.645034029756253,Low,0.8825959164292496,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 12:15:00,BLDG_A,1,A103,Meeting Room,20,0,0.5683808486357507,2.8419042431787536,Low,0.5683808486357507,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 12:30:00,BLDG_A,2,A201,Lab,30,0,0.7813473962684491,2.60449132089483,Low,0.7813473962684491,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 12:45:00,BLDG_A,2,A202,Conference,25,0,1.6871634199134198,6.748653679653679,Low,1.6871634199134198,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 13:00:00,BLDG_B,1,B101,Office,8,0,0.3729047619047618,4.661309523809523,Low,0.3729047619047618,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 13:15:00,BLDG_B,1,B102,Office,15,2,1.557671377641966,10.38447585094644,Low,0.442328622358034,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 13:30:00,BLDG_B,1,B103,Meeting Room,18,1,0.6851462777221513,3.8063682095675073,Low,0.3148537222778487,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 13:45:00,BLDG_B,2,B201,Training Room,35,3,2.6506917989417995,7.573405139833713,Low,0.3493082010582005,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 14:00:00,BLDG_B,2,B202,Conference,25,0,0.3543296296296294,1.4173185185185178,Low,0.3543296296296294,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 14:15:00,BLDG_C,1,C101,Office,10,2,1.1568381083086967,11.568381083086969,Low,0.8431618916913033,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 14:30:00,BLDG_C,1,C102,Office,14,0,0.3288715465980511,2.349082475700365,Low,0.3288715465980511,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 14:45:00,BLDG_C,1,C103,Meeting Room,20,1,1.1063711484593837,5.531855742296918,Low,0.1063711484593836,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 15:00:00,BLDG_C,2,C201,Lab,30,0,0.9506904761904764,3.1689682539682544,Low,0.9506904761904764,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 15:15:00,BLDG_C,2,C202,Training Room,40,0,0.7436783380018677,1.8591958450046693,Low,0.7436783380018677,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 15:30:00,BLDG_A,1,A101,Office,10,1,0.815067920404877,8.15067920404877,Low,0.184932079595123,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 15:45:00,BLDG_A,1,A102,Office,12,1,1.1653379651749218,9.711149709791016,Low,0.1653379651749218,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 16:00:00,BLDG_A,1,A103,Meeting Room,20,0,0.5277132935329014,2.638566467664507,Low,0.5277132935329014,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 16:15:00,BLDG_A,2,A201,Lab,30,0,1.5676269841269834,5.225423280423279,Low,1.5676269841269834,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 16:30:00,BLDG_A,2,A202,Conference,25,0,0.3407269426289034,1.3629077705156136,Low,0.3407269426289034,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 16:45:00,BLDG_B,1,B101,Office,8,1,0.8806876293995862,11.008595367494827,Low,0.1193123706004137,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 17:00:00,BLDG_B,1,B102,Office,15,4,2.6693657237823905,17.795771491882604,Low,1.3306342762176095,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 17:15:00,BLDG_B,1,B103,Meeting Room,18,0,0.5130096907449851,2.85005383747214,Low,0.5130096907449851,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 17:30:00,BLDG_B,2,B201,Training Room,35,0,1.018531746031746,2.9100907029478456,Low,1.018531746031746,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 17:45:00,BLDG_B,2,B202,Conference,25,0,0.5198505291005292,2.079402116402117,Low,0.5198505291005292,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 18:00:00,BLDG_C,1,C101,Office,10,3,1.7050451770451769,17.05045177045177,Low,1.2949548229548231,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 18:15:00,BLDG_C,1,C102,Office,14,0,0.6497723665223669,4.641231189445478,Low,0.6497723665223669,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 18:30:00,BLDG_C,1,C103,Meeting Room,20,1,1.650727954144621,8.253639770723105,Low,0.6507279541446209,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 18:45:00,BLDG_C,2,C201,Lab,30,0,0.9231785714285712,3.077261904761904,Low,0.9231785714285712,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 19:00:00,BLDG_C,2,C202,Training Room,40,2,2.001261904761904,5.00315476190476,Low,0.001261904761904,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 19:15:00,BLDG_A,1,A101,Office,10,1,0.8419550264550267,8.419550264550267,Low,0.1580449735449732,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 19:30:00,BLDG_A,1,A102,Office,12,0,0.4759487525357089,3.966239604464241,Low,0.4759487525357089,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 19:45:00,BLDG_A,1,A103,Meeting Room,20,0,1.4272308584661524,7.136154292330763,Low,1.4272308584661524,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 20:00:00,BLDG_A,2,A201,Lab,30,0,2.602769841269841,8.675899470899468,Low,2.602769841269841,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 20:15:00,BLDG_A,2,A202,Conference,25,0,1.2996671853926751,5.198668741570701,Low,1.2996671853926751,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 20:30:00,BLDG_B,1,B101,Office,8,0,0.3655904071773637,4.569880089717047,Low,0.3655904071773637,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 20:45:00,BLDG_B,1,B102,Office,15,0,0.4439140396640394,2.959426931093596,Low,0.4439140396640394,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 21:00:00,BLDG_B,1,B103,Meeting Room,18,0,0.3892530573946983,2.1625169855261013,Low,0.3892530573946983,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 21:15:00,BLDG_B,2,B201,Training Room,35,1,1.8434246031746024,5.26692743764172,Low,0.8434246031746022,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 21:30:00,BLDG_B,2,B202,Conference,25,0,1.09562216779322,4.382488671172879,Low,1.09562216779322,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-10 21:45:00,BLDG_C,1,C101,Office,10,1,0.9332347905717472,9.332347905717471,Low,0.0667652094282528,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 22:00:00,BLDG_C,1,C102,Office,14,2,1.3347925897631785,9.534232784022704,Low,0.6652074102368215,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 22:15:00,BLDG_C,1,C103,Meeting Room,20,0,0.3523199855699855,1.7615999278499277,Low,0.3523199855699855,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 22:30:00,BLDG_C,2,C201,Lab,30,3,2.3577738095238088,7.859246031746029,Low,0.6422261904761912,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 22:45:00,BLDG_C,2,C202,Training Room,40,5,2.97091798941799,7.427294973544975,Low,2.02908201058201,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-10 23:00:00,BLDG_A,1,A101,Office,10,0,0.5007626289832172,5.007626289832172,Low,0.5007626289832172,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 23:15:00,BLDG_A,1,A102,Office,12,0,0.400587283087283,3.338227359060692,Low,0.400587283087283,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 23:30:00,BLDG_A,1,A103,Meeting Room,20,1,1.3927096206262868,6.9635481031314335,Low,0.3927096206262868,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-10 23:45:00,BLDG_A,2,A201,Lab,30,5,1.9184497354497352,6.394832451499117,Low,3.081550264550265,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 00:00:00,BLDG_A,2,A202,Conference,25,1,1.2886878306878309,5.154751322751324,Low,0.2886878306878309,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 00:15:00,BLDG_B,1,B101,Office,8,0,0.2599074074074073,3.2488425925925912,Low,0.2599074074074073,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 00:30:00,BLDG_B,1,B102,Office,15,0,0.446765220618162,2.9784348041210795,Low,0.446765220618162,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 00:45:00,BLDG_B,1,B103,Meeting Room,18,0,0.6629216947315324,3.682898304064069,Low,0.6629216947315324,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 01:00:00,BLDG_B,2,B201,Training Room,35,3,0.7487486772486774,2.1392819349962213,Low,2.2512513227513224,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 01:15:00,BLDG_B,2,B202,Conference,25,0,1.4784917267917266,5.913966907166906,Low,1.4784917267917266,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 01:30:00,BLDG_C,1,C101,Office,10,0,0.4918718505787474,4.918718505787474,Low,0.4918718505787474,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 01:45:00,BLDG_C,1,C102,Office,14,3,2.022356490459431,14.44540350328165,Low,0.9776435095405688,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 02:00:00,BLDG_C,1,C103,Meeting Room,20,1,1.0218306376085786,5.109153188042893,Low,0.0218306376085786,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 02:15:00,BLDG_C,2,C201,Lab,30,0,0.6210000000000001,2.0700000000000003,Low,0.6210000000000001,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 02:30:00,BLDG_C,2,C202,Training Room,40,0,1.11062962962963,2.7765740740740745,Low,1.11062962962963,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 02:45:00,BLDG_A,1,A101,Office,10,0,0.3007777777777777,3.0077777777777777,Low,0.3007777777777777,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 03:00:00,BLDG_A,1,A102,Office,12,3,1.9484708994709,16.237257495590836,Low,1.0515291005291,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 03:15:00,BLDG_A,1,A103,Meeting Room,20,2,1.793569985569986,8.96784992784993,Low,0.2064300144300139,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 03:30:00,BLDG_A,2,A201,Lab,30,1,2.2196031746031726,7.398677248677242,Low,1.2196031746031726,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 03:45:00,BLDG_A,2,A202,Conference,25,0,1.8400925925925928,7.360370370370371,Low,1.8400925925925928,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 04:00:00,BLDG_B,1,B101,Office,8,1,0.8513504273504272,10.64188034188034,Low,0.1486495726495728,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 04:15:00,BLDG_B,1,B102,Office,15,0,0.6441031746031745,4.294021164021164,Low,0.6441031746031745,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 04:30:00,BLDG_B,1,B103,Meeting Room,18,0,0.6125550976800977,3.403083876000543,Low,0.6125550976800977,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 04:45:00,BLDG_B,2,B201,Training Room,35,0,0.9517896825396828,2.719399092970522,Low,0.9517896825396828,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 05:00:00,BLDG_B,2,B202,Conference,25,3,2.2456671476671475,8.98266859066859,Low,0.7543328523328525,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 05:15:00,BLDG_C,1,C101,Office,10,1,0.6356739440109006,6.356739440109006,Low,0.3643260559890994,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 05:30:00,BLDG_C,1,C102,Office,14,1,0.9696863642893055,6.92633117349504,Low,0.0303136357106944,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 05:45:00,BLDG_C,1,C103,Meeting Room,20,0,0.8923958492487901,4.461979246243951,Low,0.8923958492487901,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 06:00:00,BLDG_C,2,C201,Lab,30,0,1.486064814814814,4.953549382716046,Low,1.486064814814814,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 06:15:00,BLDG_C,2,C202,Training Room,40,0,0.8148703703703702,2.0371759259259257,Low,0.8148703703703702,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 06:30:00,BLDG_A,1,A101,Office,10,0,0.4812808833678399,4.812808833678399,Low,0.4812808833678399,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 06:45:00,BLDG_A,1,A102,Office,12,0,0.4306957855644469,3.589131546370391,Low,0.4306957855644469,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 07:00:00,BLDG_A,1,A103,Meeting Room,20,0,0.3367341269841269,1.6836706349206343,Low,0.3367341269841269,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 07:15:00,BLDG_A,2,A201,Lab,30,4,2.911846560846561,9.70615520282187,Low,1.088153439153439,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 07:30:00,BLDG_A,2,A202,Conference,25,0,0.570190476190476,2.280761904761904,Low,0.570190476190476,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 07:45:00,BLDG_B,1,B101,Office,8,0,0.274751867413632,3.434398342670401,Low,0.274751867413632,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 08:00:00,BLDG_B,1,B102,Office,15,0,0.3466938013677145,2.311292009118097,Low,0.3466938013677145,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 08:15:00,BLDG_B,1,B103,Meeting Room,18,0,0.6029239028944913,3.349577238302729,Low,0.6029239028944913,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 08:30:00,BLDG_B,2,B201,Training Room,35,0,2.2665529100529094,6.475865457294026,Low,2.2665529100529094,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 08:45:00,BLDG_B,2,B202,Conference,25,0,0.6655555555555558,2.662222222222223,Low,0.6655555555555558,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 09:00:00,BLDG_C,1,C101,Office,10,2,1.2698585673585667,12.698585673585669,Low,0.7301414326414333,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 09:15:00,BLDG_C,1,C102,Office,14,0,0.32784244894539,2.3417317781813574,Low,0.32784244894539,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 09:30:00,BLDG_C,1,C103,Meeting Room,20,0,0.3624463118580766,1.812231559290383,Low,0.3624463118580766,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 09:45:00,BLDG_C,2,C201,Lab,30,0,2.1215661375661368,7.0718871252204565,Low,2.1215661375661368,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 10:00:00,BLDG_C,2,C202,Training Room,40,0,1.2230079365079365,3.057519841269841,Low,1.2230079365079365,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 10:15:00,BLDG_A,1,A101,Office,10,0,0.4177263769383335,4.177263769383335,Low,0.4177263769383335,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 10:30:00,BLDG_A,1,A102,Office,12,0,0.3604171267540833,3.0034760562840277,Low,0.3604171267540833,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 10:45:00,BLDG_A,1,A103,Meeting Room,20,0,0.4372798786181138,2.186399393090569,Low,0.4372798786181138,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 11:00:00,BLDG_A,2,A201,Lab,30,6,3.820257936507935,12.734193121693115,Low,2.179742063492065,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 11:15:00,BLDG_A,2,A202,Conference,25,0,0.8354693539404066,3.3418774157616267,Low,0.8354693539404066,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 11:30:00,BLDG_B,1,B101,Office,8,1,0.4525019140019138,5.656273925023923,Low,0.5474980859980861,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 11:45:00,BLDG_B,1,B102,Office,15,1,0.7582483311291406,5.054988874194271,Low,0.2417516688708594,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 12:00:00,BLDG_B,1,B103,Meeting Room,18,0,0.3123290228945768,1.735161238303205,Low,0.3123290228945768,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 12:15:00,BLDG_B,2,B201,Training Room,35,0,1.425246753246753,4.0721335807050085,Low,1.425246753246753,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 12:30:00,BLDG_B,2,B202,Conference,25,2,1.14166040733146,4.56664162932584,Low,0.85833959266854,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 12:45:00,BLDG_C,1,C101,Office,10,1,0.6354391556511122,6.354391556511121,Low,0.3645608443488878,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 13:00:00,BLDG_C,1,C102,Office,14,0,0.4489248677248675,3.206606198034768,Low,0.4489248677248675,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 13:15:00,BLDG_C,1,C103,Meeting Room,20,0,0.396010050787992,1.98005025393996,Low,0.396010050787992,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 13:30:00,BLDG_C,2,C201,Lab,30,2,2.3335158730158723,7.778386243386241,Low,0.3335158730158722,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 13:45:00,BLDG_C,2,C202,Training Room,40,1,1.901630952380952,4.75407738095238,Low,0.9016309523809518,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 14:00:00,BLDG_A,1,A101,Office,10,1,1.0278809523809525,10.278809523809525,Low,0.0278809523809524,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 14:15:00,BLDG_A,1,A102,Office,12,1,0.687501662588619,5.729180521571825,Low,0.312498337411381,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 14:30:00,BLDG_A,1,A103,Meeting Room,20,1,0.7716757083496215,3.8583785417481073,Low,0.2283242916503784,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 14:45:00,BLDG_A,2,A201,Lab,30,3,2.357514550264551,7.8583818342151694,Low,0.6424854497354491,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 15:00:00,BLDG_A,2,A202,Conference,25,0,1.3787213804713805,5.514885521885521,Low,1.3787213804713805,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 15:15:00,BLDG_B,1,B101,Office,8,0,0.3578285024154589,4.472856280193237,Low,0.3578285024154589,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 15:30:00,BLDG_B,1,B102,Office,15,0,0.3364512322530945,2.2430082150206303,Low,0.3364512322530945,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 15:45:00,BLDG_B,1,B103,Meeting Room,18,3,1.9811706438985843,11.006503577214358,Low,1.0188293561014157,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 16:00:00,BLDG_B,2,B201,Training Room,35,0,0.603107142857143,1.7231632653061226,Low,0.603107142857143,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 16:15:00,BLDG_B,2,B202,Conference,25,0,0.6557473544973547,2.622989417989418,Low,0.6557473544973547,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 16:30:00,BLDG_C,1,C101,Office,10,1,0.8722553777921422,8.722553777921423,Low,0.1277446222078577,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 16:45:00,BLDG_C,1,C102,Office,14,3,1.8862010582010575,13.472864701436126,Low,1.1137989417989422,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 17:00:00,BLDG_C,1,C103,Meeting Room,20,0,0.310836148160142,1.5541807408007102,Low,0.310836148160142,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 17:15:00,BLDG_C,2,C201,Lab,30,1,2.7531111111111106,9.177037037037037,Low,1.7531111111111106,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 17:30:00,BLDG_C,2,C202,Training Room,40,0,0.7500595238095241,1.8751488095238105,Low,0.7500595238095241,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 17:45:00,BLDG_A,1,A101,Office,10,1,0.6538487818056784,6.538487818056785,Low,0.3461512181943216,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 18:00:00,BLDG_A,1,A102,Office,12,0,0.3713809523809524,3.09484126984127,Low,0.3713809523809524,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 18:15:00,BLDG_A,1,A103,Meeting Room,20,0,1.1539563492063494,5.769781746031747,Low,1.1539563492063494,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 18:30:00,BLDG_A,2,A201,Lab,30,2,2.149176654500184,7.163922181667279,Low,0.1491766545001835,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 18:45:00,BLDG_A,2,A202,Conference,25,3,2.1672164502164497,8.668865800865799,Low,0.8327835497835503,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 19:00:00,BLDG_B,1,B101,Office,8,0,0.395063492063492,4.938293650793651,Low,0.395063492063492,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 19:15:00,BLDG_B,1,B102,Office,15,0,0.7015890248096132,4.6772601653974215,Low,0.7015890248096132,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 19:30:00,BLDG_B,1,B103,Meeting Room,18,0,0.3329783156705063,1.8498795315028127,Low,0.3329783156705063,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 19:45:00,BLDG_B,2,B201,Training Room,35,0,0.9431375661375656,2.694678760393045,Low,0.9431375661375656,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 20:00:00,BLDG_B,2,B202,Conference,25,2,1.826066137566137,7.304264550264548,Low,0.1739338624338628,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 20:15:00,BLDG_C,1,C101,Office,10,1,0.8188512533218412,8.188512533218411,Low,0.1811487466781588,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 20:30:00,BLDG_C,1,C102,Office,14,0,0.754156796906797,5.386834263619979,Low,0.754156796906797,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 20:45:00,BLDG_C,1,C103,Meeting Room,20,1,1.0623456265956268,5.311728132978135,Low,0.0623456265956268,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 21:00:00,BLDG_C,2,C201,Lab,30,4,2.6489603174603173,8.829867724867725,Low,1.3510396825396829,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 21:15:00,BLDG_C,2,C202,Training Room,40,5,3.3507195767195768,8.376798941798942,Low,1.6492804232804232,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-11 21:30:00,BLDG_A,1,A101,Office,10,2,1.2486778499278504,12.486778499278502,Low,0.7513221500721496,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 21:45:00,BLDG_A,1,A102,Office,12,0,0.4424268241337209,3.6868902011143407,Low,0.4424268241337209,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 22:00:00,BLDG_A,1,A103,Meeting Room,20,0,0.7698492063492063,3.849246031746032,Low,0.7698492063492063,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 22:15:00,BLDG_A,2,A201,Lab,30,0,0.7900074491785017,2.633358163928339,Low,0.7900074491785017,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 22:30:00,BLDG_A,2,A202,Conference,25,2,1.4896309523809517,5.958523809523807,Low,0.5103690476190483,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-11 22:45:00,BLDG_B,1,B101,Office,8,1,0.5674855699855698,7.093569624819622,Low,0.4325144300144302,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 23:00:00,BLDG_B,1,B102,Office,15,1,0.9103795093795088,6.069196729196726,Low,0.0896204906204911,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 23:15:00,BLDG_B,1,B103,Meeting Room,18,2,1.3025112044817928,7.2361733582321826,Low,0.6974887955182072,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 23:30:00,BLDG_B,2,B201,Training Room,35,1,1.246574074074074,3.561640211640212,Low,0.246574074074074,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-11 23:45:00,BLDG_B,2,B202,Conference,25,6,3.408398148148147,13.633592592592588,Low,2.591601851851853,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 00:00:00,BLDG_C,1,C101,Office,10,1,0.9086580086580084,9.086580086580083,Low,0.0913419913419915,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 00:15:00,BLDG_C,1,C102,Office,14,0,0.4508172234911367,3.2201230249366906,Low,0.4508172234911367,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 00:30:00,BLDG_C,1,C103,Meeting Room,20,0,0.4429801445830857,2.214900722915429,Low,0.4429801445830857,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 00:45:00,BLDG_C,2,C201,Lab,30,2,1.4656587301587305,4.885529100529101,Low,0.5343412698412697,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 01:00:00,BLDG_C,2,C202,Training Room,40,0,1.3653465608465605,3.413366402116401,Low,1.3653465608465605,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 01:15:00,BLDG_A,1,A101,Office,10,0,0.3157910052910053,3.157910052910053,Low,0.3157910052910053,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 01:30:00,BLDG_A,1,A102,Office,12,2,1.3596283068783073,11.330235890652562,Low,0.6403716931216927,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 01:45:00,BLDG_A,1,A103,Meeting Room,20,1,1.2035251322751326,6.017625661375663,Low,0.2035251322751325,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 02:00:00,BLDG_A,2,A201,Lab,30,0,0.5323870851370852,1.7746236171236174,Low,0.5323870851370852,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 02:15:00,BLDG_A,2,A202,Conference,25,2,1.4219973544973543,5.687989417989418,Low,0.5780026455026455,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 02:30:00,BLDG_B,1,B101,Office,8,0,0.5309999999999998,6.6374999999999975,Low,0.5309999999999998,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 02:45:00,BLDG_B,1,B102,Office,15,3,2.281516016118958,15.210106774126386,Low,0.718483983881042,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 03:00:00,BLDG_B,1,B103,Meeting Room,18,3,1.9004788359788365,10.55821575543798,Low,1.0995211640211635,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 03:15:00,BLDG_B,2,B201,Training Room,35,0,0.4684285714285713,1.3383673469387751,Low,0.4684285714285713,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 03:30:00,BLDG_B,2,B202,Conference,25,0,0.558126984126984,2.232507936507936,Low,0.558126984126984,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 03:45:00,BLDG_C,1,C101,Office,10,1,0.896324074074074,8.963240740740739,Low,0.103675925925926,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 04:00:00,BLDG_C,1,C102,Office,14,1,1.0427653124392255,7.448323660280183,Low,0.0427653124392255,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 04:15:00,BLDG_C,1,C103,Meeting Room,20,5,3.386404761904762,16.932023809523812,Low,1.613595238095238,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 04:30:00,BLDG_C,2,C201,Lab,30,0,1.28759126984127,4.2919708994709,Low,1.28759126984127,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 04:45:00,BLDG_C,2,C202,Training Room,40,1,1.3227380952380954,3.3068452380952387,Low,0.3227380952380954,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 05:00:00,BLDG_A,1,A101,Office,10,1,0.8045992063492063,8.045992063492063,Low,0.1954007936507936,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 05:15:00,BLDG_A,1,A102,Office,12,0,0.5410754062567787,4.508961718806489,Low,0.5410754062567787,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 05:30:00,BLDG_A,1,A103,Meeting Room,20,0,1.1891351273266997,5.945675636633498,Low,1.1891351273266997,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 05:45:00,BLDG_A,2,A201,Lab,30,0,0.6657619047619046,2.2192063492063485,Low,0.6657619047619046,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 06:00:00,BLDG_A,2,A202,Conference,25,0,0.6810181082534027,2.724072433013611,Low,0.6810181082534027,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 06:15:00,BLDG_B,1,B101,Office,8,1,0.8446672619319681,10.5583407741496,Low,0.1553327380680319,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 06:30:00,BLDG_B,1,B102,Office,15,1,0.9749711561773272,6.499807707848847,Low,0.0250288438226728,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 06:45:00,BLDG_B,1,B103,Meeting Room,18,2,1.937638768638768,10.764659825770932,Low,0.0623612313612322,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 07:00:00,BLDG_B,2,B201,Training Room,35,7,1.217930735930736,3.4798021026592454,Low,5.782069264069264,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 07:15:00,BLDG_B,2,B202,Conference,25,1,1.0113447775167412,4.045379110066965,Low,0.0113447775167412,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 07:30:00,BLDG_C,1,C101,Office,10,0,0.612810115060115,6.128101150601149,Low,0.612810115060115,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 07:45:00,BLDG_C,1,C102,Office,14,1,1.3609788359788353,9.721277399848825,Low,0.3609788359788353,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 08:00:00,BLDG_C,1,C103,Meeting Room,20,5,5.319034391534393,26.595171957671965,Low,0.3190343915343927,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 08:15:00,BLDG_C,2,C201,Lab,30,7,9.916826719576726,33.05608906525575,Low,2.9168267195767257,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 08:30:00,BLDG_C,2,C202,Training Room,40,14,12.940821428571423,32.35205357142856,Low,1.0591785714285766,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 08:45:00,BLDG_A,1,A101,Office,10,2,1.814305555555555,18.14305555555555,Low,0.185694444444445,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 09:00:00,BLDG_A,1,A102,Office,12,6,6.2145211640211615,51.787676366843016,Normal,0.2145211640211615,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-12 09:15:00,BLDG_A,1,A103,Meeting Room,20,9,11.134119047619048,55.67059523809523,Normal,2.1341190476190466,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-12 09:30:00,BLDG_A,2,A201,Lab,30,18,13.226751322751316,44.08917107583772,Normal,4.773248677248684,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-12 09:45:00,BLDG_A,2,A202,Conference,25,5,11.524757936507935,46.09903174603175,Normal,6.524757936507937,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-12 10:00:00,BLDG_B,1,B101,Office,8,5,5.570520757020757,69.63150946275947,Normal,0.5705207570207573,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-12 10:15:00,BLDG_B,1,B102,Office,15,8,7.814801587301591,52.09867724867727,Normal,0.1851984126984094,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-12 10:30:00,BLDG_B,1,B103,Meeting Room,18,11,11.091011904761912,61.616732804232846,Normal,0.0910119047619115,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-12 10:45:00,BLDG_B,2,B201,Training Room,35,33,22.9651574074074,65.61473544973543,Normal,10.0348425925926,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-12 11:00:00,BLDG_B,2,B202,Conference,25,12,11.618960317460315,46.47584126984126,Normal,0.3810396825396847,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-12 11:15:00,BLDG_C,1,C101,Office,10,5,5.47115476190476,54.71154761904759,Normal,0.47115476190476,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-12 11:30:00,BLDG_C,1,C102,Office,14,10,8.556000240500241,61.11428743214458,Normal,1.443999759499759,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-12 11:45:00,BLDG_C,1,C103,Meeting Room,20,12,12.511742063492065,62.55871031746032,Normal,0.5117420634920649,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-12 12:00:00,BLDG_C,2,C201,Lab,30,11,12.864288359788365,42.88096119929455,Normal,1.8642883597883628,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-12 12:15:00,BLDG_C,2,C202,Training Room,40,15,15.68265211640212,39.2066302910053,Low,0.6826521164021209,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 12:30:00,BLDG_A,1,A101,Office,10,9,7.268695360195358,72.68695360195359,High Usage,1.731304639804642,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-12 12:45:00,BLDG_A,1,A102,Office,12,4,4.441190476190476,37.00992063492063,Low,0.4411904761904761,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 13:00:00,BLDG_A,1,A103,Meeting Room,20,7,8.688570105820107,43.44285052910053,Normal,1.6885701058201068,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-12 13:15:00,BLDG_A,2,A201,Lab,30,10,11.472011904761905,38.24003968253968,Low,1.472011904761905,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 13:30:00,BLDG_A,2,A202,Conference,25,8,8.232280423280423,32.929121693121694,Low,0.2322804232804234,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 13:45:00,BLDG_B,1,B101,Office,8,3,3.955289682539682,49.44112103174603,Normal,0.9552896825396822,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-12 14:00:00,BLDG_B,1,B102,Office,15,8,8.078346560846558,53.85564373897706,Normal,0.0783465608465583,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-12 14:15:00,BLDG_B,1,B103,Meeting Room,18,11,11.320390211640218,62.89105673133455,Normal,0.3203902116402179,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-12 14:30:00,BLDG_B,2,B201,Training Room,35,8,10.107357142857149,28.87816326530614,Low,2.1073571428571487,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 14:45:00,BLDG_B,2,B202,Conference,25,11,10.149809523809528,40.599238095238114,Normal,0.8501904761904715,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-12 15:00:00,BLDG_C,1,C101,Office,10,6,6.4426715506715535,64.42671550671554,Normal,0.4426715506715535,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-12 15:15:00,BLDG_C,1,C102,Office,14,7,6.813845029239766,48.6703216374269,Normal,0.1861549707602341,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-12 15:30:00,BLDG_C,1,C103,Meeting Room,20,8,8.580502645502644,42.902513227513225,Normal,0.5805026455026443,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-12 15:45:00,BLDG_C,2,C201,Lab,30,16,14.569818783068788,48.566062610229295,Normal,1.4301812169312118,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-12 16:00:00,BLDG_C,2,C202,Training Room,40,7,15.01448412698414,37.53621031746035,Low,8.01448412698414,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 16:15:00,BLDG_A,1,A101,Office,10,7,6.742171341816077,67.42171341816076,Normal,0.2578286581839233,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-12 16:30:00,BLDG_A,1,A102,Office,12,7,6.419230158730158,53.49358465608465,Normal,0.5807698412698423,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-12 16:45:00,BLDG_A,1,A103,Meeting Room,20,9,9.389259259259257,46.94629629629629,Normal,0.3892592592592567,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-12 17:00:00,BLDG_A,2,A201,Lab,30,6,6.788862433862435,22.629541446208115,Low,0.7888624338624348,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 17:15:00,BLDG_A,2,A202,Conference,25,0,2.910667989417989,11.642671957671956,Low,2.910667989417989,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 17:30:00,BLDG_B,1,B101,Office,8,2,2.3182142857142853,28.97767857142857,Low,0.3182142857142853,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 17:45:00,BLDG_B,1,B102,Office,15,3,3.0184603174603173,20.12306878306878,Low,0.0184603174603172,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 18:00:00,BLDG_B,1,B103,Meeting Room,18,2,1.4840944132296128,8.244968962386737,Low,0.5159055867703872,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 18:15:00,BLDG_B,2,B201,Training Room,35,0,1.7595833333333335,5.027380952380954,Low,1.7595833333333335,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 18:30:00,BLDG_B,2,B202,Conference,25,2,1.4451455336777916,5.780582134711167,Low,0.5548544663222084,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 18:45:00,BLDG_C,1,C101,Office,10,0,0.3120820045967106,3.120820045967106,Low,0.3120820045967106,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 19:00:00,BLDG_C,1,C102,Office,14,1,1.0262619047619046,7.330442176870747,Low,0.0262619047619045,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 19:15:00,BLDG_C,1,C103,Meeting Room,20,1,0.9768536866359449,4.884268433179724,Low,0.0231463133640551,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 19:30:00,BLDG_C,2,C201,Lab,30,0,0.8234985011548479,2.744995003849493,Low,0.8234985011548479,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 19:45:00,BLDG_C,2,C202,Training Room,40,0,0.5598095238095236,1.3995238095238092,Low,0.5598095238095236,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 20:00:00,BLDG_A,1,A101,Office,10,2,1.3298809523809527,13.298809523809526,Low,0.6701190476190473,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 20:15:00,BLDG_A,1,A102,Office,12,2,0.816954906204906,6.80795755170755,Low,1.183045093795094,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 20:30:00,BLDG_A,1,A103,Meeting Room,20,0,0.90764417989418,4.5382208994709,Low,0.90764417989418,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 20:45:00,BLDG_A,2,A201,Lab,30,0,0.8545553221288514,2.848517740429505,Low,0.8545553221288514,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 21:00:00,BLDG_A,2,A202,Conference,25,0,0.6205992063492065,2.482396825396826,Low,0.6205992063492065,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-12 21:15:00,BLDG_B,1,B101,Office,8,2,1.338839947089947,16.735499338624336,Low,0.661160052910053,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 21:30:00,BLDG_B,1,B102,Office,15,3,2.4818822751322736,16.545881834215155,Low,0.5181177248677264,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 21:45:00,BLDG_B,1,B103,Meeting Room,18,0,0.7465591736694676,4.147550964830375,Low,0.7465591736694676,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 22:00:00,BLDG_B,2,B201,Training Room,35,0,0.5528843193843193,1.579669483955198,Low,0.5528843193843193,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 22:15:00,BLDG_B,2,B202,Conference,25,3,1.8908616192268148,7.563446476907259,Low,1.1091383807731852,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-12 22:30:00,BLDG_C,1,C101,Office,10,1,1.1822467320261438,11.822467320261438,Low,0.1822467320261438,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 22:45:00,BLDG_C,1,C102,Office,14,2,1.7495317460317463,12.496655328798187,Low,0.2504682539682537,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 23:00:00,BLDG_C,1,C103,Meeting Room,20,0,0.6006652236652239,3.0033261183261195,Low,0.6006652236652239,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 23:15:00,BLDG_C,2,C201,Lab,30,0,0.6069563492063492,2.0231878306878306,Low,0.6069563492063492,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 23:30:00,BLDG_C,2,C202,Training Room,40,0,0.4589285714285714,1.1473214285714284,Low,0.4589285714285714,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-12 23:45:00,BLDG_A,1,A101,Office,10,1,0.9984285714285716,9.984285714285717,Low,0.0015714285714284,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 00:00:00,BLDG_A,1,A102,Office,12,0,0.600304232804233,5.002535273368608,Low,0.600304232804233,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 00:15:00,BLDG_A,1,A103,Meeting Room,20,0,1.447205687830687,7.236028439153435,Low,1.447205687830687,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 00:30:00,BLDG_A,2,A201,Lab,30,0,1.018281746031746,3.394272486772487,Low,1.018281746031746,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 00:45:00,BLDG_A,2,A202,Conference,25,2,1.634320105820106,6.537280423280424,Low,0.365679894179894,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 01:00:00,BLDG_B,1,B101,Office,8,0,0.8268213684463687,10.335267105579607,Low,0.8268213684463687,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 01:15:00,BLDG_B,1,B102,Office,15,0,1.9378730158730164,12.919153439153444,Low,1.9378730158730164,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 01:30:00,BLDG_B,1,B103,Meeting Room,18,1,1.0555479656509068,5.86415536472726,Low,0.0555479656509068,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 01:45:00,BLDG_B,2,B201,Training Room,35,7,3.933967772967772,11.23990792276506,Low,3.0660322270322284,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 02:00:00,BLDG_B,2,B202,Conference,25,1,1.1249093314093308,4.499637325637323,Low,0.1249093314093308,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 02:15:00,BLDG_C,1,C101,Office,10,1,1.019029761904762,10.19029761904762,Low,0.0190297619047619,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 02:30:00,BLDG_C,1,C102,Office,14,1,1.0606858648597786,7.576327606141275,Low,0.0606858648597785,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 02:45:00,BLDG_C,1,C103,Meeting Room,20,2,1.992376322751323,9.961881613756615,Low,0.007623677248677,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 03:00:00,BLDG_C,2,C201,Lab,30,8,4.625924242424243,15.419747474747474,Low,3.374075757575757,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 03:15:00,BLDG_C,2,C202,Training Room,40,0,0.9180476190476192,2.295119047619048,Low,0.9180476190476192,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 03:30:00,BLDG_A,1,A101,Office,10,1,1.0320482804232802,10.320482804232803,Low,0.0320482804232802,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 03:45:00,BLDG_A,1,A102,Office,12,2,1.566373556998557,13.053112974987975,Low,0.4336264430014429,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 04:00:00,BLDG_A,1,A103,Meeting Room,20,1,1.233336476721676,6.16668238360838,Low,0.2333364767216759,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 04:15:00,BLDG_A,2,A201,Lab,30,0,1.6820582010582006,5.606860670194002,Low,1.6820582010582006,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 04:30:00,BLDG_A,2,A202,Conference,25,3,2.0517404711477307,8.206961884590923,Low,0.9482595288522692,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 04:45:00,BLDG_B,1,B101,Office,8,0,0.4858174603174605,6.072718253968256,Low,0.4858174603174605,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 05:00:00,BLDG_B,1,B102,Office,15,0,0.5365199855699856,3.576799903799904,Low,0.5365199855699856,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 05:15:00,BLDG_B,1,B103,Meeting Room,18,0,1.2736170634920634,7.075650352733685,Low,1.2736170634920634,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 05:30:00,BLDG_B,2,B201,Training Room,35,3,2.206646164021164,6.304703325774754,Low,0.7933538359788361,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 05:45:00,BLDG_B,2,B202,Conference,25,4,2.6532301587301585,10.612920634920634,Low,1.3467698412698417,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 06:00:00,BLDG_C,1,C101,Office,10,1,0.8170053966303965,8.170053966303966,Low,0.1829946033696035,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 06:15:00,BLDG_C,1,C102,Office,14,0,1.3359312169312167,9.542365835222975,Low,1.3359312169312167,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 06:30:00,BLDG_C,1,C103,Meeting Room,20,0,0.2863968482497894,1.4319842412489472,Low,0.2863968482497894,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 06:45:00,BLDG_C,2,C201,Lab,30,2,2.049419108669109,6.831397028897031,Low,0.0494191086691091,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 07:00:00,BLDG_C,2,C202,Training Room,40,4,0.9768703703703706,2.4421759259259264,Low,3.0231296296296293,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 07:15:00,BLDG_A,1,A101,Office,10,0,0.7250291005291004,7.250291005291004,Low,0.7250291005291004,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 07:30:00,BLDG_A,1,A102,Office,12,1,1.1163681657848328,9.30306804820694,Low,0.1163681657848327,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 07:45:00,BLDG_A,1,A103,Meeting Room,20,0,2.411134920634921,12.055674603174603,Low,2.411134920634921,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 08:00:00,BLDG_A,2,A201,Lab,30,5,8.942892857142853,29.809642857142844,Low,3.942892857142853,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 08:15:00,BLDG_A,2,A202,Conference,25,9,6.557380952380954,26.22952380952381,Low,2.442619047619046,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 08:30:00,BLDG_B,1,B101,Office,8,3,2.3853650793650787,29.81706349206348,Low,0.6146349206349213,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 08:45:00,BLDG_B,1,B102,Office,15,4,4.700976190476191,31.339841269841276,Low,0.7009761904761911,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 09:00:00,BLDG_B,1,B103,Meeting Room,18,11,10.782466931216932,59.9025940623163,Normal,0.2175330687830676,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-13 09:15:00,BLDG_B,2,B201,Training Room,35,16,16.13664417989417,46.10469765684048,Normal,0.1366441798941693,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-13 09:30:00,BLDG_B,2,B202,Conference,25,15,13.865690476190483,55.46276190476193,Normal,1.1343095238095149,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-13 09:45:00,BLDG_C,1,C101,Office,10,6,6.1778373015872985,61.77837301587299,Normal,0.1778373015872985,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-13 10:00:00,BLDG_C,1,C102,Office,14,10,8.148866402116399,58.20618858654571,Normal,1.8511335978836008,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-13 10:15:00,BLDG_C,1,C103,Meeting Room,20,15,13.04725661375662,65.2362830687831,Normal,1.9527433862433805,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-13 10:30:00,BLDG_C,2,C201,Lab,30,12,12.97794312169312,43.25981040564373,Normal,0.9779431216931194,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-13 10:45:00,BLDG_C,2,C202,Training Room,40,21,20.41794444444444,51.0448611111111,Normal,0.5820555555555593,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-13 11:00:00,BLDG_A,1,A101,Office,10,6,6.268245624745624,62.68245624745623,Normal,0.2682456247456235,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-13 11:15:00,BLDG_A,1,A102,Office,12,7,6.876420634920631,57.30350529100527,Normal,0.1235793650793688,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-13 11:30:00,BLDG_A,1,A103,Meeting Room,20,12,12.10255555555556,60.512777777777806,Normal,0.1025555555555612,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-13 11:45:00,BLDG_A,2,A201,Lab,30,13,14.606510582010587,48.68836860670196,Normal,1.6065105820105874,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-13 12:00:00,BLDG_A,2,A202,Conference,25,11,10.232575396825396,40.93030158730159,Normal,0.7674246031746037,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-13 12:15:00,BLDG_B,1,B101,Office,8,3,3.3456028138528144,41.82003517316018,Normal,0.3456028138528144,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-13 12:30:00,BLDG_B,1,B102,Office,15,8,7.591792568542566,50.61195045695044,Normal,0.4082074314574342,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-13 12:45:00,BLDG_B,1,B103,Meeting Room,18,4,8.816087301587306,48.97826278659615,Normal,4.816087301587306,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-13 13:00:00,BLDG_B,2,B201,Training Room,35,36,24.921519841269856,71.20434240362816,High Usage,11.078480158730144,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-13 13:15:00,BLDG_B,2,B202,Conference,25,9,8.632976190476189,34.531904761904755,Low,0.3670238095238112,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 13:30:00,BLDG_C,1,C101,Office,10,5,5.205686507936506,52.05686507936507,Normal,0.2056865079365062,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-13 13:45:00,BLDG_C,1,C102,Office,14,6,6.204708994708997,44.31934996220712,Normal,0.204708994708997,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-13 14:00:00,BLDG_C,1,C103,Meeting Room,20,12,10.232948412698413,51.16474206349205,Normal,1.767051587301589,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-13 14:15:00,BLDG_C,2,C201,Lab,30,14,12.954013227513228,43.18004409171076,Normal,1.0459867724867724,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-13 14:30:00,BLDG_C,2,C202,Training Room,40,12,12.137921957671953,30.34480489417988,Low,0.137921957671951,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 14:45:00,BLDG_A,1,A101,Office,10,5,5.53338298202772,55.3338298202772,Normal,0.53338298202772,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-13 15:00:00,BLDG_A,1,A102,Office,12,7,6.491055555555557,54.092129629629646,Normal,0.5089444444444426,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-13 15:15:00,BLDG_A,1,A103,Meeting Room,20,9,8.805406084656088,44.02703042328044,Normal,0.194593915343912,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-13 15:30:00,BLDG_A,2,A201,Lab,30,18,16.612029100529096,55.37343033509698,Normal,1.387970899470904,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-13 15:45:00,BLDG_A,2,A202,Conference,25,14,13.060763227513236,52.24305291005295,Normal,0.9392367724867636,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-13 16:00:00,BLDG_B,1,B101,Office,8,3,6.177571428571427,77.21964285714283,High Usage,3.1775714285714267,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-13 16:15:00,BLDG_B,1,B102,Office,15,10,8.615857142857141,57.439047619047614,Normal,1.384142857142859,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-13 16:30:00,BLDG_B,1,B103,Meeting Room,18,9,10.74054761904762,59.669708994709005,Normal,1.7405476190476217,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-13 16:45:00,BLDG_B,2,B201,Training Room,35,15,13.062773809523808,37.32221088435374,Low,1.937226190476192,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 17:00:00,BLDG_B,2,B202,Conference,25,7,7.060234126984127,28.24093650793651,Low,0.0602341269841266,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 17:15:00,BLDG_C,1,C101,Office,10,3,2.5695925925925915,25.69592592592592,Low,0.4304074074074084,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 17:30:00,BLDG_C,1,C102,Office,14,4,3.2376587301587287,23.12613378684806,Low,0.7623412698412713,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 17:45:00,BLDG_C,1,C103,Meeting Room,20,4,3.418297619047621,17.091488095238105,Low,0.5817023809523789,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 18:00:00,BLDG_C,2,C201,Lab,30,1,1.1228844333054857,3.742948111018285,Low,0.1228844333054854,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 18:15:00,BLDG_C,2,C202,Training Room,40,0,0.7554214703425232,1.888553675856308,Low,0.7554214703425232,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 18:30:00,BLDG_A,1,A101,Office,10,0,0.389091861091861,3.8909186109186105,Low,0.389091861091861,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 18:45:00,BLDG_A,1,A102,Office,12,0,1.2021469456469465,10.017891213724557,Low,1.2021469456469465,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 19:00:00,BLDG_A,1,A103,Meeting Room,20,4,3.3028611111111115,16.51430555555556,Low,0.6971388888888885,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 19:15:00,BLDG_A,2,A201,Lab,30,0,0.9456263227513224,3.1520877425044085,Low,0.9456263227513224,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 19:30:00,BLDG_A,2,A202,Conference,25,1,0.9264146499101434,3.7056585996405738,Low,0.0735853500898565,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 19:45:00,BLDG_B,1,B101,Office,8,0,0.6133121693121691,7.666402116402114,Low,0.6133121693121691,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 20:00:00,BLDG_B,1,B102,Office,15,0,0.9436499018532124,6.290999345688082,Low,0.9436499018532124,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 20:15:00,BLDG_B,1,B103,Meeting Room,18,0,0.316216872016872,1.7567604000937334,Low,0.316216872016872,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 20:30:00,BLDG_B,2,B201,Training Room,35,5,3.0182936507936504,8.623696145124715,Low,1.9817063492063496,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 20:45:00,BLDG_B,2,B202,Conference,25,3,2.382669973544974,9.530679894179896,Low,0.6173300264550261,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 21:00:00,BLDG_C,1,C101,Office,10,0,0.8459252044252046,8.459252044252045,Low,0.8459252044252046,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 21:15:00,BLDG_C,1,C102,Office,14,0,0.4111738587238587,2.936956133741848,Low,0.4111738587238587,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 21:30:00,BLDG_C,1,C103,Meeting Room,20,2,0.9544085808158388,4.7720429040791945,Low,1.045591419184161,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 21:45:00,BLDG_C,2,C201,Lab,30,0,1.5980515873015868,5.326838624338623,Low,1.5980515873015868,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 22:00:00,BLDG_C,2,C202,Training Room,40,0,1.6303492063492062,4.075873015873015,Low,1.6303492063492062,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-13 22:15:00,BLDG_A,1,A101,Office,10,2,1.3988796296296295,13.988796296296297,Low,0.6011203703703705,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 22:30:00,BLDG_A,1,A102,Office,12,2,0.9269405964405965,7.724504970338304,Low,1.0730594035594034,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 22:45:00,BLDG_A,1,A103,Meeting Room,20,0,0.8067564102564105,4.033782051282053,Low,0.8067564102564105,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 23:00:00,BLDG_A,2,A201,Lab,30,3,1.9549325396825403,6.516441798941801,Low,1.0450674603174597,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 23:15:00,BLDG_A,2,A202,Conference,25,0,1.4675443121693117,5.870177248677246,Low,1.4675443121693117,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-13 23:30:00,BLDG_B,1,B101,Office,8,1,1.098871693121693,13.735896164021163,Low,0.098871693121693,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-13 23:45:00,BLDG_B,1,B102,Office,15,1,0.9400089480236534,6.266726320157689,Low,0.0599910519763465,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 00:00:00,BLDG_B,1,B103,Meeting Room,18,0,0.4005101851851851,2.2250565843621395,Low,0.4005101851851851,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 00:15:00,BLDG_B,2,B201,Training Room,35,1,0.9967281746031748,2.8477947845805,Low,0.0032718253968251,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 00:30:00,BLDG_B,2,B202,Conference,25,4,2.1165478595478606,8.466191438191442,Low,1.8834521404521396,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 00:45:00,BLDG_C,1,C101,Office,10,0,0.3653471538040503,3.653471538040504,Low,0.3653471538040503,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 01:00:00,BLDG_C,1,C102,Office,14,0,0.3343253466032877,2.388038190023484,Low,0.3343253466032877,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 01:15:00,BLDG_C,1,C103,Meeting Room,20,0,1.4626939634439633,7.313469817219817,Low,1.4626939634439633,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 01:30:00,BLDG_C,2,C201,Lab,30,6,4.054961640211639,13.516538800705463,Low,1.9450383597883607,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 01:45:00,BLDG_C,2,C202,Training Room,40,0,1.2326322751322751,3.081580687830688,Low,1.2326322751322751,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 02:00:00,BLDG_A,1,A101,Office,10,0,0.3031300530245542,3.0313005302455425,Low,0.3031300530245542,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 02:15:00,BLDG_A,1,A102,Office,12,0,0.3976865079365076,3.31405423280423,Low,0.3976865079365076,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 02:30:00,BLDG_A,1,A103,Meeting Room,20,2,1.7754391534391532,8.877195767195765,Low,0.2245608465608468,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 02:45:00,BLDG_A,2,A201,Lab,30,2,1.8293703703703688,6.097901234567897,Low,0.1706296296296308,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 03:00:00,BLDG_A,2,A202,Conference,25,1,1.0899526455026458,4.359810582010583,Low,0.0899526455026458,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 03:15:00,BLDG_B,1,B101,Office,8,2,0.5308324706694272,6.63540588336784,Low,1.4691675293305728,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 03:30:00,BLDG_B,1,B102,Office,15,0,0.2141154259683671,1.427436173122448,Low,0.2141154259683671,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 03:45:00,BLDG_B,1,B103,Meeting Room,18,0,0.667397764957603,3.707765360875572,Low,0.667397764957603,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 04:00:00,BLDG_B,2,B201,Training Room,35,3,2.4386861471861474,6.967674706246135,Low,0.5613138528138526,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 04:15:00,BLDG_B,2,B202,Conference,25,1,1.0883444988184123,4.353377995273649,Low,0.0883444988184123,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 04:30:00,BLDG_C,1,C101,Office,10,1,0.7662720622289586,7.662720622289585,Low,0.2337279377710414,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 04:45:00,BLDG_C,1,C102,Office,14,0,0.3429096732574994,2.449354808982138,Low,0.3429096732574994,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 05:00:00,BLDG_C,1,C103,Meeting Room,20,2,1.7272441246293246,8.636220623146624,Low,0.2727558753706753,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 05:15:00,BLDG_C,2,C201,Lab,30,5,3.0154130096483023,10.051376698827674,Low,1.9845869903516975,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 05:30:00,BLDG_C,2,C202,Training Room,40,0,1.0496838624338627,2.624209656084657,Low,1.0496838624338627,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 05:45:00,BLDG_A,1,A101,Office,10,1,0.7283208974517068,7.283208974517068,Low,0.2716791025482932,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 06:00:00,BLDG_A,1,A102,Office,12,0,0.3748711770917654,3.123926475764712,Low,0.3748711770917654,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 06:15:00,BLDG_A,1,A103,Meeting Room,20,7,4.240502164502166,21.202510822510828,Low,2.759497835497834,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 06:30:00,BLDG_A,2,A201,Lab,30,3,2.3342063492063496,7.780687830687833,Low,0.6657936507936504,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 06:45:00,BLDG_A,2,A202,Conference,25,2,1.7322698412698412,6.929079365079365,Low,0.2677301587301588,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 07:00:00,BLDG_B,1,B101,Office,8,0,0.3814999999999999,4.768749999999999,Low,0.3814999999999999,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 07:15:00,BLDG_B,1,B102,Office,15,0,0.8621499118165789,5.7476660787771925,Low,0.8621499118165789,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 07:30:00,BLDG_B,1,B103,Meeting Room,18,0,0.2721781094843613,1.512100608246452,Low,0.2721781094843613,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 07:45:00,BLDG_B,2,B201,Training Room,35,4,3.111924603174603,8.891213151927436,Low,0.8880753968253972,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 08:00:00,BLDG_B,2,B202,Conference,25,5,5.342259259259262,21.36903703703705,Low,0.3422592592592623,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 08:15:00,BLDG_C,1,C101,Office,10,2,2.35161111111111,23.5161111111111,Low,0.3516111111111102,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 08:30:00,BLDG_C,1,C102,Office,14,3,2.5770753968253954,18.40768140589568,Low,0.4229246031746045,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 08:45:00,BLDG_C,1,C103,Meeting Room,20,3,7.225891534391532,36.12945767195766,Low,4.225891534391532,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 09:00:00,BLDG_C,2,C201,Lab,30,12,13.660398148148152,45.534660493827175,Normal,1.6603981481481522,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-14 09:15:00,BLDG_C,2,C202,Training Room,40,21,18.99407539682539,47.48518849206348,Normal,2.005924603174609,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-14 09:30:00,BLDG_A,1,A101,Office,10,7,7.438153439153441,74.38153439153442,High Usage,0.4381534391534414,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-14 09:45:00,BLDG_A,1,A102,Office,12,7,7.21501282051282,60.12510683760684,Normal,0.2150128205128201,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-14 10:00:00,BLDG_A,1,A103,Meeting Room,20,11,10.263206349206346,51.31603174603173,Normal,0.7367936507936541,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-14 10:15:00,BLDG_A,2,A201,Lab,30,12,14.33073941798942,47.76913139329807,Normal,2.3307394179894185,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-14 10:30:00,BLDG_A,2,A202,Conference,25,8,9.392535714285714,37.570142857142855,Low,1.3925357142857138,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 10:45:00,BLDG_B,1,B101,Office,8,5,5.355434824434823,66.9429353054353,Normal,0.3554348244348233,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-14 11:00:00,BLDG_B,1,B102,Office,15,8,9.172472222222222,61.14981481481482,Normal,1.172472222222222,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-14 11:15:00,BLDG_B,1,B103,Meeting Room,18,8,11.38148809523809,63.23048941798939,Normal,3.3814880952380904,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-14 11:30:00,BLDG_B,2,B201,Training Room,35,13,16.09119973544973,45.97485638699923,Normal,3.091199735449731,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-14 11:45:00,BLDG_B,2,B202,Conference,25,11,10.364588023088023,41.458352092352094,Normal,0.6354119769119766,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-14 12:00:00,BLDG_C,1,C101,Office,10,5,5.268599206349204,52.68599206349205,Normal,0.2685992063492044,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-14 12:15:00,BLDG_C,1,C102,Office,14,4,5.475258852258853,39.10899180184895,Low,1.475258852258853,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 12:30:00,BLDG_C,1,C103,Meeting Room,20,2,5.343966931216929,26.719834656084647,Low,3.3439669312169293,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 12:45:00,BLDG_C,2,C201,Lab,30,10,14.879682539682538,49.598941798941794,Normal,4.879682539682538,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-14 13:00:00,BLDG_C,2,C202,Training Room,40,12,19.83528968253968,49.5882242063492,Normal,7.835289682539678,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-14 13:15:00,BLDG_A,1,A101,Office,10,5,5.52221560846561,55.222156084656106,Normal,0.5222156084656104,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-14 13:30:00,BLDG_A,1,A102,Office,12,6,5.874737688237688,48.95614740198073,Normal,0.1252623117623121,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-14 13:45:00,BLDG_A,1,A103,Meeting Room,20,7,7.303960317460319,36.5198015873016,Low,0.3039603174603194,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 14:00:00,BLDG_A,2,A201,Lab,30,12,12.356170634920632,41.18723544973545,Normal,0.3561706349206321,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-14 14:15:00,BLDG_A,2,A202,Conference,25,10,8.924253968253971,35.697015873015886,Low,1.0757460317460286,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 14:30:00,BLDG_B,1,B101,Office,8,5,4.567547619047617,57.094345238095215,Normal,0.432452380952383,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-14 14:45:00,BLDG_B,1,B102,Office,15,9,8.715726190476191,58.10484126984128,Normal,0.2842738095238086,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-14 15:00:00,BLDG_B,1,B103,Meeting Room,18,8,9.28364021164021,51.57577895355672,Normal,1.2836402116402097,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-14 15:15:00,BLDG_B,2,B201,Training Room,35,42,17.66050529100529,50.4585865457294,Normal,24.33949470899471,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-14 15:30:00,BLDG_B,2,B202,Conference,25,7,8.561623015873016,34.24649206349206,Low,1.5616230158730158,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 15:45:00,BLDG_C,1,C101,Office,10,7,6.5700595238095225,65.70059523809523,Normal,0.4299404761904775,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-14 16:00:00,BLDG_C,1,C102,Office,14,7,7.462948412698412,53.30677437641723,Normal,0.4629484126984122,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-14 16:15:00,BLDG_C,1,C103,Meeting Room,20,9,10.430980158730163,52.154900793650825,Normal,1.430980158730165,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-14 16:30:00,BLDG_C,2,C201,Lab,30,8,12.27673941798942,40.92246472663141,Normal,4.27673941798942,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-14 16:45:00,BLDG_C,2,C202,Training Room,40,13,14.769010582010583,36.922526455026464,Low,1.7690105820105837,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 17:00:00,BLDG_A,1,A101,Office,10,1,1.7967579365079362,17.967579365079363,Low,0.7967579365079362,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 17:15:00,BLDG_A,1,A102,Office,12,4,1.987059523809523,16.558829365079358,Low,2.012940476190477,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 17:30:00,BLDG_A,1,A103,Meeting Room,20,5,3.4654761904761897,17.32738095238095,Low,1.5345238095238103,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 17:45:00,BLDG_A,2,A201,Lab,30,6,5.69591798941799,18.98639329805997,Low,0.3040820105820101,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 18:00:00,BLDG_A,2,A202,Conference,25,0,0.8661968941918716,3.4647875767674865,Low,0.8661968941918716,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 18:15:00,BLDG_B,1,B101,Office,8,1,0.8155222253591817,10.194027816989772,Low,0.1844777746408182,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 18:30:00,BLDG_B,1,B102,Office,15,3,1.894042230531385,12.626948203542568,Low,1.105957769468615,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 18:45:00,BLDG_B,1,B103,Meeting Room,18,0,0.4589799016449184,2.5498883424717693,Low,0.4589799016449184,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 19:00:00,BLDG_B,2,B201,Training Room,35,0,0.70805291005291,2.0230083144368862,Low,0.70805291005291,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 19:15:00,BLDG_B,2,B202,Conference,25,0,0.3489981022955447,1.3959924091821787,Low,0.3489981022955447,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 19:30:00,BLDG_C,1,C101,Office,10,1,0.8526668701668704,8.526668701668703,Low,0.1473331298331296,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 19:45:00,BLDG_C,1,C102,Office,14,0,0.5977083701322833,4.269345500944881,Low,0.5977083701322833,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 20:00:00,BLDG_C,1,C103,Meeting Room,20,2,1.997025132275133,9.985125661375664,Low,0.0029748677248673,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 20:15:00,BLDG_C,2,C201,Lab,30,4,3.351814814814816,11.17271604938272,Low,0.6481851851851843,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 20:30:00,BLDG_C,2,C202,Training Room,40,4,1.5938253968253973,3.9845634920634936,Low,2.4061746031746027,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 20:45:00,BLDG_A,1,A101,Office,10,0,0.4845952380952382,4.845952380952382,Low,0.4845952380952382,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 21:00:00,BLDG_A,1,A102,Office,12,2,1.2499372506578388,10.41614375548199,Low,0.7500627493421612,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 21:15:00,BLDG_A,1,A103,Meeting Room,20,1,0.7934018219610409,3.967009109805205,Low,0.206598178038959,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 21:30:00,BLDG_A,2,A201,Lab,30,3,2.669962301587303,8.899874338624343,Low,0.3300376984126969,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 21:45:00,BLDG_A,2,A202,Conference,25,1,1.3342326007326002,5.336930402930401,Low,0.3342326007326002,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-14 22:00:00,BLDG_B,1,B101,Office,8,0,0.3930091575091574,4.912614468864467,Low,0.3930091575091574,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 22:15:00,BLDG_B,1,B102,Office,15,3,2.097261904761904,13.981746031746026,Low,0.9027380952380964,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 22:30:00,BLDG_B,1,B103,Meeting Room,18,0,0.5446404151404153,3.025780084113418,Low,0.5446404151404153,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 22:45:00,BLDG_B,2,B201,Training Room,35,0,0.7466825396825397,2.133378684807256,Low,0.7466825396825397,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 23:00:00,BLDG_B,2,B202,Conference,25,3,1.725509339426006,6.902037357704023,Low,1.274490660573994,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-14 23:15:00,BLDG_C,1,C101,Office,10,1,0.8479396741602626,8.479396741602626,Low,0.1520603258397374,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 23:30:00,BLDG_C,1,C102,Office,14,0,0.3259271284271283,2.3280509173366304,Low,0.3259271284271283,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-14 23:45:00,BLDG_C,1,C103,Meeting Room,20,4,2.690487974987976,13.45243987493988,Low,1.3095120250120242,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 00:00:00,BLDG_C,2,C201,Lab,30,3,2.462150793650794,8.207169312169313,Low,0.5378492063492062,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 00:15:00,BLDG_C,2,C202,Training Room,40,0,1.2855880230880228,3.2139700577200574,Low,1.2855880230880228,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 00:30:00,BLDG_A,1,A101,Office,10,1,0.8361384310134309,8.361384310134309,Low,0.1638615689865691,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 00:45:00,BLDG_A,1,A102,Office,12,1,0.8030808229127195,6.692340190939329,Low,0.1969191770872804,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 01:00:00,BLDG_A,1,A103,Meeting Room,20,2,1.623277441077441,8.116387205387205,Low,0.3767225589225589,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 01:15:00,BLDG_A,2,A201,Lab,30,3,2.9009920634920614,9.66997354497354,Low,0.0990079365079386,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 01:30:00,BLDG_A,2,A202,Conference,25,0,0.4962328042328042,1.984931216931217,Low,0.4962328042328042,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 01:45:00,BLDG_B,1,B101,Office,8,1,0.8941679894179896,11.17709986772487,Low,0.1058320105820104,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 02:00:00,BLDG_B,1,B102,Office,15,4,1.284824218374219,8.565494789161459,Low,2.7151757816257813,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 02:15:00,BLDG_B,1,B103,Meeting Room,18,0,0.4989169320614335,2.771760733674631,Low,0.4989169320614335,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 02:30:00,BLDG_B,2,B201,Training Room,35,2,1.0671200096200102,3.0489143132000294,Low,0.9328799903799898,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 02:45:00,BLDG_B,2,B202,Conference,25,5,3.187664742664743,12.750658970658971,Low,1.812335257335257,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 03:00:00,BLDG_C,1,C101,Office,10,0,0.3818833871039753,3.818833871039754,Low,0.3818833871039753,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 03:15:00,BLDG_C,1,C102,Office,14,0,1.2804089947089945,9.145778533635674,Low,1.2804089947089945,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 03:30:00,BLDG_C,1,C103,Meeting Room,20,0,1.1293022486772484,5.646511243386241,Low,1.1293022486772484,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 03:45:00,BLDG_C,2,C201,Lab,30,1,1.5487008547008547,5.162336182336182,Low,0.5487008547008547,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 04:00:00,BLDG_C,2,C202,Training Room,40,4,2.588322150072149,6.470805375180373,Low,1.4116778499278508,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 04:15:00,BLDG_A,1,A101,Office,10,0,0.1985674603174603,1.985674603174603,Low,0.1985674603174603,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 04:30:00,BLDG_A,1,A102,Office,12,0,0.339168617330382,2.8264051444198506,Low,0.339168617330382,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 04:45:00,BLDG_A,1,A103,Meeting Room,20,3,1.0461692561961105,5.230846280980552,Low,1.953830743803889,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 05:00:00,BLDG_A,2,A201,Lab,30,0,2.149067651302945,7.163558837676483,Low,2.149067651302945,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 05:15:00,BLDG_A,2,A202,Conference,25,2,1.7743241421064002,7.097296568425601,Low,0.2256758578935997,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 05:30:00,BLDG_B,1,B101,Office,8,0,0.2176336553945249,2.720420692431562,Low,0.2176336553945249,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 05:45:00,BLDG_B,1,B102,Office,15,2,1.7576719576719575,11.717813051146384,Low,0.2423280423280425,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 06:00:00,BLDG_B,1,B103,Meeting Room,18,0,0.6012254901960785,3.340141612200436,Low,0.6012254901960785,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 06:15:00,BLDG_B,2,B201,Training Room,35,0,0.9289616402116404,2.6541761148904013,Low,0.9289616402116404,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 06:30:00,BLDG_B,2,B202,Conference,25,0,0.4564302131041261,1.8257208524165045,Low,0.4564302131041261,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 06:45:00,BLDG_C,1,C101,Office,10,0,0.2515622268230965,2.515622268230965,Low,0.2515622268230965,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 07:00:00,BLDG_C,1,C102,Office,14,0,0.3317086531825662,2.369347522732616,Low,0.3317086531825662,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 07:15:00,BLDG_C,1,C103,Meeting Room,20,0,0.3776553730583141,1.888276865291571,Low,0.3776553730583141,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 07:30:00,BLDG_C,2,C201,Lab,30,0,0.8890775054838523,2.9635916849461745,Low,0.8890775054838523,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 07:45:00,BLDG_C,2,C202,Training Room,40,5,1.4191349206349206,3.5478373015873017,Low,3.580865079365079,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 08:00:00,BLDG_A,1,A101,Office,10,2,2.46636507936508,24.6636507936508,Low,0.46636507936508,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 08:15:00,BLDG_A,1,A102,Office,12,4,3.3369166666666685,27.807638888888903,Low,0.6630833333333315,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 08:30:00,BLDG_A,1,A103,Meeting Room,20,7,6.328173280423282,31.64086640211641,Low,0.6718267195767176,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 08:45:00,BLDG_A,2,A201,Lab,30,36,20.276310846560843,67.58770282186947,Normal,15.723689153439157,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-15 09:00:00,BLDG_A,2,A202,Conference,25,13,11.643477513227518,46.57391005291007,Normal,1.356522486772482,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-15 09:15:00,BLDG_B,1,B101,Office,8,4,4.487872655122656,56.0984081890332,Normal,0.487872655122656,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-15 09:30:00,BLDG_B,1,B102,Office,15,11,11.097373015873016,73.98248677248678,High Usage,0.0973730158730159,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-15 09:45:00,BLDG_B,1,B103,Meeting Room,18,11,10.46114285714286,58.11746031746032,Normal,0.5388571428571414,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-15 10:00:00,BLDG_B,2,B201,Training Room,35,16,16.902220899470898,48.29205971277399,Normal,0.9022208994708976,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-15 10:15:00,BLDG_B,2,B202,Conference,25,14,13.06802513227514,52.27210052910056,Normal,0.9319748677248594,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-15 10:30:00,BLDG_C,1,C101,Office,10,5,5.733481721981724,57.33481721981724,Normal,0.7334817219817236,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-15 10:45:00,BLDG_C,1,C102,Office,14,7,6.8536623230570575,48.95473087897898,Normal,0.1463376769429425,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-15 11:00:00,BLDG_C,1,C103,Meeting Room,20,11,10.360710317460317,51.80355158730159,Normal,0.6392896825396832,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-15 11:15:00,BLDG_C,2,C201,Lab,30,13,19.50833333333334,65.0277777777778,Normal,6.50833333333334,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-15 11:30:00,BLDG_C,2,C202,Training Room,40,16,16.665100529100524,41.66275132275131,Normal,0.6651005291005241,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-15 11:45:00,BLDG_A,1,A101,Office,10,10,8.409842592592595,84.09842592592595,High Usage,1.5901574074074052,High Usage Monitoring,MEDIUM,HIGH USAGE WARNING,Monitor occupancy and prepare alternate workspace.,4
+2026-01-15 12:00:00,BLDG_A,1,A102,Office,12,2,3.777940476190476,31.482837301587303,Low,1.777940476190476,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 12:15:00,BLDG_A,1,A103,Meeting Room,20,8,8.29666666666667,41.48333333333335,Normal,0.2966666666666704,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-15 12:30:00,BLDG_A,2,A201,Lab,30,12,11.927390211640212,39.75796737213404,Low,0.072609788359788,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 12:45:00,BLDG_A,2,A202,Conference,25,5,7.072282865282867,28.28913146113147,Low,2.072282865282867,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,4
+2026-01-15 13:00:00,BLDG_B,1,B101,Office,8,9,6.625297619047617,82.81622023809521,High Usage,2.3747023809523826,High Usage Monitoring,MEDIUM,HIGH USAGE WARNING,Monitor occupancy and prepare alternate workspace.,5
+2026-01-15 13:15:00,BLDG_B,1,B102,Office,15,18,11.41463888888889,76.0975925925926,High Usage,6.58536111111111,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-15 13:30:00,BLDG_B,1,B103,Meeting Room,18,8,7.341657203907203,40.786984466151125,Normal,0.6583427960927972,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-15 13:45:00,BLDG_B,2,B201,Training Room,35,12,13.686538359788353,39.104395313681,Low,1.6865383597883523,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 14:00:00,BLDG_B,2,B202,Conference,25,12,11.084662698412702,44.33865079365081,Normal,0.9153373015872984,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-15 14:15:00,BLDG_C,1,C101,Office,10,11,6.582976190476189,65.82976190476188,Normal,4.417023809523811,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-15 14:30:00,BLDG_C,1,C102,Office,14,5,6.954468253968253,49.67477324263038,Normal,1.954468253968253,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-15 14:45:00,BLDG_C,1,C103,Meeting Room,20,12,10.605404558404564,53.02702279202283,Normal,1.3945954415954347,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-15 15:00:00,BLDG_C,2,C201,Lab,30,12,13.232822751322749,44.10940917107583,Normal,1.2328227513227483,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,3
+2026-01-15 15:15:00,BLDG_C,2,C202,Training Room,40,8,14.783732804232796,36.95933201058199,Low,6.783732804232795,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,3
+2026-01-15 15:30:00,BLDG_A,1,A101,Office,10,5,6.02676455026455,60.26764550264551,Normal,1.0267645502645504,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-15 15:45:00,BLDG_A,1,A102,Office,12,6,6.334996031746033,52.7916335978836,Normal,0.3349960317460327,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-15 16:00:00,BLDG_A,1,A103,Meeting Room,20,7,8.374109584859593,41.870547924297966,Normal,1.3741095848595926,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-15 16:15:00,BLDG_A,2,A201,Lab,30,15,13.621707671957674,45.40569223985892,Normal,1.3782923280423258,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-15 16:30:00,BLDG_A,2,A202,Conference,25,13,10.303500000000003,41.21400000000002,Normal,2.696499999999995,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,4
+2026-01-15 16:45:00,BLDG_B,1,B101,Office,8,4,6.28296296296296,78.53703703703701,High Usage,2.2829629629629604,Normal Occupancy,LOW,NORMAL,Continue normal occupancy monitoring.,5
+2026-01-15 17:00:00,BLDG_B,1,B102,Office,15,4,4.43582275132275,29.572151675485,Low,0.4358227513227497,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 17:15:00,BLDG_B,1,B103,Meeting Room,18,5,5.870753968253967,32.61529982363315,Low,0.8707539682539673,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 17:30:00,BLDG_B,2,B201,Training Room,35,7,6.768132275132274,19.33752078609221,Low,0.2318677248677261,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5
+2026-01-15 17:45:00,BLDG_B,2,B202,Conference,25,1,2.61766798941799,10.47067195767196,Low,1.6176679894179902,Low Occupancy,LOW,LOW USAGE,Workspace is available for allocation.,5

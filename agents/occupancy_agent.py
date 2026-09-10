@@ -1,402 +1,403 @@
 import pandas as pd
-from pathlib import Path
+import os
 
 
 # ============================================================
-# OCCUPANCY AGENT
+# 1. PATHS
 # ============================================================
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-PROCESSED_DIR = (
-    BASE_DIR
-    / "data"
-    / "occupancy"
-    / "processed"
+FORECAST_FILE = os.path.join(
+    BASE_DIR,
+    "data",
+    "occupancy",
+    "processed",
+    "occupancy_forecast_results.csv"
 )
 
-FORECAST_FILE = (
-    PROCESSED_DIR
-    / "occupancy_forecast_results.csv"
+OVERCROWDING_FILE = os.path.join(
+    BASE_DIR,
+    "data",
+    "occupancy",
+    "processed",
+    "overcrowding_detection_results.csv"
 )
 
-OVERCROWDING_FILE = (
-    PROCESSED_DIR
-    / "overcrowding_detection_results.csv"
+WORKSPACE_FILE = os.path.join(
+    BASE_DIR,
+    "data",
+    "occupancy",
+    "processed",
+    "workspace_allocation_results.csv"
 )
 
-WORKSPACE_FILE = (
-    PROCESSED_DIR
-    / "workspace_allocation_results.csv"
+MODEL_PREDICTIONS_FILE = os.path.join(
+    BASE_DIR,
+    "data",
+    "occupancy",
+    "processed",
+    "occupancy_model_predictions.csv"
+)
+
+OUTPUT_FILE = os.path.join(
+    BASE_DIR,
+    "data",
+    "occupancy",
+    "processed",
+    "occupancy_agent_results.csv"
+)
+
+BUILDING_SUMMARY_FILE = os.path.join(
+    BASE_DIR,
+    "data",
+    "occupancy",
+    "processed",
+    "occupancy_agent_building_summary.csv"
 )
 
 
 # ============================================================
-# LOAD DATA
+# 2. LOAD DATA
 # ============================================================
 
 print("=" * 60)
 print("OCCUPANCY AGENT")
 print("=" * 60)
 
-forecast_df = pd.read_csv(FORECAST_FILE)
 
-overcrowding_df = pd.read_csv(OVERCROWDING_FILE)
+print("\nLoading ML model predictions...")
 
-workspace_df = pd.read_csv(WORKSPACE_FILE)
+ml_predictions = pd.read_csv(MODEL_PREDICTIONS_FILE)
 
-print("\nOccupancy forecast data loaded.")
-print(f"Forecast records: {len(forecast_df)}")
+print("ML prediction records:", len(ml_predictions))
 
-print("\nOvercrowding data loaded.")
-print(f"Overcrowding records: {len(overcrowding_df)}")
 
-print("\nWorkspace allocation data loaded.")
-print(f"Workspace records: {len(workspace_df)}")
+print("\nLoading occupancy forecast data...")
+
+forecast = pd.read_csv(FORECAST_FILE)
+
+forecast["Forecast_Timestamp"] = pd.to_datetime(
+    forecast["Forecast_Timestamp"]
+)
+
+print("Forecast records:", len(forecast))
+
+
+print("\nLoading overcrowding data...")
+
+overcrowding = pd.read_csv(OVERCROWDING_FILE)
+
+print("Overcrowding records:", len(overcrowding))
+
+
+print("\nLoading workspace allocation data...")
+
+workspace = pd.read_csv(WORKSPACE_FILE)
+
+print("Workspace records:", len(workspace))
 
 
 # ============================================================
-# OCCUPANCY AGENT DECISION FUNCTION
+# 3. PREPARE ML PREDICTIONS
 # ============================================================
 
-def occupancy_decision(
-    forecast_utilization,
-    overcrowded,
-    workspace_status
-):
-    """
-    Generate an operational decision based on
-    occupancy, overcrowding and workspace availability.
-    """
+print("\nPreparing ML occupancy predictions...")
 
-    # Critical overcrowding
-    if overcrowded and forecast_utilization > 120:
+ml_predictions["Timestamp"] = pd.to_datetime(
+    ml_predictions["Timestamp"]
+)
+
+ml_predictions["Predicted_Utilization_Percent"] = pd.to_numeric(
+    ml_predictions["Predicted_Utilization_Percent"],
+    errors="coerce"
+)
+
+ml_predictions["Predicted_Occupancy"] = pd.to_numeric(
+    ml_predictions["Predicted_Occupancy"],
+    errors="coerce"
+)
+
+
+# ============================================================
+# 4. BUILD AGENT DECISION FUNCTION
+# ============================================================
+
+def occupancy_decision(utilization):
+
+    if utilization > 120:
         return (
             "Immediate Occupancy Action",
             "HIGH",
-            "Immediately redirect occupants and activate alternate workspace."
+            "CRITICAL OCCUPANCY ALERT",
+            "Immediately redirect occupants to available workspace."
         )
 
-    # High overcrowding
-    elif overcrowded and forecast_utilization > 110:
+    elif utilization > 100:
         return (
             "Overcrowding Alert",
             "HIGH",
-            "Redirect occupants to available rooms and monitor the affected area."
-        )
-
-    # Moderate overcrowding
-    elif overcrowded:
-        return (
-            "Manage Overcrowding",
-            "MEDIUM",
+            "OVERCROWDING ALERT",
             "Redistribute occupants to available workspace."
         )
 
-    # High predicted utilization
-    elif forecast_utilization >= 80:
+    elif utilization >= 80:
         return (
             "High Usage Monitoring",
             "MEDIUM",
+            "HIGH USAGE WARNING",
             "Monitor occupancy and prepare alternate workspace."
         )
 
-    # Good workspace availability
-    elif workspace_status == "Underutilized":
-        return (
-            "Workspace Available",
-            "LOW",
-            "Prefer this workspace for future allocation."
-        )
-
-    # Normal condition
-    else:
+    elif utilization >= 40:
         return (
             "Normal Occupancy",
             "LOW",
+            "NORMAL",
             "Continue normal occupancy monitoring."
         )
 
-
-# ============================================================
-# PREPARE OVERCROWDING DATA
-# ============================================================
-
-overcrowding_df["Overcrowded_Detected"] = (
-    overcrowding_df["Overcrowding_Detected"]
-    .astype(str)
-    .str.lower()
-    .isin(["true", "1", "yes"])
-)
-
-overcrowding_lookup = (
-    overcrowding_df
-    .groupby("Building_ID")["Overcrowded_Detected"]
-    .sum()
-    .to_dict()
-)
-
-
-# ============================================================
-# PREPARE WORKSPACE DATA
-# ============================================================
-
-workspace_lookup = (
-    workspace_df
-    .set_index("Room_ID")["Workspace_Status"]
-    .to_dict()
-)
-
-
-# ============================================================
-# GENERATE AGENT DECISIONS
-# ============================================================
-
-agent_results = []
-
-for _, row in forecast_df.iterrows():
-
-    building_id = row["Building_ID"]
-
-    forecast_utilization = float(
-        row["Forecast_Utilization_Percent"]
-    )
-
-    predicted_occupancy = float(
-        row["Predicted_Occupancy"]
-    )
-
-    # Determine whether building has overcrowding
-    overcrowded_count = overcrowding_lookup.get(
-        building_id,
-        0
-    )
-
-    overcrowded = overcrowded_count > 0
-
-    # Find a representative workspace status
-    building_workspace = workspace_df[
-        workspace_df["Building_ID"] == building_id
-    ]
-
-    if len(building_workspace) > 0:
-
-        workspace_status = (
-            building_workspace["Workspace_Status"]
-            .mode()
-            .iloc[0]
+    else:
+        return (
+            "Low Occupancy",
+            "LOW",
+            "LOW USAGE",
+            "Workspace is available for allocation."
         )
 
-    else:
-        workspace_status = "Unknown"
-
-    # Generate decision
-    decision, priority, recommendation = occupancy_decision(
-        forecast_utilization,
-        overcrowded,
-        workspace_status
-    )
-
-    # Alert type
-    if priority == "HIGH":
-        alert_type = "URGENT ALERT"
-
-    elif priority == "MEDIUM":
-        alert_type = "OCCUPANCY WARNING"
-
-    else:
-        alert_type = "NORMAL"
-
-    agent_results.append(
-        {
-            "Forecast_Timestamp": row[
-                "Forecast_Timestamp"
-            ],
-            "Building_ID": building_id,
-            "Predicted_Occupancy": round(
-                predicted_occupancy,
-                2
-            ),
-            "Forecast_Utilization_Percent": round(
-                forecast_utilization,
-                2
-            ),
-            "Overcrowded_Records": int(
-                overcrowded_count
-            ),
-            "Workspace_Status": workspace_status,
-            "Agent_Decision": decision,
-            "Priority": priority,
-            "Alert_Type": alert_type,
-            "Agent_Recommendation": recommendation
-        }
-    )
-
-
-agent_df = pd.DataFrame(agent_results)
-
 
 # ============================================================
-# BUILDING-LEVEL AGENT SUMMARY
+# 5. APPLY ML-BASED AGENT DECISIONS
 # ============================================================
 
-building_summary = (
-    agent_df
-    .groupby("Building_ID", as_index=False)
-    .agg(
-        Average_Predicted_Occupancy=(
-            "Predicted_Occupancy",
-            "mean"
-        ),
-        Maximum_Predicted_Occupancy=(
-            "Predicted_Occupancy",
-            "max"
-        ),
-        Average_Forecast_Utilization=(
-            "Forecast_Utilization_Percent",
-            "mean"
-        ),
-        Maximum_Forecast_Utilization=(
-            "Forecast_Utilization_Percent",
-            "max"
-        ),
-        Overcrowded_Records=(
-            "Overcrowded_Records",
-            "max"
-        )
-    )
+print("\nGenerating ML-based occupancy agent decisions...")
+
+results = ml_predictions.copy()
+
+decisions = results[
+    "Predicted_Utilization_Percent"
+].apply(occupancy_decision)
+
+results["Agent_Decision"] = decisions.apply(
+    lambda x: x[0]
+)
+
+results["Priority"] = decisions.apply(
+    lambda x: x[1]
+)
+
+results["Alert_Type"] = decisions.apply(
+    lambda x: x[2]
+)
+
+results["Agent_Recommendation"] = decisions.apply(
+    lambda x: x[3]
 )
 
 
 # ============================================================
-# OVERALL FACILITY DECISION
+# 6. ADD HISTORICAL OVERCROWDING INFORMATION
 # ============================================================
 
-maximum_utilization = agent_df[
-    "Forecast_Utilization_Percent"
-].max()
+historical_overcrowding = (
+    overcrowding
+    .groupby("Building_ID")
+    .size()
+    .reset_index(name="Historical_Overcrowding_Records")
+)
 
-total_overcrowded_records = overcrowding_df[
-    "Overcrowding_Detected"
-].sum()
+results = results.merge(
+    historical_overcrowding,
+    on="Building_ID",
+    how="left"
+)
 
-if total_overcrowded_records > 0 and maximum_utilization > 110:
+results["Historical_Overcrowding_Records"] = (
+    results["Historical_Overcrowding_Records"]
+    .fillna(0)
+    .astype(int)
+)
 
-    overall_decision = "Immediate Occupancy Action"
-    overall_priority = "HIGH"
-    overall_recommendation = (
-        "Overcrowding risk detected. "
-        "Redirect occupants and activate alternate workspace."
-    )
 
-elif total_overcrowded_records > 0:
+# ============================================================
+# 7. ADD WORKSPACE INFORMATION
+# ============================================================
 
-    overall_decision = "Overcrowding Monitoring"
-    overall_priority = "MEDIUM"
-    overall_recommendation = (
-        "Monitor affected buildings and redistribute occupants "
-        "to available workspace."
-    )
+if "Workspace_Status" in workspace.columns:
 
-elif maximum_utilization >= 80:
-
-    overall_decision = "High Usage Monitoring"
-    overall_priority = "MEDIUM"
-    overall_recommendation = (
-        "Occupancy is expected to increase. "
-        "Prepare alternate workspace."
-    )
+    workspace_info = workspace[
+        ["Building_ID", "Room_ID", "Workspace_Status"]
+    ].drop_duplicates()
 
 else:
 
-    overall_decision = "Normal Occupancy"
-    overall_priority = "LOW"
-    overall_recommendation = (
-        "Facility occupancy is within manageable levels. "
-        "Continue normal monitoring."
-    )
+    workspace_info = workspace[
+        ["Building_ID", "Room_ID"]
+    ].drop_duplicates()
+
+    workspace_info["Workspace_Status"] = "Available"
 
 
 # ============================================================
-# SAVE RESULTS
+# 8. SAVE AGENT RESULTS
 # ============================================================
 
-AGENT_OUTPUT = (
-    PROCESSED_DIR
-    / "occupancy_agent_results.csv"
-)
-
-BUILDING_OUTPUT = (
-    PROCESSED_DIR
-    / "occupancy_agent_building_summary.csv"
-)
-
-
-agent_df.to_csv(
-    AGENT_OUTPUT,
-    index=False
-)
-
-building_summary.to_csv(
-    BUILDING_OUTPUT,
+results.to_csv(
+    OUTPUT_FILE,
     index=False
 )
 
 
 # ============================================================
-# DISPLAY RESULTS
+# 9. DECISION DISTRIBUTION
 # ============================================================
 
 print("\n" + "=" * 60)
 print("OCCUPANCY AGENT DECISION SUMMARY")
 print("=" * 60)
 
+display_columns = [
+    "Timestamp",
+    "Building_ID",
+    "Room_ID",
+    "Predicted_Occupancy",
+    "Predicted_Utilization_Percent",
+    "Predicted_Occupancy_Status",
+    "Agent_Decision",
+    "Priority",
+    "Alert_Type",
+    "Agent_Recommendation"
+]
+
+available_columns = [
+    column
+    for column in display_columns
+    if column in results.columns
+]
+
 print(
-    agent_df[
-        [
-            "Forecast_Timestamp",
-            "Building_ID",
-            "Predicted_Occupancy",
-            "Forecast_Utilization_Percent",
-            "Agent_Decision",
-            "Priority",
-            "Alert_Type"
-        ]
-    ]
-    .head(15)
-    .to_string(index=False)
+    results[available_columns].head(20).to_string(
+        index=False
+    )
 )
 
+
+# ============================================================
+# 10. DECISION DISTRIBUTION
+# ============================================================
 
 print("\n" + "-" * 60)
 print("AGENT DECISION DISTRIBUTION")
 print("-" * 60)
 
 print(
-    agent_df["Agent_Decision"]
+    results["Agent_Decision"]
     .value_counts()
 )
 
+
+# ============================================================
+# 11. PRIORITY DISTRIBUTION
+# ============================================================
 
 print("\n" + "-" * 60)
 print("PRIORITY DISTRIBUTION")
 print("-" * 60)
 
 print(
-    agent_df["Priority"]
+    results["Priority"]
     .value_counts()
 )
 
+
+# ============================================================
+# 12. ALERT DISTRIBUTION
+# ============================================================
 
 print("\n" + "-" * 60)
 print("ALERT DISTRIBUTION")
 print("-" * 60)
 
 print(
-    agent_df["Alert_Type"]
+    results["Alert_Type"]
     .value_counts()
 )
 
+
+# ============================================================
+# 13. BUILDING SUMMARY
+# ============================================================
+
+building_summary = (
+    results
+    .groupby("Building_ID")
+    .agg(
+        Average_Predicted_Occupancy=(
+            "Predicted_Occupancy",
+            "mean"
+        ),
+
+        Maximum_Predicted_Occupancy=(
+            "Predicted_Occupancy",
+            "max"
+        ),
+
+        Average_Predicted_Utilization=(
+            "Predicted_Utilization_Percent",
+            "mean"
+        ),
+
+        Maximum_Predicted_Utilization=(
+            "Predicted_Utilization_Percent",
+            "max"
+        ),
+
+        Historical_Overcrowding_Records=(
+            "Historical_Overcrowding_Records",
+            "max"
+        )
+    )
+    .reset_index()
+)
+
+
+building_summary[
+    "Average_Predicted_Occupancy"
+] = building_summary[
+    "Average_Predicted_Occupancy"
+].round(2)
+
+
+building_summary[
+    "Maximum_Predicted_Occupancy"
+] = building_summary[
+    "Maximum_Predicted_Occupancy"
+].round(2)
+
+
+building_summary[
+    "Average_Predicted_Utilization"
+] = building_summary[
+    "Average_Predicted_Utilization"
+].round(2)
+
+
+building_summary[
+    "Maximum_Predicted_Utilization"
+] = building_summary[
+    "Maximum_Predicted_Utilization"
+].round(2)
+
+
+building_summary.to_csv(
+    BUILDING_SUMMARY_FILE,
+    index=False
+)
+
+
+# ============================================================
+# 14. BUILDING SUMMARY DISPLAY
+# ============================================================
 
 print("\n" + "-" * 60)
 print("BUILDING SUMMARY")
@@ -409,48 +410,84 @@ print(
 )
 
 
+# ============================================================
+# 15. OVERALL FACILITY DECISION
+# ============================================================
+
+maximum_usage = results[
+    "Predicted_Utilization_Percent"
+].max()
+
+high_usage_count = (
+    results["Predicted_Utilization_Percent"] >= 80
+).sum()
+
+overcrowding_count = (
+    results["Predicted_Utilization_Percent"] > 100
+).sum()
+
+
 print("\n" + "=" * 60)
 print("OVERALL FACILITY DECISION")
 print("=" * 60)
 
-print(
-    f"Decision       : {overall_decision}"
-)
 
-print(
-    f"Priority       : {overall_priority}"
-)
+if maximum_usage > 120:
 
-print(
-    f"Maximum usage  : {maximum_utilization:.2f}%"
-)
+    overall_decision = "Immediate Occupancy Action"
+    overall_priority = "HIGH"
+    overall_recommendation = (
+        "Critical overcrowding predicted. "
+        "Immediately redistribute occupants."
+    )
 
-print(
-    f"Overcrowded records: "
-    f"{int(total_overcrowded_records)}"
-)
+elif maximum_usage > 100:
 
-print(
-    f"Recommendation : {overall_recommendation}"
-)
+    overall_decision = "Overcrowding Alert"
+    overall_priority = "HIGH"
+    overall_recommendation = (
+        "Overcrowding predicted. "
+        "Redistribute occupants to available workspace."
+    )
+
+elif maximum_usage >= 80:
+
+    overall_decision = "High Usage Monitoring"
+    overall_priority = "MEDIUM"
+    overall_recommendation = (
+        "High occupancy predicted. "
+        "Monitor facility usage and prepare alternate workspace."
+    )
+
+else:
+
+    overall_decision = "Normal Occupancy"
+    overall_priority = "LOW"
+    overall_recommendation = (
+        "Occupancy is within acceptable levels. "
+        "Continue normal monitoring."
+    )
+
+
+print(f"Decision            : {overall_decision}")
+print(f"Priority            : {overall_priority}")
+print(f"Maximum usage       : {maximum_usage:.2f}%")
+print(f"High usage records  : {high_usage_count}")
+print(f"Overcrowded records : {overcrowding_count}")
+print(f"Recommendation      : {overall_recommendation}")
 
 
 # ============================================================
-# COMPLETION
+# 16. FINAL OUTPUT
 # ============================================================
 
 print("\n" + "=" * 60)
-print("STEP 9 - OCCUPANCY AGENT COMPLETED")
+print("STEP 9 - ML-BASED OCCUPANCY AGENT COMPLETED")
 print("=" * 60)
 
 print("\nFiles created:")
+print("1.", OUTPUT_FILE)
+print("2.", BUILDING_SUMMARY_FILE)
 
-print(
-    f"1. {AGENT_OUTPUT}"
-)
-
-print(
-    f"2. {BUILDING_OUTPUT}"
-)
-
-print("\nOccupancy Agent is ready.")
+print("\nOccupancy Agent is now using ML predictions.")
+print("=" * 60)

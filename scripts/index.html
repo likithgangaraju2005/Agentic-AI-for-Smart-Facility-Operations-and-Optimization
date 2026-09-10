@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Facility AI | Smart Facility Intelligence</title>
 
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
+    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
-     BACKGROUND
-===================================================== -->
+<!-- ============================================================
+     ANIMATED BACKGROUND
+============================================================ -->
 
 <div class="background-grid"></div>
 
@@ -37,821 +34,1632 @@
 <div class="ambient ambient-two"></div>
 <div class="ambient ambient-three"></div>
 
+<div class="floating-particle particle-one"></div>
+<div class="floating-particle particle-two"></div>
+<div class="floating-particle particle-three"></div>
+<div class="floating-particle particle-four"></div>
+<div class="floating-particle particle-five"></div>
 
-<!-- =====================================================
-     SIDEBAR
-===================================================== -->
 
-<aside class="sidebar">
+<!-- ============================================================
+     LOGIN PAGE
+============================================================ -->
 
-    <!-- LOGO -->
+<div id="loginPage" class="login-page">
 
-    <div class="brand">
+    <div class="login-orbit orbit-one"></div>
+    <div class="login-orbit orbit-two"></div>
 
-        <div class="brand-logo">
-            ⚡
-        </div>
+    <div class="login-container">
 
-        <div>
-
-            <h2>Facility AI</h2>
-
-            <p>SMART FACILITY INTELLIGENCE</p>
-
-        </div>
-
-    </div>
-
-
-    <div class="sidebar-line"></div>
-
-
-    <!-- BUILDING SELECTOR -->
-
-    <div class="side-heading">
-
-        <span>🏢</span>
-
-        <span>Facility Controls</span>
-
-    </div>
-
-
-    <label class="side-label">
-        BUILDING
-    </label>
-
-
-    <select
-        id="buildingSelector"
-        class="building-selector"
-    >
-
-        <option value="ALL">
-            All Buildings
-        </option>
-
-        <option value="A">
-            Building A
-        </option>
-
-        <option value="B">
-            Building B
-        </option>
-
-        <option value="C">
-            Building C
-        </option>
-
-    </select>
-
-
-    <!-- BUILDING BLOCKS -->
-
-    <div class="building-blocks">
-
-        <button
-            class="building-card active"
-            data-building="ALL"
-        >
-
-            <span class="building-icon">
-                🏢
-            </span>
-
-            <span>
-
-                <strong>ALL</strong>
-
-                <small>Buildings</small>
-
-            </span>
-
-        </button>
-
-
-        <button
-            class="building-card"
-            data-building="A"
-        >
-
-            <span class="building-icon">
-                A
-            </span>
-
-            <span>
-
-                <strong>Building A</strong>
-
-                <small>Energy: 9.99 kWh</small>
-
-            </span>
-
-        </button>
-
-
-        <button
-            class="building-card"
-            data-building="B"
-        >
-
-            <span class="building-icon">
-                B
-            </span>
-
-            <span>
-
-                <strong>Building B</strong>
-
-                <small>Energy: 9.86 kWh</small>
-
-            </span>
-
-        </button>
-
-
-        <button
-            class="building-card"
-            data-building="C"
-        >
-
-            <span class="building-icon">
-                C
-            </span>
-
-            <span>
-
-                <strong>Building C</strong>
-
-                <small>Energy: 9.61 kWh</small>
-
-            </span>
-
-        </button>
-
-    </div>
-
-
-    <div class="sidebar-line"></div>
-
-
-    <!-- NAVIGATION -->
-
-    <div class="side-heading">
-
-        <span>⚡</span>
-
-        <span>Energy Agent</span>
-
-        <span class="agent-live">
-            LIVE
-        </span>
-
-    </div>
-
-
-    <nav class="navigation">
-
-        <a href="#energy-overview" class="nav-link active">
-            <span>01</span>
-            Facility Overview
-        </a>
-
-
-        <a href="#energy-distribution" class="nav-link">
-            <span>02</span>
-            Energy Distribution
-        </a>
-
-
-        <a href="#advanced-analytics" class="nav-link">
-            <span>03</span>
-            Advanced Analytics
-        </a>
-
-
-        <a href="#energy-anomaly" class="nav-link">
-            <span>04</span>
-            Anomaly Detection
-        </a>
-
-
-        <a href="#energy-recommendations" class="nav-link">
-            <span>05</span>
-            Energy Recommendations
-        </a>
-
-    </nav>
-
-
-    <!-- MAINTENANCE -->
-
-    <div class="side-heading maintenance-heading">
-
-        <span>⚙</span>
-
-        <span>Predictive Maintenance</span>
-
-        <span class="agent-live purple">
-            AI
-        </span>
-
-    </div>
-
-
-    <nav class="navigation">
-
-        <a
-            href="#maintenance-decisions"
-            class="nav-link"
-        >
-
-            <span>01</span>
-
-            Maintenance Decisions
-
-        </a>
-
-
-        <a
-            href="#equipment-health"
-            class="nav-link"
-        >
-
-            <span>02</span>
-
-            Equipment Health
-
-        </a>
-
-
-        <a
-            href="#health-distribution"
-            class="nav-link"
-        >
-
-            <span>03</span>
-
-            Health Distribution
-
-        </a>
-
-
-        <a
-            href="#equipment-alerts"
-            class="nav-link"
-        >
-
-            <span>04</span>
-
-            Alerts & Anomalies
-
-        </a>
-
-
-        <a
-            href="#maintenance-recommendations"
-            class="nav-link"
-        >
-
-            <span>05</span>
-
-            Equipment Recommendations
-
-        </a>
-
-    </nav>
-
-
-    <!-- LIVE CONTROL -->
-
-    <div class="sidebar-line"></div>
-
-
-    <div class="side-heading">
-
-        <span>🔄</span>
-
-        <span>Live Monitoring</span>
-
-    </div>
-
-
-    <div class="refresh-box">
-
-        <div class="refresh-status">
-
-            <span class="online-dot"></span>
-
-            <span id="refreshStatus">
-                Auto Refresh ON
-            </span>
-
-        </div>
-
-
-        <div class="countdown">
-
-            Next reading in
-
-            <strong id="countdown">
-                15:00
-            </strong>
-
-        </div>
-
-
-        <button
-            id="nextReading"
-            class="control-button"
-        >
-
-            ⚡ Next 15-Min Reading
-
-        </button>
-
-
-        <button
-            id="resetMonitoring"
-            class="control-button secondary"
-        >
-
-            🔄 Reset Monitoring
-
-        </button>
-
-
-        <button
-            id="autoRefreshButton"
-            class="control-button auto-button"
-        >
-
-            ⏱ Auto Refresh: ON
-
-        </button>
-
-    </div>
-
-
-    <div class="sidebar-footer">
-
-        <span>Facility AI v2.0</span>
-
-        <span class="system-online">
-            ● SYSTEM ONLINE
-        </span>
-
-    </div>
-
-</aside>
-
-
-
-<!-- =====================================================
-     MAIN CONTENT
-===================================================== -->
-
-<main class="main">
-
-
-<!-- =====================================================
-     TOP HEADER
-===================================================== -->
-
-<header class="top-header">
-
-    <div>
-
-        <div class="breadcrumb">
-            FACILITY AI / INTELLIGENCE CENTER
-        </div>
-
-        <h1>
-            Smart Facility Intelligence
-        </h1>
-
-        <p>
-            Agentic AI powered energy optimization
-            and predictive maintenance platform
-        </p>
-
-    </div>
-
-
-    <div class="header-right">
-
-        <div class="selected-building">
-
-            <span>
-                CURRENT FACILITY
-            </span>
-
-            <strong id="selectedBuilding">
-                All Buildings
-            </strong>
-
-        </div>
-
-
-        <div class="live-indicator">
-
-            <span></span>
-
-            LIVE
-
-        </div>
-
-    </div>
-
-</header>
-
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero reveal">
-
-    <div class="hero-content">
-
-        <div class="hero-badge">
-            ✦ AGENTIC AI PLATFORM
-        </div>
-
-        <h2>
-            Intelligent Facility
-            <span>Operations</span>
-        </h2>
-
-        <p>
-            Monitor energy consumption, detect anomalies,
-            predict equipment failures and receive AI-driven
-            recommendations in real time.
-        </p>
-
-
-        <div class="hero-stats">
+        <div class="login-logo">
+            <div class="login-logo-icon">⚡</div>
 
             <div>
-                <strong>2</strong>
-                <span>AI Agents</span>
+                <div class="login-brand">
+                    FACILITY<span>AI</span>
+                </div>
+
+                <div class="login-subtitle">
+                    Smart Facility Intelligence
+                </div>
+            </div>
+        </div>
+
+
+        <div class="login-card">
+
+            <div class="login-card-glow"></div>
+
+            <div class="login-header">
+
+                <div class="login-status">
+                    <span class="status-dot"></span>
+                    SECURE ACCESS
+                </div>
+
+                <h1>
+                    Welcome Back
+                </h1>
+
+                <p>
+                    Sign in to access your facility intelligence dashboard.
+                </p>
+
             </div>
 
-            <div>
-                <strong>100+</strong>
-                <span>Assets</span>
-            </div>
 
-            <div>
-                <strong>24/7</strong>
-                <span>Monitoring</span>
+            <form id="loginForm">
+
+                <div class="input-group">
+
+                    <label for="userId">
+                        User ID
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            ◉
+                        </span>
+
+                        <input
+                            type="text"
+                            id="userId"
+                            placeholder="Enter your user ID"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            ◆
+                        </span>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="password-toggle"
+                        >
+                            Show
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div id="loginError" class="login-error">
+                    Invalid User ID or Password
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-button"
+                    id="loginButton"
+                >
+
+                    <span class="button-text">
+                        Enter Dashboard
+                    </span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <div class="demo-credentials">
+
+                <div class="demo-title">
+                    DEMO ACCESS
+                </div>
+
+                <div class="demo-text">
+                    Use your assigned facility credentials
+                </div>
+
             </div>
 
         </div>
 
-    </div>
 
-
-    <div class="hero-orbit">
-
-        <div class="orbit orbit-one"></div>
-
-        <div class="orbit orbit-two"></div>
-
-        <div class="orbit-core">
-            ⚡
+        <div class="login-footer">
+            <span>AI-POWERED FACILITY OPERATIONS</span>
+            <span>•</span>
+            <span>SECURE SESSION</span>
         </div>
-
-        <div class="orbit-node node-one">
-            ENERGY
-        </div>
-
-        <div class="orbit-node node-two">
-            AI
-        </div>
-
-        <div class="orbit-node node-three">
-            HEALTH
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     ENERGY AGENT
-===================================================== -->
-
-<div class="agent-title reveal">
-
-    <div class="agent-number">
-        01
-    </div>
-
-    <div>
-
-        <div class="eyebrow">
-            ENERGY AGENT
-        </div>
-
-        <h2>
-            Energy Intelligence
-        </h2>
-
-        <p>
-            Real-time consumption monitoring,
-            analytics, anomaly detection and optimization.
-        </p>
 
     </div>
 
 </div>
 
 
+<!-- ============================================================
+     MAIN DASHBOARD
+============================================================ -->
 
-<!-- =====================================================
-     1. FACILITY OVERVIEW
-===================================================== -->
-
-<section
-    id="energy-overview"
-    class="dashboard-section reveal"
->
-
-    <div class="section-title">
-
-        <div>
-
-            <span>
-                ENERGY AGENT / 01
-            </span>
-
-            <h2>
-                Facility Overview
-            </h2>
-
-            <p>
-                Real-time snapshot of facility performance.
-            </p>
-
-        </div>
+<div id="dashboardPage" class="dashboard-page hidden">
 
 
-        <div class="timestamp">
-            ● Updated
-            <strong id="updateTime">
-                Just now
-            </strong>
-        </div>
+    <!-- ========================================================
+         LEFT SIDEBAR
+    ========================================================= -->
 
-    </div>
+    <aside class="sidebar">
 
+        <!-- BRAND -->
 
-    <!-- KPI -->
+        <div class="brand">
 
-    <div class="kpi-grid">
-
-
-        <div class="metric-card cyan-card">
-
-            <div class="metric-top">
-
-                <span>
-                    ENERGY CONSUMPTION
-                </span>
-
-                <b>
-                    ⚡
-                </b>
-
+            <div class="brand-icon">
+                ⚡
             </div>
 
-            <strong
-                class="metric-number"
-                id="energyValue"
-            >
-                12.22
-            </strong>
+            <div class="brand-text">
 
-            <span class="metric-unit">
-                kWh
-            </span>
+                <div class="brand-name">
+                    FACILITY<span>AI</span>
+                </div>
 
-            <div class="metric-change positive">
-                ↓ 8.4%
-                <small>
-                    vs previous period
-                </small>
-            </div>
+                <div class="brand-description">
+                    Smart Intelligence
+                </div>
 
-            <div class="metric-line">
-                <i></i>
             </div>
 
         </div>
 
 
-        <div class="metric-card">
+        <!-- ====================================================
+             FACILITY CONTROLS
+        ==================================================== -->
 
-            <div class="metric-top">
+        <div class="sidebar-section facility-controls">
 
-                <span>
-                    POWER DEMAND
-                </span>
-
-                <b>
-                    ◉
-                </b>
-
+            <div class="sidebar-section-title">
+                FACILITY CONTROLS
             </div>
 
-            <strong
-                class="metric-number"
-                id="powerValue"
-            >
-                8.64
-            </strong>
 
-            <span class="metric-unit">
-                kW
-            </span>
+            <select id="buildingSelector" class="building-selector">
 
-            <div class="metric-change positive">
-                ↓ 4.7%
-                <small>
-                    optimized
-                </small>
-            </div>
+                <option value="ALL">
+                    All Buildings
+                </option>
 
-            <div class="metric-line purple-line">
-                <i></i>
+                <option value="A">
+                    Building A
+                </option>
+
+                <option value="B">
+                    Building B
+                </option>
+
+                <option value="C">
+                    Building C
+                </option>
+
+            </select>
+
+
+            <div class="building-blocks">
+
+                <button
+                    class="building-card active"
+                    data-building="ALL"
+                >
+                    <span class="building-icon">
+                        ◈
+                    </span>
+
+                    <span class="building-info">
+                        <strong>
+                            ALL
+                        </strong>
+
+                        <small>
+                            Buildings
+                        </small>
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="building-card"
+                    data-building="A"
+                >
+                    <span class="building-icon">
+                        A
+                    </span>
+
+                    <span class="building-info">
+                        <strong>
+                            Building A
+                        </strong>
+
+                        <small>
+                            BLDG_A
+                        </small>
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="building-card"
+                    data-building="B"
+                >
+                    <span class="building-icon">
+                        B
+                    </span>
+
+                    <span class="building-info">
+                        <strong>
+                            Building B
+                        </strong>
+
+                        <small>
+                            BLDG_B
+                        </small>
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="building-card"
+                    data-building="C"
+                >
+                    <span class="building-icon">
+                        C
+                    </span>
+
+                    <span class="building-info">
+                        <strong>
+                            Building C
+                        </strong>
+
+                        <small>
+                            BLDG_C
+                        </small>
+                    </span>
+
+                </button>
+
             </div>
 
         </div>
 
 
-        <div class="metric-card">
+        <!-- ====================================================
+             NAVIGATION
+        ==================================================== -->
 
-            <div class="metric-top">
-
-                <span>
-                    EFFICIENCY
-                </span>
-
-                <b>
-                    ♻
-                </b>
-
-            </div>
-
-            <strong
-                class="metric-number"
-            >
-                82.6
-            </strong>
-
-            <span class="metric-unit">
-                %
-            </span>
-
-            <div class="metric-change positive">
-                ↑ 6.8%
-                <small>
-                    improvement
-                </small>
-            </div>
-
-            <div class="metric-line green-line">
-                <i></i>
-            </div>
-
-        </div>
+        <nav class="navigation">
 
 
-        <div class="metric-card">
+            <!-- =================================================
+                 ENERGY AGENT
+            ================================================= -->
 
-            <div class="metric-top">
+            <div class="navigation-agent">
 
-                <span>
-                    ACTIVE ALERTS
-                </span>
+                <div class="agent-navigation-header">
 
-                <b>
-                    ⚠
-                </b>
+                    <div class="agent-nav-title">
 
-            </div>
+                        <span class="agent-nav-icon energy-icon">
+                            ⚡
+                        </span>
 
-            <strong
-                class="metric-number"
-                id="alertValue"
-            >
-                7
-            </strong>
+                        <span>
+                            Energy Agent
+                        </span>
 
-            <span class="metric-unit">
-                alerts
-            </span>
+                    </div>
 
-            <div class="metric-change danger">
-                3 critical
-                <small>
-                    requires attention
-                </small>
-            </div>
-
-            <div class="metric-line red-line">
-                <i></i>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     2. ENERGY DISTRIBUTION
-===================================================== -->
-
-<section
-    id="energy-distribution"
-    class="dashboard-section reveal"
->
-
-    <div class="section-title">
-
-        <div>
-
-            <span>
-                ENERGY AGENT / 02
-            </span>
-
-            <h2>
-                Energy Distribution
-            </h2>
-
-            <p>
-                Understand how facility energy is distributed.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="two-column">
-
-
-        <div class="panel chart-panel">
-
-            <div class="panel-heading">
-
-                <div>
-
-                    <h3>
-                        Energy Consumption
-                    </h3>
-
-                    <small>
-                        24-hour consumption trend
-                    </small>
+                    <span class="agent-badge live-badge">
+                        LIVE
+                    </span>
 
                 </div>
 
-                <span class="chart-live">
+
+                <div class="agent-navigation-links">
+
+
+                    <a
+                        href="#energy-overview"
+                        class="nav-link active"
+                        data-section="energy-overview"
+                    >
+
+                        <span class="nav-number">
+                            01
+                        </span>
+
+                        <span class="nav-text">
+                            Facility Overview
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#energy-distribution"
+                        class="nav-link"
+                        data-section="energy-distribution"
+                    >
+
+                        <span class="nav-number">
+                            02
+                        </span>
+
+                        <span class="nav-text">
+                            Energy Distribution
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#advanced-analytics"
+                        class="nav-link"
+                        data-section="advanced-analytics"
+                    >
+
+                        <span class="nav-number">
+                            03
+                        </span>
+
+                        <span class="nav-text">
+                            Advanced Analytics
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#energy-anomaly"
+                        class="nav-link"
+                        data-section="energy-anomaly"
+                    >
+
+                        <span class="nav-number">
+                            04
+                        </span>
+
+                        <span class="nav-text">
+                            Anomaly Detection
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#energy-recommendations"
+                        class="nav-link"
+                        data-section="energy-recommendations"
+                    >
+
+                        <span class="nav-number">
+                            05
+                        </span>
+
+                        <span class="nav-text">
+                            Energy Recommendations
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PREDICTIVE MAINTENANCE AGENT
+            ================================================= -->
+
+            <div class="navigation-agent">
+
+                <div class="agent-navigation-header">
+
+                    <div class="agent-nav-title">
+
+                        <span class="agent-nav-icon maintenance-icon">
+                            ⚙
+                        </span>
+
+                        <span>
+                            Predictive Maintenance
+                        </span>
+
+                    </div>
+
+                    <span class="agent-badge ai-badge">
+                        AI
+                    </span>
+
+                </div>
+
+
+                <div class="agent-navigation-links">
+
+
+                    <a
+                        href="#maintenance-decisions"
+                        class="nav-link"
+                        data-section="maintenance-decisions"
+                    >
+
+                        <span class="nav-number">
+                            01
+                        </span>
+
+                        <span class="nav-text">
+                            Maintenance Decisions
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#equipment-health"
+                        class="nav-link"
+                        data-section="equipment-health"
+                    >
+
+                        <span class="nav-number">
+                            02
+                        </span>
+
+                        <span class="nav-text">
+                            Equipment Health
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#health-distribution"
+                        class="nav-link"
+                        data-section="health-distribution"
+                    >
+
+                        <span class="nav-number">
+                            03
+                        </span>
+
+                        <span class="nav-text">
+                            Health Distribution
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#equipment-alerts"
+                        class="nav-link"
+                        data-section="equipment-alerts"
+                    >
+
+                        <span class="nav-number">
+                            04
+                        </span>
+
+                        <span class="nav-text">
+                            Alerts & Anomalies
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#maintenance-recommendations"
+                        class="nav-link"
+                        data-section="maintenance-recommendations"
+                    >
+
+                        <span class="nav-number">
+                            05
+                        </span>
+
+                        <span class="nav-text">
+                            Equipment Recommendations
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 OCCUPANCY AGENT
+            ================================================= -->
+
+            <div class="navigation-agent">
+
+                <div class="agent-navigation-header">
+
+                    <div class="agent-nav-title">
+
+                        <span class="agent-nav-icon occupancy-icon">
+                            👥
+                        </span>
+
+                        <span>
+                            Occupancy Agent
+                        </span>
+
+                    </div>
+
+                    <span class="agent-badge occupancy-badge">
+                        AI
+                    </span>
+
+                </div>
+
+
+                <div class="agent-navigation-links">
+
+
+                    <a
+                        href="#occupancy-overview"
+                        class="nav-link"
+                        data-section="occupancy-overview"
+                    >
+
+                        <span class="nav-number">
+                            01
+                        </span>
+
+                        <span class="nav-text">
+                            Occupancy Overview
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#space-utilization"
+                        class="nav-link"
+                        data-section="space-utilization"
+                    >
+
+                        <span class="nav-number">
+                            02
+                        </span>
+
+                        <span class="nav-text">
+                            Space Utilization
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#overcrowding-detection"
+                        class="nav-link"
+                        data-section="overcrowding-detection"
+                    >
+
+                        <span class="nav-number">
+                            03
+                        </span>
+
+                        <span class="nav-text">
+                            Overcrowding Detection
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#workspace-allocation"
+                        class="nav-link"
+                        data-section="workspace-allocation"
+                    >
+
+                        <span class="nav-number">
+                            04
+                        </span>
+
+                        <span class="nav-text">
+                            Workspace Allocation
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#occupancy-heatmap"
+                        class="nav-link"
+                        data-section="occupancy-heatmap"
+                    >
+
+                        <span class="nav-number">
+                            05
+                        </span>
+
+                        <span class="nav-text">
+                            Occupancy Heatmap
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#usage-forecast"
+                        class="nav-link"
+                        data-section="usage-forecast"
+                    >
+
+                        <span class="nav-number">
+                            06
+                        </span>
+
+                        <span class="nav-text">
+                            Usage Forecast
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </nav>
+
+
+        <!-- ====================================================
+             LIVE MONITORING
+        ==================================================== -->
+
+        <div class="refresh-box">
+
+            <div class="refresh-header">
+
+                <div>
+
+                    <span class="refresh-dot"></span>
+
+                    <span>
+                        Live Monitoring
+                    </span>
+
+                </div>
+
+                <span id="refreshStatus">
+                    ACTIVE
+                </span>
+
+            </div>
+
+
+            <div class="refresh-time">
+
+                <span>
+                    Next reading
+                </span>
+
+                <strong id="nextReading">
+                    15:00
+                </strong>
+
+            </div>
+
+
+            <div class="countdown-row">
+
+                <span>
+                    Refresh in
+                </span>
+
+                <strong id="countdown">
+                    15:00
+                </strong>
+
+            </div>
+
+
+            <div class="refresh-actions">
+
+                <button
+                    id="autoRefreshButton"
+                    class="refresh-button active"
+                >
+                    Auto Refresh
+                </button>
+
+                <button
+                    id="resetMonitoring"
+                    class="reset-button"
+                >
+                    Reset
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ====================================================
+             USER / LOGOUT
+        ==================================================== -->
+
+        <div class="sidebar-user">
+
+            <div class="user-avatar">
+                <span id="userInitial">
+                    U
+                </span>
+            </div>
+
+
+            <div class="user-details">
+
+                <strong id="loggedUserId">
+                    USER
+                </strong>
+
+                <span id="loggedUserRole">
+                    User
+                </span>
+
+            </div>
+
+
+            <button
+                id="logoutButton"
+                class="logout-button"
+                title="Logout"
+            >
+                ↪
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- ========================================================
+         MAIN CONTENT
+    ========================================================= -->
+
+    <main class="main-content">
+
+
+        <!-- ====================================================
+             TOP HEADER
+        ==================================================== -->
+
+        <header class="top-header">
+
+            <div class="header-left">
+
+                <div class="page-status">
+                    <span class="status-dot"></span>
+                    FACILITY INTELLIGENCE ONLINE
+                </div>
+
+                <h1>
+                    Smart Facility Intelligence
+                </h1>
+
+                <p>
+                    AI-powered monitoring, prediction and optimization
+                    across your facility.
+                </p>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <div class="header-time">
+
+                    <span>
+                        SYSTEM TIME
+                    </span>
+
+                    <strong id="updateTime">
+                        --:--:--
+                    </strong>
+
+                </div>
+
+
+                <div class="header-building">
+
+                    <span>
+                        SELECTED
+                    </span>
+
+                    <strong id="selectedBuilding">
+                        All Buildings
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ====================================================
+             HERO
+        ==================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    <span>✦</span>
+                    MULTI-AGENT FACILITY SYSTEM
+                </div>
+
+
+                <h2>
+                    Intelligent Operations.
+                    <span>Smarter Facilities.</span>
+                </h2>
+
+
+                <p>
+                    Monitor energy, predict equipment failures,
+                    understand occupancy and optimize facility
+                    operations using intelligent AI agents.
+                </p>
+
+
+                <div class="hero-agent-status">
+
+                    <div class="hero-agent">
+
+                        <span class="hero-agent-dot energy-dot"></span>
+
+                        <span>
+                            Energy Agent
+                        </span>
+
+                        <strong>
+                            ONLINE
+                        </strong>
+
+                    </div>
+
+
+                    <div class="hero-agent">
+
+                        <span class="hero-agent-dot maintenance-dot"></span>
+
+                        <span>
+                            Maintenance Agent
+                        </span>
+
+                        <strong>
+                            ONLINE
+                        </strong>
+
+                    </div>
+
+
+                    <div class="hero-agent">
+
+                        <span class="hero-agent-dot occupancy-dot"></span>
+
+                        <span>
+                            Occupancy Agent
+                        </span>
+
+                        <strong>
+                            ONLINE
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="hero-orbit orbit-a"></div>
+                <div class="hero-orbit orbit-b"></div>
+                <div class="hero-orbit orbit-c"></div>
+
+                <div class="hero-core">
+
+                    <div class="core-icon">
+                        ✦
+                    </div>
+
+                    <span>
+                        AI
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             ENERGY AGENT
+        ==================================================== -->
+
+        <div class="agent-title">
+
+            <div class="agent-title-icon energy-title-icon">
+                ⚡
+            </div>
+
+            <div>
+
+                <span>
+                    AGENT 01
+                </span>
+
+                <h2>
+                    Energy Intelligence Agent
+                </h2>
+
+                <p>
+                    Real-time energy monitoring, analytics,
+                    anomaly detection and efficiency recommendations.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ====================================================
+             ENERGY OVERVIEW
+        ==================================================== -->
+
+        <section
+            id="energy-overview"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            ENERGY AGENT
+                        </span>
+
+                        <h2>
+                            Facility Overview
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <span class="section-live">
                     ● LIVE
                 </span>
 
             </div>
 
 
-            <div class="chart-box">
+            <div class="kpi-grid">
 
-                <canvas id="energyChart"></canvas>
+
+                <div class="metric-card energy-card">
+
+                    <div class="metric-top">
+
+                        <span>
+                            ENERGY CONSUMPTION
+                        </span>
+
+                        <span class="metric-icon">
+                            ⚡
+                        </span>
+
+                    </div>
+
+                    <strong id="energyConsumption">
+                        15.93 kWh
+                    </strong>
+
+                    <small>
+                        Current facility reading
+                    </small>
+
+                    <div class="metric-line">
+                        <span style="width: 72%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <span>
+                            POWER DEMAND
+                        </span>
+
+                        <span class="metric-icon">
+                            ◉
+                        </span>
+
+                    </div>
+
+                    <strong id="powerDemand">
+                        42.8 kW
+                    </strong>
+
+                    <small>
+                        Current demand
+                    </small>
+
+                    <div class="metric-line">
+                        <span style="width: 61%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <span>
+                            HVAC USAGE
+                        </span>
+
+                        <span class="metric-icon">
+                            ❄
+                        </span>
+
+                    </div>
+
+                    <strong id="hvacUsage">
+                        8.42 kWh
+                    </strong>
+
+                    <small>
+                        HVAC energy consumption
+                    </small>
+
+                    <div class="metric-line">
+                        <span style="width: 53%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <span>
+                            OCCUPANCY
+                        </span>
+
+                        <span class="metric-icon">
+                            👥
+                        </span>
+
+                    </div>
+
+                    <strong id="energyOccupancy">
+                        126
+                    </strong>
+
+                    <small>
+                        People currently detected
+                    </small>
+
+                    <div class="metric-line">
+                        <span style="width: 48%"></span>
+                    </div>
+
+                </div>
 
             </div>
 
-        </div>
+
+            <div class="overview-status-grid">
 
 
-        <div class="panel">
+                <div class="panel status-panel">
 
-            <div class="panel-heading">
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                ENERGY STATUS
+                            </span>
+
+                            <h3>
+                                Facility Energy Condition
+                            </h3>
+
+                        </div>
+
+                        <span class="status-pill normal">
+                            NORMAL
+                        </span>
+
+                    </div>
+
+
+                    <div class="energy-status-content">
+
+                        <div class="energy-gauge">
+
+                            <div class="gauge-circle">
+
+                                <div>
+
+                                    <strong>
+                                        82%
+                                    </strong>
+
+                                    <span>
+                                        Efficiency
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="status-details">
+
+                            <div>
+                                <span>
+                                    Daily consumption
+                                </span>
+
+                                <strong>
+                                    382.4 kWh
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>
+                                    Efficiency score
+                                </span>
+
+                                <strong>
+                                    82 / 100
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>
+                                    Energy alerts
+                                </span>
+
+                                <strong>
+                                    3
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                SYSTEM ACTIVITY
+                            </span>
+
+                            <h3>
+                                Recent Energy Events
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+                        <div class="activity-item">
+
+                            <span class="activity-icon">
+                                ⚡
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Energy reading updated
+                                </strong>
+
+                                <span>
+                                    Building A · 2 min ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <span class="activity-icon">
+                                ✓
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Consumption within threshold
+                                </strong>
+
+                                <span>
+                                    Building B · 8 min ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item warning">
+
+                            <span class="activity-icon">
+                                !
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Unusual energy pattern detected
+                                </strong>
+
+                                <span>
+                                    Building C · 12 min ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             ENERGY DISTRIBUTION
+        ==================================================== -->
+
+        <section
+            id="energy-distribution"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
 
                 <div>
 
-                    <h3>
-                        Energy Sources
-                    </h3>
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            ENERGY AGENT
+                        </span>
+
+                        <h2>
+                            Energy Distribution
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="two-column">
+
+
+                <div class="panel chart-box">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                CONSUMPTION TREND
+                            </span>
+
+                            <h3>
+                                Energy Consumption
+                            </h3>
+
+                        </div>
+
+                        <span class="chart-period">
+                            24 HOURS
+                        </span>
+
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="energyChart"></canvas>
+                    </div>
+
+                </div>
+
+
+                <div class="panel chart-box">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                ENERGY SOURCES
+                            </span>
+
+                            <h3>
+                                Distribution
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <div class="donut-wrapper">
+
+                        <canvas id="sourceChart"></canvas>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="two-column">
+
+
+                <div class="panel chart-box">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                POWER DEMAND
+                            </span>
+
+                            <h3>
+                                Demand by Building
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="demandChart"></canvas>
+                    </div>
+
+                </div>
+
+
+                <div class="panel chart-box">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                FACILITY SECTORS
+                            </span>
+
+                            <h3>
+                                Consumption by Sector
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <div class="chart-container">
+                        <canvas id="sectorChart"></canvas>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             ADVANCED ANALYTICS
+        ==================================================== -->
+
+        <section
+            id="advanced-analytics"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            ENERGY AGENT
+                        </span>
+
+                        <h2>
+                            Advanced Analytics
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="analytics-grid">
+
+
+                <div class="analytics-card">
+
+                    <span class="analytics-icon">
+                        📊
+                    </span>
+
+                    <span class="analytics-label">
+                        AVERAGE CONSUMPTION
+                    </span>
+
+                    <strong>
+                        12.84 kWh
+                    </strong>
 
                     <small>
-                        Current energy mix
+                        Facility average
+                    </small>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <span class="analytics-icon">
+                        ⚡
+                    </span>
+
+                    <span class="analytics-label">
+                        PEAK DEMAND
+                    </span>
+
+                    <strong>
+                        58.7 kW
+                    </strong>
+
+                    <small>
+                        Today's maximum
+                    </small>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <span class="analytics-icon">
+                        🌡
+                    </span>
+
+                    <span class="analytics-label">
+                        TEMPERATURE
+                    </span>
+
+                    <strong>
+                        24.8°C
+                    </strong>
+
+                    <small>
+                        Current average
+                    </small>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <span class="analytics-icon">
+                        💧
+                    </span>
+
+                    <span class="analytics-label">
+                        HUMIDITY
+                    </span>
+
+                    <strong>
+                        57.2%
+                    </strong>
+
+                    <small>
+                        Current average
                     </small>
 
                 </div>
@@ -859,1635 +1667,3277 @@
             </div>
 
 
-            <div class="donut-wrapper">
+            <div class="panel energy-flow-panel">
 
-                <canvas id="sourceChart"></canvas>
+                <div class="panel-header">
 
-                <div class="donut-label">
+                    <div>
 
-                    <strong>
-                        100%
-                    </strong>
+                        <span class="panel-label">
+                            FACILITY ENERGY FLOW
+                        </span>
 
-                    <span>
-                        Total
+                        <h3>
+                            Energy Distribution Flow
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="energy-flow">
+
+                    <div class="flow-node">
+
+                        <span>
+                            ⚡
+                        </span>
+
+                        <strong>
+                            Grid
+                        </strong>
+
+                        <small>
+                            100%
+                        </small>
+
+                    </div>
+
+
+                    <div class="flow-line">
+                        <span></span>
+                    </div>
+
+
+                    <div class="flow-node">
+
+                        <span>
+                            🏢
+                        </span>
+
+                        <strong>
+                            Facility
+                        </strong>
+
+                        <small>
+                            82%
+                        </small>
+
+                    </div>
+
+
+                    <div class="flow-line">
+                        <span></span>
+                    </div>
+
+
+                    <div class="flow-node">
+
+                        <span>
+                            ❄
+                        </span>
+
+                        <strong>
+                            HVAC
+                        </strong>
+
+                        <small>
+                            44%
+                        </small>
+
+                    </div>
+
+
+                    <div class="flow-line">
+                        <span></span>
+                    </div>
+
+
+                    <div class="flow-node">
+
+                        <span>
+                            💡
+                        </span>
+
+                        <strong>
+                            Lighting
+                        </strong>
+
+                        <small>
+                            23%
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             ENERGY ANOMALY
+        ==================================================== -->
+
+        <section
+            id="energy-anomaly"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        04
                     </span>
 
+                    <div>
+
+                        <span class="section-label">
+                            ENERGY AGENT
+                        </span>
+
+                        <h2>
+                            Anomaly Detection in Energy Consumption
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <span class="section-live anomaly-live">
+                    AI DETECTION
+                </span>
+
+            </div>
+
+
+            <div class="anomaly-layout">
+
+
+                <div class="panel anomaly-score">
+
+                    <div class="anomaly-circle">
+
+                        <div>
+
+                            <strong>
+                                98.8%
+                            </strong>
+
+                            <span>
+                                Detection Accuracy
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="anomaly-stat">
+
+                        <span>
+                            Detection threshold
+                        </span>
+
+                        <strong>
+                            15.93 kWh
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                DETECTION SUMMARY
+                            </span>
+
+                            <h3>
+                                Energy Anomalies
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="anomaly-stat-grid">
+
+                        <div>
+
+                            <span>
+                                Total records
+                            </span>
+
+                            <strong>
+                                1,000
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Normal
+                            </span>
+
+                            <strong class="normal-text">
+                                975
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Abnormal
+                            </span>
+
+                            <strong class="warning-text">
+                                25
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Detection rate
+                            </span>
+
+                            <strong>
+                                2.5%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="anomaly-progress">
+
+                        <div class="progress-label">
+
+                            <span>
+                                Normal energy records
+                            </span>
+
+                            <strong>
+                                97.5%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+                            <span style="width:97.5%"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             ENERGY RECOMMENDATIONS
+        ==================================================== -->
+
+        <section
+            id="energy-recommendations"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        05
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            ENERGY AGENT
+                        </span>
+
+                        <h2>
+                            Energy Recommendations
+                        </h2>
+
+                    </div>
+
                 </div>
 
             </div>
 
 
-            <div class="source-items">
+            <div class="recommendation-grid">
 
-                <div>
-                    <i class="green"></i>
-                    Renewable
-                    <strong>48%</strong>
+
+                <div class="recommendation-card priority-high">
+
+                    <div class="recommendation-top">
+
+                        <span class="recommendation-number">
+                            01
+                        </span>
+
+                        <span class="priority-tag high">
+                            HIGH
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Optimize HVAC Operation
+                    </h3>
+
+                    <p>
+                        Reduce HVAC usage during low-occupancy
+                        periods to improve energy efficiency.
+                    </p>
+
+                    <div class="recommendation-impact">
+                        <span>
+                            Estimated saving
+                        </span>
+
+                        <strong>
+                            8–12%
+                        </strong>
+                    </div>
+
                 </div>
 
-                <div>
-                    <i class="blue"></i>
-                    Grid
-                    <strong>32%</strong>
+
+                <div class="recommendation-card priority-medium">
+
+                    <div class="recommendation-top">
+
+                        <span class="recommendation-number">
+                            02
+                        </span>
+
+                        <span class="priority-tag medium">
+                            MEDIUM
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Adjust Lighting Schedule
+                    </h3>
+
+                    <p>
+                        Align lighting schedules with actual
+                        workspace occupancy.
+                    </p>
+
+                    <div class="recommendation-impact">
+                        <span>
+                            Estimated saving
+                        </span>
+
+                        <strong>
+                            5–8%
+                        </strong>
+                    </div>
+
                 </div>
 
-                <div>
-                    <i class="purple"></i>
-                    Backup
-                    <strong>20%</strong>
+
+                <div class="recommendation-card priority-low">
+
+                    <div class="recommendation-top">
+
+                        <span class="recommendation-number">
+                            03
+                        </span>
+
+                        <span class="priority-tag low">
+                            LOW
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Monitor Water Consumption
+                    </h3>
+
+                    <p>
+                        Continue monitoring water usage patterns
+                        for future optimization opportunities.
+                    </p>
+
+                    <div class="recommendation-impact">
+                        <span>
+                            Monitoring
+                        </span>
+
+                        <strong>
+                            ACTIVE
+                        </strong>
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
+        </section>
 
 
-    <div class="panel power-flow-panel">
 
-        <div class="panel-heading">
+        <!-- ====================================================
+             PREDICTIVE MAINTENANCE AGENT
+        ==================================================== -->
+
+        <div class="agent-title maintenance-agent-title">
+
+            <div class="agent-title-icon maintenance-title-icon">
+                ⚙
+            </div>
 
             <div>
 
-                <h3>
-                    Live Energy Flow
-                </h3>
-
-                <small>
-                    Energy movement across facility systems
-                </small>
-
-            </div>
-
-        </div>
-
-
-        <div class="energy-flow">
-
-            <div class="flow-point source-point">
-                <span>⚡</span>
-                <strong>12.22 kWh</strong>
-                <small>INPUT</small>
-            </div>
-
-
-            <div class="animated-flow">
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-            </div>
-
-
-            <div class="flow-point">
-                <span>❄</span>
-                <strong>4.21 kWh</strong>
-                <small>HVAC</small>
-            </div>
-
-
-            <div class="animated-flow">
-                <i></i>
-                <i></i>
-                <i></i>
-                <i></i>
-            </div>
-
-
-            <div class="flow-point">
-                <span>💡</span>
-                <strong>2.18 kWh</strong>
-                <small>LIGHTING</small>
-            </div>
-
-
-            <div class="animated-flow">
-                <i></i>
-                <i></i>
-                <i></i>
-            </div>
-
-
-            <div class="flow-point">
-                <span>⚙</span>
-                <strong>3.96 kWh</strong>
-                <small>EQUIPMENT</small>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     3. ADVANCED ANALYTICS
-===================================================== -->
-
-<section
-    id="advanced-analytics"
-    class="dashboard-section reveal"
->
-
-    <div class="section-title">
-
-        <div>
-
-            <span>
-                ENERGY AGENT / 03
-            </span>
-
-            <h2>
-                Advanced Analytics
-            </h2>
-
-            <p>
-                Analyze demand patterns and sector-level consumption.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="analytics-grid">
-
-
-        <div class="panel">
-
-            <div class="panel-heading">
-
-                <div>
-
-                    <h3>
-                        Power Demand
-                    </h3>
-
-                    <small>
-                        Facility demand profile
-                    </small>
-
-                </div>
-
-            </div>
-
-            <div class="chart-box">
-                <canvas id="demandChart"></canvas>
-            </div>
-
-        </div>
-
-
-        <div class="panel">
-
-            <div class="panel-heading">
-
-                <div>
-
-                    <h3>
-                        Sector Consumption
-                    </h3>
-
-                    <small>
-                        Distribution by sector
-                    </small>
-
-                </div>
-
-            </div>
-
-            <div class="chart-box">
-                <canvas id="sectorChart"></canvas>
-            </div>
-
-        </div>
-
-
-        <div class="analytics-cards">
-
-            <div class="analysis-card">
-
                 <span>
-                    PEAK DEMAND
+                    AGENT 02
                 </span>
 
-                <strong>
-                    17.8 kW
-                </strong>
-
-                <small>
-                    18:00 – 20:00
-                </small>
-
-            </div>
-
-
-            <div class="analysis-card">
-
-                <span>
-                    BASE LOAD
-                </span>
-
-                <strong>
-                    6.9 kW
-                </strong>
-
-                <small>
-                    Overnight average
-                </small>
-
-            </div>
-
-
-            <div class="analysis-card">
-
-                <span>
-                    OPTIMIZATION
-                </span>
-
-                <strong>
-                    8.4%
-                </strong>
-
-                <small>
-                    Potential savings
-                </small>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     4. ENERGY ANOMALY
-===================================================== -->
-
-<section
-    id="energy-anomaly"
-    class="dashboard-section reveal"
->
-
-    <div class="section-title">
-
-        <div>
-
-            <span>
-                ENERGY AGENT / 04
-            </span>
-
-            <h2>
-                Energy Consumption Anomaly Detection
-            </h2>
-
-            <p>
-                AI detection of unusual energy consumption patterns.
-            </p>
-
-        </div>
-
-        <div class="ai-status">
-            ✦ AI DETECTOR ACTIVE
-        </div>
-
-    </div>
-
-
-    <div class="anomaly-layout">
-
-
-        <div class="anomaly-main panel">
-
-            <div class="anomaly-score">
-
-                <div class="score-ring">
-
-                    <strong>
-                        97.5%
-                    </strong>
-
-                    <span>
-                        NORMAL
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="anomaly-text">
-
-                <h3>
-                    Energy pattern status
-                </h3>
+                <h2>
+                    Predictive Maintenance Agent
+                </h2>
 
                 <p>
-                    The Energy Agent is continuously monitoring
-                    consumption against expected facility behavior.
+                    AI-powered equipment health monitoring,
+                    failure prediction and maintenance decisions.
                 </p>
-
-
-                <div class="anomaly-stats">
-
-                    <div>
-
-                        <strong>
-                            975
-                        </strong>
-
-                        <span>
-                            Normal records
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong class="danger-number">
-                            25
-                        </strong>
-
-                        <span>
-                            Abnormal records
-                        </span>
-
-                    </div>
-
-
-                    <div>
-
-                        <strong>
-                            15.93
-                        </strong>
-
-                        <span>
-                            kWh threshold
-                        </span>
-
-                    </div>
-
-                </div>
 
             </div>
 
         </div>
 
 
-        <div class="panel alert-panel">
 
-            <div class="panel-heading">
+        <!-- ====================================================
+             MAINTENANCE DECISIONS
+        ==================================================== -->
+
+        <section
+            id="maintenance-decisions"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
 
                 <div>
 
-                    <h3>
-                        Recent Anomalies
-                    </h3>
+                    <span class="section-number">
+                        01
+                    </span>
 
-                    <small>
-                        Latest detected events
-                    </small>
+                    <div>
+
+                        <span class="section-label">
+                            MAINTENANCE AGENT
+                        </span>
+
+                        <h2>
+                            Maintenance Decision Distribution
+                        </h2>
+
+                    </div>
 
                 </div>
+
+                <span class="section-live ai-section-live">
+                    AI MODEL
+                </span>
 
             </div>
 
 
-            <div class="anomaly-list">
+            <div class="decision-grid">
 
-                <div class="anomaly-item">
 
-                    <span class="warning-icon">
-                        ⚠
-                    </span>
+                <div class="decision-card urgent">
+
+                    <div class="decision-icon">
+                        !
+                    </div>
 
                     <div>
 
+                        <span>
+                            IMMEDIATE MAINTENANCE
+                        </span>
+
                         <strong>
-                            Energy spike detected
+                            189
                         </strong>
 
                         <small>
-                            Building A · 17.82 kWh
+                            High priority assets
                         </small>
 
                     </div>
 
-                    <b>
-                        2m
-                    </b>
-
                 </div>
 
 
-                <div class="anomaly-item">
+                <div class="decision-card medium">
 
-                    <span class="warning-icon">
-                        ⚠
-                    </span>
+                    <div class="decision-icon">
+                        ◷
+                    </div>
 
                     <div>
 
+                        <span>
+                            SCHEDULE SOON
+                        </span>
+
                         <strong>
-                            Abnormal demand pattern
+                            410
                         </strong>
 
                         <small>
-                            Building B · 16.74 kWh
+                            Within 7 days
                         </small>
 
                     </div>
 
-                    <b>
-                        8m
-                    </b>
+                </div>
+
+
+                <div class="decision-card monitor">
+
+                    <div class="decision-icon">
+                        ◉
+                    </div>
+
+                    <div>
+
+                        <span>
+                            MONITOR EQUIPMENT
+                        </span>
+
+                        <strong>
+                            250
+                        </strong>
+
+                        <small>
+                            Within 30 days
+                        </small>
+
+                    </div>
 
                 </div>
 
 
-                <div class="anomaly-item">
+                <div class="decision-card normal">
 
-                    <span class="normal-icon">
+                    <div class="decision-icon">
                         ✓
-                    </span>
+                    </div>
 
                     <div>
 
+                        <span>
+                            NO IMMEDIATE ACTION
+                        </span>
+
                         <strong>
-                            Consumption normalized
+                            151
                         </strong>
 
                         <small>
-                            Building C · Within threshold
+                            Routine cycle
                         </small>
 
                     </div>
 
-                    <b>
-                        15m
-                    </b>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             EQUIPMENT HEALTH
+        ==================================================== -->
+
+        <section
+            id="equipment-health"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            MAINTENANCE AGENT
+                        </span>
+
+                        <h2>
+                            Equipment Health
+                        </h2>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
 
-    </div>
-
-</section>
+            <div class="health-layout">
 
 
+                <div class="panel health-overview">
 
-<!-- =====================================================
-     5. ENERGY RECOMMENDATIONS
-===================================================== -->
+                    <div class="panel-header">
 
-<section
-    id="energy-recommendations"
-    class="dashboard-section reveal"
->
+                        <div>
 
-    <div class="section-title">
+                            <span class="panel-label">
+                                FACILITY HEALTH
+                            </span>
 
-        <div>
+                            <h3>
+                                Equipment Health Score
+                            </h3>
 
-            <span>
-                ENERGY AGENT / 05
-            </span>
+                        </div>
 
-            <h2>
-                Energy Recommendations
-            </h2>
-
-            <p>
-                AI-generated recommendations for improving energy efficiency.
-            </p>
-
-        </div>
-
-    </div>
+                    </div>
 
 
-    <div class="recommendation-grid">
+                    <div class="health-score">
+
+                        <div class="health-score-circle">
+
+                            <div>
+
+                                <strong>
+                                    52.47
+                                </strong>
+
+                                <span>
+                                    Average Score
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
 
-        <div class="recommendation-card priority-high">
+                    <div class="health-scale">
 
-            <div class="recommendation-icon">
-                ⚡
+                        <span>
+                            Critical
+                        </span>
+
+                        <span>
+                            Warning
+                        </span>
+
+                        <span>
+                            Healthy
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel equipment-list-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                EQUIPMENT STATUS
+                            </span>
+
+                            <h3>
+                                Recent Equipment Health
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="equipment-list">
+
+
+                        <div class="equipment-row">
+
+                            <div class="equipment-icon">
+                                ❄
+                            </div>
+
+                            <div class="equipment-info">
+
+                                <strong>
+                                    HVAC-001
+                                </strong>
+
+                                <span>
+                                    Air Conditioning System
+                                </span>
+
+                            </div>
+
+                            <div class="equipment-health-value">
+
+                                <strong>
+                                    82
+                                </strong>
+
+                                <span>
+                                    Healthy
+                                </span>
+
+                            </div>
+
+                            <div class="health-bar">
+                                <span style="width:82%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="equipment-row">
+
+                            <div class="equipment-icon">
+                                ⚙
+                            </div>
+
+                            <div class="equipment-info">
+
+                                <strong>
+                                    PUMP-002
+                                </strong>
+
+                                <span>
+                                    Water Pump
+                                </span>
+
+                            </div>
+
+                            <div class="equipment-health-value warning-health">
+
+                                <strong>
+                                    48
+                                </strong>
+
+                                <span>
+                                    Warning
+                                </span>
+
+                            </div>
+
+                            <div class="health-bar warning-bar">
+                                <span style="width:48%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="equipment-row">
+
+                            <div class="equipment-icon">
+                                ⚡
+                            </div>
+
+                            <div class="equipment-info">
+
+                                <strong>
+                                    ELEC-003
+                                </strong>
+
+                                <span>
+                                    Electrical Unit
+                                </span>
+
+                            </div>
+
+                            <div class="equipment-health-value critical-health">
+
+                                <strong>
+                                    24
+                                </strong>
+
+                                <span>
+                                    Critical
+                                </span>
+
+                            </div>
+
+                            <div class="health-bar critical-bar">
+                                <span style="width:24%"></span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="equipment-row">
+
+                            <div class="equipment-icon">
+                                🔧
+                            </div>
+
+                            <div class="equipment-info">
+
+                                <strong>
+                                    MOTOR-004
+                                </strong>
+
+                                <span>
+                                    Facility Motor
+                                </span>
+
+                            </div>
+
+                            <div class="equipment-health-value warning-health">
+
+                                <strong>
+                                    57
+                                </strong>
+
+                                <span>
+                                    Warning
+                                </span>
+
+                            </div>
+
+                            <div class="health-bar warning-bar">
+                                <span style="width:57%"></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             HEALTH DISTRIBUTION
+        ==================================================== -->
+
+        <section
+            id="health-distribution"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            MAINTENANCE AGENT
+                        </span>
+
+                        <h2>
+                            Equipment Health Distribution
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="health-distribution-layout">
+
+
+                <div class="panel chart-box">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                HEALTH CATEGORIES
+                            </span>
+
+                            <h3>
+                                Equipment Health
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <div class="donut-wrapper">
+                        <canvas id="healthChart"></canvas>
+                    </div>
+
+                </div>
+
+
+                <div class="health-category-list">
+
+
+                    <div class="health-category critical">
+
+                        <div class="category-icon">
+                            !
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Critical
+                            </strong>
+
+                            <span>
+                                Immediate attention required
+                            </span>
+
+                        </div>
+
+                        <strong>
+                            209
+                        </strong>
+
+                    </div>
+
+
+                    <div class="health-category warning">
+
+                        <div class="category-icon">
+                            ◷
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Warning
+                            </strong>
+
+                            <span>
+                                Maintenance planning required
+                            </span>
+
+                        </div>
+
+                        <strong>
+                            464
+                        </strong>
+
+                    </div>
+
+
+                    <div class="health-category normal">
+
+                        <div class="category-icon">
+                            ◉
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Normal
+                            </strong>
+
+                            <span>
+                                Equipment operating normally
+                            </span>
+
+                        </div>
+
+                        <strong>
+                            317
+                        </strong>
+
+                    </div>
+
+
+                    <div class="health-category healthy">
+
+                        <div class="category-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Healthy
+                            </strong>
+
+                            <span>
+                                Excellent equipment condition
+                            </span>
+
+                        </div>
+
+                        <strong>
+                            10
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             EQUIPMENT ALERTS
+        ==================================================== -->
+
+        <section
+            id="equipment-alerts"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            MAINTENANCE AGENT
+                        </span>
+
+                        <h2>
+                            Alerts & Anomaly Detection
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <span class="section-live alert-live">
+                    LIVE ALERTS
+                </span>
+
+            </div>
+
+
+            <div class="equipment-alert-layout">
+
+
+                <div class="panel alert-summary">
+
+                    <div class="alert-summary-header">
+
+                        <span class="alert-pulse"></span>
+
+                        <div>
+
+                            <span>
+                                ACTIVE ALERTS
+                            </span>
+
+                            <strong>
+                                849
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert-breakdown">
+
+                        <div>
+
+                            <span class="alert-indicator urgent-indicator"></span>
+
+                            <span>
+                                Urgent
+                            </span>
+
+                            <strong>
+                                189
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="alert-indicator warning-indicator"></span>
+
+                            <span>
+                                Warning
+                            </span>
+
+                            <strong>
+                                410
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span class="alert-indicator caution-indicator"></span>
+
+                            <span>
+                                Caution
+                            </span>
+
+                            <strong>
+                                250
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel alert-list-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                RECENT ALERTS
+                            </span>
+
+                            <h3>
+                                Equipment Anomalies
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert-list">
+
+
+                        <div class="alert-row urgent-alert">
+
+                            <div class="alert-status">
+                                !
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    ELEC-003 requires immediate maintenance
+                                </strong>
+
+                                <span>
+                                    Failure probability above critical threshold
+                                </span>
+
+                            </div>
+
+                            <time>
+                                3 min
+                            </time>
+
+                        </div>
+
+
+                        <div class="alert-row warning-alert">
+
+                            <div class="alert-status">
+                                ⚠
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    PUMP-002 maintenance recommended
+                                </strong>
+
+                                <span>
+                                    Equipment health below normal level
+                                </span>
+
+                            </div>
+
+                            <time>
+                                11 min
+                            </time>
+
+                        </div>
+
+
+                        <div class="alert-row warning-alert">
+
+                            <div class="alert-status">
+                                ⚠
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    MOTOR-004 health degradation detected
+                                </strong>
+
+                                <span>
+                                    Monitor vibration and operating hours
+                                </span>
+
+                            </div>
+
+                            <time>
+                                19 min
+                            </time>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             MAINTENANCE RECOMMENDATIONS
+        ==================================================== -->
+
+        <section
+            id="maintenance-recommendations"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        05
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            MAINTENANCE AGENT
+                        </span>
+
+                        <h2>
+                            Equipment Recommendations
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="recommendation-grid maintenance-recommendations">
+
+
+                <div class="recommendation-card priority-high">
+
+                    <div class="recommendation-top">
+
+                        <span class="recommendation-number">
+                            01
+                        </span>
+
+                        <span class="priority-tag high">
+                            HIGH
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Immediate Maintenance
+                    </h3>
+
+                    <p>
+                        Inspect equipment with critical health
+                        scores and high failure probability.
+                    </p>
+
+                    <div class="recommendation-impact">
+
+                        <span>
+                            Action
+                        </span>
+
+                        <strong>
+                            WITHIN 24 HRS
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recommendation-card priority-medium">
+
+                    <div class="recommendation-top">
+
+                        <span class="recommendation-number">
+                            02
+                        </span>
+
+                        <span class="priority-tag medium">
+                            MEDIUM
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Schedule Maintenance
+                    </h3>
+
+                    <p>
+                        Plan maintenance for equipment showing
+                        moderate degradation.
+                    </p>
+
+                    <div class="recommendation-impact">
+
+                        <span>
+                            Action
+                        </span>
+
+                        <strong>
+                            WITHIN 7 DAYS
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="recommendation-card priority-low">
+
+                    <div class="recommendation-top">
+
+                        <span class="recommendation-number">
+                            03
+                        </span>
+
+                        <span class="priority-tag low">
+                            LOW
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Continue Monitoring
+                    </h3>
+
+                    <p>
+                        Keep healthy equipment under continuous
+                        predictive monitoring.
+                    </p>
+
+                    <div class="recommendation-impact">
+
+                        <span>
+                            Action
+                        </span>
+
+                        <strong>
+                            30 DAYS
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             OCCUPANCY AGENT
+        ==================================================== -->
+
+        <div class="agent-title occupancy-agent-title">
+
+            <div class="agent-title-icon occupancy-title-icon">
+                👥
             </div>
 
             <div>
 
-                <span class="priority">
-                    HIGH PRIORITY
+                <span>
+                    AGENT 03
                 </span>
 
-                <h3>
-                    Optimize HVAC operation
-                </h3>
+                <h2>
+                    Occupancy Intelligence Agent
+                </h2>
 
                 <p>
-                    HVAC consumption is above the expected
-                    baseline during low occupancy periods.
+                    Monitor occupancy, analyze space utilization,
+                    detect overcrowding and forecast facility usage.
                 </p>
 
-                <div class="saving">
-                    Potential saving
-                    <strong>
-                        8–12%
-                    </strong>
-                </div>
-
             </div>
-
-            <button>
-                Apply
-            </button>
 
         </div>
 
 
-        <div class="recommendation-card">
 
-            <div class="recommendation-icon green-icon">
-                💡
+        <!-- ====================================================
+             OCCUPANCY OVERVIEW
+        ==================================================== -->
+
+        <section
+            id="occupancy-overview"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            OCCUPANCY AGENT
+                        </span>
+
+                        <h2>
+                            Occupancy Overview
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <span class="section-live occupancy-live">
+                    AI MONITORING
+                </span>
+
             </div>
+
+
+            <div class="kpi-grid">
+
+
+                <div class="metric-card occupancy-card">
+
+                    <div class="metric-top">
+
+                        <span>
+                            TOTAL OCCUPANCY
+                        </span>
+
+                        <span class="metric-icon">
+                            👥
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        3,966
+                    </strong>
+
+                    <small>
+                        Total occupancy records
+                    </small>
+
+                    <div class="metric-line">
+                        <span style="width:68%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <span>
+                            AVERAGE OCCUPANCY
+                        </span>
+
+                        <span class="metric-icon">
+                            ◉
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        3.97
+                    </strong>
+
+                    <small>
+                        People per record
+                    </small>
+
+                    <div class="metric-line">
+                        <span style="width:43%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <span>
+                            SPACE UTILIZATION
+                        </span>
+
+                        <span class="metric-icon">
+                            ▦
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        20.01%
+                    </strong>
+
+                    <small>
+                        Average facility utilization
+                    </small>
+
+                    <div class="metric-line">
+                        <span style="width:39%"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-top">
+
+                        <span>
+                            OVERCROWDING
+                        </span>
+
+                        <span class="metric-icon">
+                            ⚠
+                        </span>
+
+                    </div>
+
+                    <strong>
+                        12
+                    </strong>
+
+                    <small>
+                        Detected overcrowded records
+                    </small>
+
+                    <div class="metric-line">
+                        <span style="width:12%"></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="two-column">
+
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                BUILDING ANALYSIS
+                            </span>
+
+                            <h3>
+                                Occupancy by Building
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="building-occupancy-list">
+
+
+                        <div class="building-occupancy-row">
+
+                            <div class="building-label">
+                                <strong>
+                                    BLDG_A
+                                </strong>
+
+                                <span>
+                                    Building A
+                                </span>
+                            </div>
+
+                            <div class="building-value">
+
+                                <strong>
+                                    3.79
+                                </strong>
+
+                                <span>
+                                    19.99%
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="building-occupancy-row">
+
+                            <div class="building-label">
+                                <strong>
+                                    BLDG_B
+                                </strong>
+
+                                <span>
+                                    Building B
+                                </span>
+                            </div>
+
+                            <div class="building-value">
+
+                                <strong>
+                                    3.78
+                                </strong>
+
+                                <span>
+                                    19.78%
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="building-occupancy-row">
+
+                            <div class="building-label">
+                                <strong>
+                                    BLDG_C
+                                </strong>
+
+                                <span>
+                                    Building C
+                                </span>
+                            </div>
+
+                            <div class="building-value">
+
+                                <strong>
+                                    4.34
+                                </strong>
+
+                                <span>
+                                    20.25%
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel occupancy-highlight">
+
+                    <div class="highlight-icon">
+                        ◈
+                    </div>
+
+                    <span class="panel-label">
+                        PEAK OCCUPANCY
+                    </span>
+
+                    <strong>
+                        11:00
+                    </strong>
+
+                    <p>
+                        Average occupancy reaches
+                        <b>9.45 people</b> during the
+                        peak hourly period.
+                    </p>
+
+                    <div class="highlight-stat">
+                        <span>
+                            Peak utilization
+                        </span>
+
+                        <strong>
+                            48.06%
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             SPACE UTILIZATION
+        ==================================================== -->
+
+        <section
+            id="space-utilization"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            OCCUPANCY AGENT
+                        </span>
+
+                        <h2>
+                            Space Utilization
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="utilization-grid">
+
+
+                <div class="panel utilization-main">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                FACILITY UTILIZATION
+                            </span>
+
+                            <h3>
+                                Workspace Usage
+                            </h3>
+
+                        </div>
+
+                        <span>
+                            20.01%
+                        </span>
+
+                    </div>
+
+
+                    <div class="large-utilization">
+
+                        <div class="utilization-ring">
+
+                            <div>
+
+                                <strong>
+                                    20.01%
+                                </strong>
+
+                                <span>
+                                    Average
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="utilization-side">
+
+
+                    <div class="mini-stat-card">
+
+                        <span>
+                            TOTAL CAPACITY
+                        </span>
+
+                        <strong>
+                            20,790
+                        </strong>
+
+                        <small>
+                            Available capacity records
+                        </small>
+
+                    </div>
+
+
+                    <div class="mini-stat-card">
+
+                        <span>
+                            WORKING HOURS
+                        </span>
+
+                        <strong>
+                            45.18%
+                        </strong>
+
+                        <small>
+                            Average working-hour utilization
+                        </small>
+
+                    </div>
+
+
+                    <div class="mini-stat-card">
+
+                        <span>
+                            PEAK PERIOD
+                        </span>
+
+                        <strong>
+                            13:00
+                        </strong>
+
+                        <small>
+                            Highest forecast activity
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel room-utilization-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            ROOM UTILIZATION
+                        </span>
+
+                        <h3>
+                            Room Type Analysis
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="room-utilization-bars">
+
+
+                    <div class="room-bar-row">
+
+                        <div class="room-bar-label">
+                            <span>
+                                Office
+                            </span>
+
+                            <strong>
+                                8.93%
+                            </strong>
+                        </div>
+
+                        <div class="room-bar">
+                            <span style="width:8.93%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="room-bar-row">
+
+                        <div class="room-bar-label">
+                            <span>
+                                Meeting Room
+                            </span>
+
+                            <strong>
+                                15.49%
+                            </strong>
+                        </div>
+
+                        <div class="room-bar">
+                            <span style="width:15.49%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="room-bar-row">
+
+                        <div class="room-bar-label">
+                            <span>
+                                Conference
+                            </span>
+
+                            <strong>
+                                20.94%
+                            </strong>
+                        </div>
+
+                        <div class="room-bar">
+                            <span style="width:20.94%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="room-bar-row">
+
+                        <div class="room-bar-label">
+                            <span>
+                                Lab
+                            </span>
+
+                            <strong>
+                                23.96%
+                            </strong>
+                        </div>
+
+                        <div class="room-bar">
+                            <span style="width:23.96%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="room-bar-row">
+
+                        <div class="room-bar-label">
+                            <span>
+                                Training Room
+                            </span>
+
+                            <strong>
+                                31.31%
+                            </strong>
+                        </div>
+
+                        <div class="room-bar">
+                            <span style="width:31.31%"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             OVERCROWDING DETECTION
+        ==================================================== -->
+
+        <section
+            id="overcrowding-detection"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            OCCUPANCY AGENT
+                        </span>
+
+                        <h2>
+                            Overcrowding Detection
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <span class="section-live alert-live">
+                    12 ALERTS
+                </span>
+
+            </div>
+
+
+            <div class="overcrowding-summary">
+
+
+                <div class="panel overcrowding-main">
+
+                    <div class="overcrowding-indicator">
+
+                        <div class="overcrowding-number">
+                            12
+                        </div>
+
+                        <span>
+                            Overcrowded Records
+                        </span>
+
+                    </div>
+
+
+                    <div class="overcrowding-rate">
+
+                        <span>
+                            Detection Rate
+                        </span>
+
+                        <strong>
+                            1.20%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="severity-list">
+
+
+                    <div class="severity-card high">
+
+                        <span>
+                            HIGH
+                        </span>
+
+                        <strong>
+                            7
+                        </strong>
+
+                        <small>
+                            Records
+                        </small>
+
+                    </div>
+
+
+                    <div class="severity-card moderate">
+
+                        <span>
+                            MODERATE
+                        </span>
+
+                        <strong>
+                            5
+                        </strong>
+
+                        <small>
+                            Records
+                        </small>
+
+                    </div>
+
+
+                    <div class="severity-card normal-severity">
+
+                        <span>
+                            NORMAL
+                        </span>
+
+                        <strong>
+                            988
+                        </strong>
+
+                        <small>
+                            Records
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel overcrowding-table-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            AFFECTED LOCATIONS
+                        </span>
+
+                        <h3>
+                            Overcrowding Alerts
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="data-table-wrapper">
+
+                    <table class="data-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Building
+                                </th>
+
+                                <th>
+                                    Room
+                                </th>
+
+                                <th>
+                                    Room Type
+                                </th>
+
+                                <th>
+                                    Severity
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>BLDG_A</td>
+                                <td>A201</td>
+                                <td>Lab</td>
+                                <td>
+                                    <span class="table-tag high">
+                                        HIGH
+                                    </span>
+                                </td>
+                                <td>
+                                    Detected
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>BLDG_B</td>
+                                <td>B201</td>
+                                <td>Training Room</td>
+                                <td>
+                                    <span class="table-tag high">
+                                        HIGH
+                                    </span>
+                                </td>
+                                <td>
+                                    Detected
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>BLDG_A</td>
+                                <td>A101</td>
+                                <td>Office</td>
+                                <td>
+                                    <span class="table-tag moderate">
+                                        MODERATE
+                                    </span>
+                                </td>
+                                <td>
+                                    Detected
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>BLDG_C</td>
+                                <td>C202</td>
+                                <td>Training Room</td>
+                                <td>
+                                    <span class="table-tag moderate">
+                                        MODERATE
+                                    </span>
+                                </td>
+                                <td>
+                                    Detected
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             WORKSPACE ALLOCATION
+        ==================================================== -->
+
+        <section
+            id="workspace-allocation"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            OCCUPANCY AGENT
+                        </span>
+
+                        <h2>
+                            Workspace Allocation
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="allocation-grid">
+
+
+                <div class="panel allocation-overview">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                ALLOCATION STATUS
+                            </span>
+
+                            <h3>
+                                Workspace Availability
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="allocation-number">
+
+                        <strong>
+                            5
+                        </strong>
+
+                        <span>
+                            Recommended allocation rooms
+                        </span>
+
+                    </div>
+
+
+                    <div class="allocation-status-list">
+
+                        <div>
+
+                            <span>
+                                Overcrowded rooms
+                            </span>
+
+                            <strong>
+                                10
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Underutilized rooms
+                            </span>
+
+                            <strong>
+                                5
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="panel-label">
+                                RECOMMENDED SPACES
+                            </span>
+
+                            <h3>
+                                Allocation Opportunities
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="allocation-list">
+
+
+                        <div class="allocation-row">
+
+                            <span>
+                                C201
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Lab
+                                </strong>
+
+                                <small>
+                                    Available workspace
+                                </small>
+                            </div>
+
+                            <span class="allocation-tag">
+                                AVAILABLE
+                            </span>
+
+                        </div>
+
+
+                        <div class="allocation-row">
+
+                            <span>
+                                B202
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Conference
+                                </strong>
+
+                                <small>
+                                    Available workspace
+                                </small>
+                            </div>
+
+                            <span class="allocation-tag">
+                                AVAILABLE
+                            </span>
+
+                        </div>
+
+
+                        <div class="allocation-row">
+
+                            <span>
+                                A103
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Meeting Room
+                                </strong>
+
+                                <small>
+                                    Available workspace
+                                </small>
+                            </div>
+
+                            <span class="allocation-tag">
+                                AVAILABLE
+                            </span>
+
+                        </div>
+
+
+                        <div class="allocation-row">
+
+                            <span>
+                                C102
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Office
+                                </strong>
+
+                                <small>
+                                    Available workspace
+                                </small>
+                            </div>
+
+                            <span class="allocation-tag">
+                                AVAILABLE
+                            </span>
+
+                        </div>
+
+
+                        <div class="allocation-row">
+
+                            <span>
+                                A102
+                            </span>
+
+                            <div>
+                                <strong>
+                                    Office
+                                </strong>
+
+                                <small>
+                                    Available workspace
+                                </small>
+                            </div>
+
+                            <span class="allocation-tag">
+                                AVAILABLE
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             OCCUPANCY HEATMAP
+        ==================================================== -->
+
+        <section
+            id="occupancy-heatmap"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        05
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            OCCUPANCY AGENT
+                        </span>
+
+                        <h2>
+                            Occupancy Heatmap
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="heatmap-panel panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <span class="panel-label">
+                            DAY / HOUR ANALYSIS
+                        </span>
+
+                        <h3>
+                            Facility Occupancy Intensity
+                        </h3>
+
+                    </div>
+
+                    <div class="heatmap-legend">
+
+                        <span>
+                            LOW
+                        </span>
+
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+
+                        <span>
+                            HIGH
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="heatmap">
+
+                    <div class="heatmap-row heatmap-header-row">
+
+                        <span></span>
+                        <span>08</span>
+                        <span>09</span>
+                        <span>10</span>
+                        <span>11</span>
+                        <span>12</span>
+                        <span>13</span>
+                        <span>14</span>
+                        <span>15</span>
+                        <span>16</span>
+
+                    </div>
+
+
+                    <div class="heatmap-row">
+
+                        <strong>
+                            Mon
+                        </strong>
+
+                        <i class="heat-2"></i>
+                        <i class="heat-3"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-5"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-5"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-3"></i>
+                        <i class="heat-2"></i>
+
+                    </div>
+
+
+                    <div class="heatmap-row">
+
+                        <strong>
+                            Tue
+                        </strong>
+
+                        <i class="heat-2"></i>
+                        <i class="heat-3"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-5"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-3"></i>
+                        <i class="heat-3"></i>
+                        <i class="heat-2"></i>
+
+                    </div>
+
+
+                    <div class="heatmap-row">
+
+                        <strong>
+                            Wed
+                        </strong>
+
+                        <i class="heat-2"></i>
+                        <i class="heat-3"></i>
+                        <i class="heat-3"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-5"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-3"></i>
+                        <i class="heat-2"></i>
+
+                    </div>
+
+
+                    <div class="heatmap-row">
+
+                        <strong>
+                            Thu
+                        </strong>
+
+                        <i class="heat-2"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-5"></i>
+                        <i class="heat-5"></i>
+                        <i class="heat-5"></i>
+                        <i class="heat-5"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-3"></i>
+
+                    </div>
+
+
+                    <div class="heatmap-row">
+
+                        <strong>
+                            Fri
+                        </strong>
+
+                        <i class="heat-2"></i>
+                        <i class="heat-3"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-5"></i>
+                        <i class="heat-5"></i>
+                        <i class="heat-5"></i>
+                        <i class="heat-4"></i>
+                        <i class="heat-2"></i>
+
+                    </div>
+
+
+                    <div class="heatmap-row weekend">
+
+                        <strong>
+                            Sat
+                        </strong>
+
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-2"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+
+                    </div>
+
+
+                    <div class="heatmap-row weekend">
+
+                        <strong>
+                            Sun
+                        </strong>
+
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+                        <i class="heat-1"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="heatmap-insight">
+
+                    <span>
+                        ✦ AI INSIGHT
+                    </span>
+
+                    <p>
+                        Highest observed occupancy period:
+                        <strong>Friday at 13:00</strong>,
+                        with an average occupancy of
+                        <strong>14.50 people</strong>
+                        and utilization of
+                        <strong>58.54%</strong>.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             USAGE FORECAST
+        ==================================================== -->
+
+        <section
+            id="usage-forecast"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        06
+                    </span>
+
+                    <div>
+
+                        <span class="section-label">
+                            OCCUPANCY AGENT
+                        </span>
+
+                        <h2>
+                            Facility Usage Forecast
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <span class="section-live forecast-live">
+                    ML FORECAST
+                </span>
+
+            </div>
+
+
+            <div class="forecast-summary">
+
+
+                <div class="forecast-card">
+
+                    <span>
+                        FORECAST PERIOD
+                    </span>
+
+                    <strong>
+                        NEXT 24 HOURS
+                    </strong>
+
+                    <small>
+                        Occupancy predictions
+                    </small>
+
+                </div>
+
+
+                <div class="forecast-card">
+
+                    <span>
+                        PEAK FORECAST HOUR
+                    </span>
+
+                    <strong>
+                        13:00
+                    </strong>
+
+                    <small>
+                        Highest predicted activity
+                    </small>
+
+                </div>
+
+
+                <div class="forecast-card">
+
+                    <span>
+                        PEAK PREDICTED OCCUPANCY
+                    </span>
+
+                    <strong>
+                        53.72
+                    </strong>
+
+                    <small>
+                        Facility forecast
+                    </small>
+
+                </div>
+
+
+                <div class="forecast-card">
+
+                    <span>
+                        PEAK UTILIZATION
+                    </span>
+
+                    <strong>
+                        62.08%
+                    </strong>
+
+                    <small>
+                        Predicted facility utilization
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="forecast-building-grid">
+
+
+                <div class="forecast-building-card">
+
+                    <div class="forecast-building-header">
+
+                        <div>
+
+                            <span>
+                                BLDG_A
+                            </span>
+
+                            <strong>
+                                Building A
+                            </strong>
+
+                        </div>
+
+                        <span class="forecast-status normal">
+                            NORMAL
+                        </span>
+
+                    </div>
+
+                    <div class="forecast-values">
+
+                        <div>
+                            <span>
+                                Avg occupancy
+                            </span>
+
+                            <strong>
+                                3.44
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>
+                                Max occupancy
+                            </span>
+
+                            <strong>
+                                13.50
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>
+                                Max utilization
+                            </span>
+
+                            <strong>
+                                59.09%
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="forecast-building-card">
+
+                    <div class="forecast-building-header">
+
+                        <div>
+
+                            <span>
+                                BLDG_B
+                            </span>
+
+                            <strong>
+                                Building B
+                            </strong>
+
+                        </div>
+
+                        <span class="forecast-status normal">
+                            NORMAL
+                        </span>
+
+                    </div>
+
+                    <div class="forecast-values">
+
+                        <div>
+                            <span>
+                                Avg occupancy
+                            </span>
+
+                            <strong>
+                                3.20
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>
+                                Max occupancy
+                            </span>
+
+                            <strong>
+                                13.25
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>
+                                Max utilization
+                            </span>
+
+                            <strong>
+                                62.50%
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="forecast-building-card forecast-high">
+
+                    <div class="forecast-building-header">
+
+                        <div>
+
+                            <span>
+                                BLDG_C
+                            </span>
+
+                            <strong>
+                                Building C
+                            </strong>
+
+                        </div>
+
+                        <span class="forecast-status warning">
+                            HIGH USAGE
+                        </span>
+
+                    </div>
+
+                    <div class="forecast-values">
+
+                        <div>
+                            <span>
+                                Avg occupancy
+                            </span>
+
+                            <strong>
+                                5.45
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>
+                                Max occupancy
+                            </span>
+
+                            <strong>
+                                39.00
+                            </strong>
+                        </div>
+
+                        <div>
+                            <span>
+                                Max utilization
+                            </span>
+
+                            <strong>
+                                97.50%
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel forecast-alert-panel">
+
+                <div class="forecast-alert-icon">
+                    ⚠
+                </div>
+
+                <div>
+
+                    <span>
+                        HIGH USAGE FORECAST
+                    </span>
+
+                    <h3>
+                        Building C — 13:45
+                    </h3>
+
+                    <p>
+                        ML model predicts approximately
+                        <strong>39 people</strong>
+                        with estimated utilization of
+                        <strong>97.5%</strong>.
+                        Consider workspace redistribution
+                        before the predicted peak.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             FINAL AI SUMMARY
+        ==================================================== -->
+
+        <section class="final-ai">
+
+            <div class="final-ai-glow"></div>
+
+            <div class="final-ai-icon">
+                ✦
+            </div>
+
+
+            <div class="final-ai-content">
+
+                <span>
+                    FACILITY AI SUMMARY
+                </span>
+
+                <h2>
+                    Intelligent Facility Operations
+                </h2>
+
+                <p>
+                    The Energy, Predictive Maintenance and
+                    Occupancy agents continuously analyze
+                    facility data to identify risks, optimize
+                    resource usage and support operational
+                    decisions.
+                </p>
+
+
+                <div class="ai-summary-items">
+
+
+                    <div>
+
+                        <span>
+                            ⚡
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Energy
+                            </strong>
+
+                            <small>
+                                Monitor & optimize consumption
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            ⚙
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Maintenance
+                            </strong>
+
+                            <small>
+                                Predict equipment failures
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            👥
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Occupancy
+                            </strong>
+
+                            <small>
+                                Optimize facility space
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ====================================================
+             FOOTER
+        ==================================================== -->
+
+        <footer class="footer">
 
             <div>
 
-                <span class="priority green-text">
-                    MEDIUM PRIORITY
+                <strong>
+                    FACILITY AI
+                </strong>
+
+                <span>
+                    Smart Facility Intelligence Platform
                 </span>
 
-                <h3>
-                    Optimize lighting schedule
-                </h3>
-
-                <p>
-                    Reduce lighting usage during low-occupancy
-                    periods.
-                </p>
-
-                <div class="saving">
-                    Potential saving
-                    <strong>
-                        4–7%
-                    </strong>
-                </div>
-
             </div>
 
-            <button>
-                Apply
-            </button>
-
-        </div>
-
-
-        <div class="recommendation-card">
-
-            <div class="recommendation-icon purple-icon">
-                📊
-            </div>
 
             <div>
 
-                <span class="priority purple-text">
-                    OPTIMIZATION
+                <span>
+                    System Status:
                 </span>
 
-                <h3>
-                    Shift peak energy demand
-                </h3>
-
-                <p>
-                    Move flexible equipment loads outside
-                    peak demand periods.
-                </p>
-
-                <div class="saving">
-                    Potential saving
-                    <strong>
-                        5–9%
-                    </strong>
-                </div>
+                <strong class="footer-online">
+                    ● ONLINE
+                </strong>
 
             </div>
 
-            <button>
-                Review
-            </button>
 
-        </div>
+            <div>
 
-    </div>
+                <span>
+                    Last Update:
+                </span>
 
-</section>
+                <strong id="footerTime">
+                    --:--:--
+                </strong>
+
+            </div>
+
+        </footer>
 
 
-
-<!-- =====================================================
-     PREDICTIVE MAINTENANCE
-===================================================== -->
-
-<div class="agent-title maintenance-agent-title reveal">
-
-    <div class="agent-number purple-number">
-        02
-    </div>
-
-    <div>
-
-        <div class="eyebrow purple-text">
-            PREDICTIVE MAINTENANCE AGENT
-        </div>
-
-        <h2>
-            Equipment Intelligence
-        </h2>
-
-        <p>
-            AI-powered equipment health scoring,
-            failure prediction and maintenance decisions.
-        </p>
-
-    </div>
+    </main>
 
 </div>
 
 
-
-<!-- =====================================================
-     MAINTENANCE DECISIONS
-===================================================== -->
-
-<section
-    id="maintenance-decisions"
-    class="dashboard-section reveal"
->
-
-    <div class="section-title">
-
-        <div>
-
-            <span>
-                MAINTENANCE AGENT / 01
-            </span>
-
-            <h2>
-                Maintenance Decision Distribution
-            </h2>
-
-            <p>
-                AI agent decisions generated from equipment health and failure risk.
-            </p>
-
-        </div>
-
-        <div class="ai-status purple-status">
-            ✦ DECISION ENGINE ACTIVE
-        </div>
-
-    </div>
-
-
-    <div class="decision-grid">
-
-
-        <div class="decision-card urgent-card">
-
-            <span class="decision-icon">
-                ⚠
-            </span>
-
-            <span class="decision-label">
-                IMMEDIATE MAINTENANCE
-            </span>
-
-            <strong>
-                189
-            </strong>
-
-            <small>
-                Within 24 hours
-            </small>
-
-            <div class="decision-bar">
-                <i style="width:47%"></i>
-            </div>
-
-        </div>
-
-
-        <div class="decision-card warning-card">
-
-            <span class="decision-icon">
-                ◉
-            </span>
-
-            <span class="decision-label">
-                SCHEDULE MAINTENANCE
-            </span>
-
-            <strong>
-                410
-            </strong>
-
-            <small>
-                Within 7 days
-            </small>
-
-            <div class="decision-bar">
-                <i style="width:72%"></i>
-            </div>
-
-        </div>
-
-
-        <div class="decision-card monitor-card">
-
-            <span class="decision-icon">
-                ◌
-            </span>
-
-            <span class="decision-label">
-                MONITOR EQUIPMENT
-            </span>
-
-            <strong>
-                250
-            </strong>
-
-            <small>
-                Within 30 days
-            </small>
-
-            <div class="decision-bar">
-                <i style="width:58%"></i>
-            </div>
-
-        </div>
-
-
-        <div class="decision-card normal-card">
-
-            <span class="decision-icon">
-                ✓
-            </span>
-
-            <span class="decision-label">
-                NO IMMEDIATE ACTION
-            </span>
-
-            <strong>
-                151
-            </strong>
-
-            <small>
-                Routine cycle
-            </small>
-
-            <div class="decision-bar">
-                <i style="width:38%"></i>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     EQUIPMENT HEALTH
-===================================================== -->
-
-<section
-    id="equipment-health"
-    class="dashboard-section reveal"
->
-
-    <div class="section-title">
-
-        <div>
-
-            <span>
-                MAINTENANCE AGENT / 02
-            </span>
-
-            <h2>
-                Equipment Health
-            </h2>
-
-            <p>
-                AI-generated health score across monitored assets.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="health-layout">
-
-
-        <div class="panel health-score-panel">
-
-            <div class="health-score-circle">
-
-                <div>
-
-                    <strong>
-                        52.4
-                    </strong>
-
-                    <span>
-                        AVG HEALTH
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="health-description">
-
-                <h3>
-                    Facility Equipment Health
-                </h3>
-
-                <p>
-                    Current average equipment health score
-                    across the monitored facility.
-                </p>
-
-                <span class="health-warning">
-                    ⚠ Attention required
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="panel equipment-list-panel">
-
-            <div class="panel-heading">
-
-                <div>
-
-                    <h3>
-                        Highest Risk Equipment
-                    </h3>
-
-                    <small>
-                        AI prioritized assets
-                    </small>
-
-                </div>
-
-            </div>
-
-
-            <div class="equipment-row">
-
-                <div class="equipment-name">
-
-                    <span>
-                        AC
-                    </span>
-
-                    <div>
-
-                        <strong>
-                            AC-204
-                        </strong>
-
-                        <small>
-                            HVAC · Building A
-                        </small>
-
-                    </div>
-
-                </div>
-
-                <div class="health-value danger-number">
-                    28
-                </div>
-
-                <div class="health-progress">
-                    <i style="width:28%"></i>
-                </div>
-
-                <span class="risk-tag urgent">
-                    HIGH RISK
-                </span>
-
-            </div>
-
-
-            <div class="equipment-row">
-
-                <div class="equipment-name">
-
-                    <span>
-                        PU
-                    </span>
-
-                    <div>
-
-                        <strong>
-                            PUMP-107
-                        </strong>
-
-                        <small>
-                            Pump · Building B
-                        </small>
-
-                    </div>
-
-                </div>
-
-                <div class="health-value warning-text">
-                    44
-                </div>
-
-                <div class="health-progress">
-                    <i style="width:44%"></i>
-                </div>
-
-                <span class="risk-tag warning-tag">
-                    WARNING
-                </span>
-
-            </div>
-
-
-            <div class="equipment-row">
-
-                <div class="equipment-name">
-
-                    <span>
-                        MT
-                    </span>
-
-                    <div>
-
-                        <strong>
-                            MTR-312
-                        </strong>
-
-                        <small>
-                            Motor · Building C
-                        </small>
-
-                    </div>
-
-                </div>
-
-                <div class="health-value">
-                    61
-                </div>
-
-                <div class="health-progress">
-                    <i style="width:61%"></i>
-                </div>
-
-                <span class="risk-tag monitor-tag">
-                    MONITOR
-                </span>
-
-            </div>
-
-
-            <div class="equipment-row">
-
-                <div class="equipment-name">
-
-                    <span>
-                        FN
-                    </span>
-
-                    <div>
-
-                        <strong>
-                            FAN-118
-                        </strong>
-
-                        <small>
-                            Fan · Building A
-                        </small>
-
-                    </div>
-
-                </div>
-
-                <div class="health-value healthy-text">
-                    78
-                </div>
-
-                <div class="health-progress">
-                    <i style="width:78%"></i>
-                </div>
-
-                <span class="risk-tag normal-tag">
-                    HEALTHY
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     HEALTH DISTRIBUTION
-===================================================== -->
-
-<section
-    id="health-distribution"
-    class="dashboard-section reveal"
->
-
-    <div class="section-title">
-
-        <div>
-
-            <span>
-                MAINTENANCE AGENT / 03
-            </span>
-
-            <h2>
-                Equipment Health Distribution
-            </h2>
-
-            <p>
-                Distribution of assets by health category.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="health-distribution-layout">
-
-
-        <div class="panel">
-
-            <div class="health-chart">
-
-                <canvas id="healthChart"></canvas>
-
-                <div class="health-chart-center">
-
-                    <strong>
-                        1000
-                    </strong>
-
-                    <span>
-                        RECORDS
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="health-category-list">
-
-            <div class="health-category critical">
-
-                <span></span>
-
-                <div>
-
-                    <strong>
-                        Critical
-                    </strong>
-
-                    <small>
-                        Immediate attention
-                    </small>
-
-                </div>
-
-                <b>
-                    209
-                </b>
-
-            </div>
-
-
-            <div class="health-category warning">
-
-                <span></span>
-
-                <div>
-
-                    <strong>
-                        Warning
-                    </strong>
-
-                    <small>
-                        Maintenance recommended
-                    </small>
-
-                </div>
-
-                <b>
-                    464
-                </b>
-
-            </div>
-
-
-            <div class="health-category normal">
-
-                <span></span>
-
-                <div>
-
-                    <strong>
-                        Normal
-                    </strong>
-
-                    <small>
-                        Continue monitoring
-                    </small>
-
-                </div>
-
-                <b>
-                    317
-                </b>
-
-            </div>
-
-
-            <div class="health-category healthy">
-
-                <span></span>
-
-                <div>
-
-                    <strong>
-                        Healthy
-                    </strong>
-
-                    <small>
-                        No action required
-                    </small>
-
-                </div>
-
-                <b>
-                    10
-                </b>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     EQUIPMENT ALERTS
-===================================================== -->
-
-<section
-    id="equipment-alerts"
-    class="dashboard-section reveal"
->
-
-    <div class="section-title">
-
-        <div>
-
-            <span>
-                MAINTENANCE AGENT / 04
-            </span>
-
-            <h2>
-                Equipment Alerts & Anomaly Detection
-            </h2>
-
-            <p>
-                Detect unusual equipment behavior before failure occurs.
-            </p>
-
-        </div>
-
-        <div class="ai-status purple-status">
-            ● MONITORING
-        </div>
-
-    </div>
-
-
-    <div class="equipment-alert-layout">
-
-
-        <div class="panel">
-
-            <div class="panel-heading">
-
-                <div>
-
-                    <h3>
-                        Active Equipment Alerts
-                    </h3>
-
-                    <small>
-                        Priority ordered
-                    </small>
-
-                </div>
-
-            </div>
-
-
-            <div class="equipment-alert">
-
-                <span class="alert-big-icon danger-bg">
-                    ⚠
-                </span>
-
-                <div>
-
-                    <strong>
-                        AC-204 — Critical Health
-                    </strong>
-
-                    <p>
-                        High temperature and vibration detected.
-                    </p>
-
-                    <small>
-                        Building A · 2 minutes ago
-                    </small>
-
-                </div>
-
-                <span class="risk-tag urgent">
-                    URGENT
-                </span>
-
-            </div>
-
-
-            <div class="equipment-alert">
-
-                <span class="alert-big-icon warning-bg">
-                    ◉
-                </span>
-
-                <div>
-
-                    <strong>
-                        PUMP-107 — Abnormal Vibration
-                    </strong>
-
-                    <p>
-                        Vibration above normal operating range.
-                    </p>
-
-                    <small>
-                        Building B · 8 minutes ago
-                    </small>
-
-                </div>
-
-                <span class="risk-tag warning-tag">
-                    WARNING
-                </span>
-
-            </div>
-
-
-            <div class="equipment-alert">
-
-                <span class="alert-big-icon blue-bg">
-                    ◌
-                </span>
-
-                <div>
-
-                    <strong>
-                        MTR-312 — Increased Load
-                    </strong>
-
-                    <p>
-                        Equipment load trending upward.
-                    </p>
-
-                    <small>
-                        Building C · 15 minutes ago
-                    </small>
-
-                </div>
-
-                <span class="risk-tag monitor-tag">
-                    MONITOR
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="panel anomaly-engine">
-
-            <div class="ai-core">
-
-                <div class="ai-rings">
-
-                    <div>
-                        ✦
-                    </div>
-
-                </div>
-
-            </div>
-
-            <h3>
-                AI Anomaly Engine
-            </h3>
-
-            <p>
-                Continuously analyzing temperature,
-                vibration, pressure, load and operating hours.
-            </p>
-
-            <div class="engine-status">
-                <span></span>
-                ANALYSIS RUNNING
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     MAINTENANCE RECOMMENDATIONS
-===================================================== -->
-
-<section
-    id="maintenance-recommendations"
-    class="dashboard-section reveal"
->
-
-    <div class="section-title">
-
-        <div>
-
-            <span>
-                MAINTENANCE AGENT / 05
-            </span>
-
-            <h2>
-                Equipment Recommendations
-            </h2>
-
-            <p>
-                AI recommendations based on equipment health and failure risk.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="maintenance-recommendations">
-
-
-        <div class="maintenance-recommendation urgent-recommendation">
-
-            <div class="recommendation-number">
-                01
-            </div>
-
-            <div>
-
-                <span>
-                    IMMEDIATE ACTION
-                </span>
-
-                <h3>
-                    Service AC-204
-                </h3>
-
-                <p>
-                    Equipment health is 28 with elevated
-                    failure probability. Inspect HVAC temperature,
-                    vibration and cooling performance.
-                </p>
-
-                <strong>
-                    Recommended: Within 24 Hours
-                </strong>
-
-            </div>
-
-            <div class="recommendation-score">
-                28
-                <small>
-                    HEALTH
-                </small>
-            </div>
-
-        </div>
-
-
-        <div class="maintenance-recommendation warning-recommendation">
-
-            <div class="recommendation-number">
-                02
-            </div>
-
-            <div>
-
-                <span>
-                    SCHEDULE MAINTENANCE
-                </span>
-
-                <h3>
-                    Inspect PUMP-107
-                </h3>
-
-                <p>
-                    Equipment vibration and maintenance history
-                    indicate increased failure risk.
-                </p>
-
-                <strong>
-                    Recommended: Within 7 Days
-                </strong>
-
-            </div>
-
-            <div class="recommendation-score">
-                44
-                <small>
-                    HEALTH
-                </small>
-            </div>
-
-        </div>
-
-
-        <div class="maintenance-recommendation monitor-recommendation">
-
-            <div class="recommendation-number">
-                03
-            </div>
-
-            <div>
-
-                <span>
-                    CONTINUE MONITORING
-                </span>
-
-                <h3>
-                    Monitor MTR-312
-                </h3>
-
-                <p>
-                    Health remains moderate. Continue monitoring
-                    load and temperature trends.
-                </p>
-
-                <strong>
-                    Recommended: Within 30 Days
-                </strong>
-
-            </div>
-
-            <div class="recommendation-score">
-                61
-                <small>
-                    HEALTH
-                </small>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FINAL AI SUMMARY
-===================================================== -->
-
-<section class="final-ai reveal">
-
-    <div class="final-ai-glow"></div>
-
-    <div class="final-ai-icon">
-        ✦
-    </div>
-
-    <div>
-
-        <span>
-            FACILITY INTELLIGENCE ENGINE
-        </span>
-
-        <h2>
-            AI agents are continuously improving facility operations.
-        </h2>
-
-        <p>
-            Energy Agent detects consumption patterns and optimization
-            opportunities, while Predictive Maintenance Agent identifies
-            equipment risks and converts them into actionable decisions.
-        </p>
-
-    </div>
-
-    <div class="final-status">
-
-        <span></span>
-
-        ALL SYSTEMS
-        <strong>
-            OPERATIONAL
-        </strong>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <div>
-
-        <strong>
-            ⚡ Facility AI
-        </strong>
-
-        <span>
-            Smart Facility Operations & Optimization
-        </span>
-
-    </div>
-
-
-    <div>
-
-        AI Engine Online
-        <span>•</span>
-
-        Last Sync:
-        <strong id="footerTime">
-            Just now
-        </strong>
-
-    </div>
-
-</footer>
-
-
-</main>
-
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
