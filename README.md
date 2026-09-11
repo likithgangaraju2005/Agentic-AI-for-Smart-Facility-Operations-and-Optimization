@@ -68,13 +68,7 @@ Dashboard / Deployment
 ## 🛠️ Technologies
 
 Python • Pandas • NumPy • Scikit-learn • Plotly • Matplotlib
-Streamlit • HTML • CSS • JavaScript • Git • GitHub
-
-## 📊 Current Progress
-
-Milestone 1 is under development with data preprocessing,
-energy analytics, anomaly detection, model evaluation,
-and live dashboard monitoring implemented.
+Streamlit • HTML • CSS • JavaScript • Git • GitHub.
 
 ## 🌐 Deployment
 
