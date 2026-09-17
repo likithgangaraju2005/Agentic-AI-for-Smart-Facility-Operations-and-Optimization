@@ -1,0 +1,7 @@
+Feature,Importance
+CCTV_Issue_Flag,0.3644398932003988
+Security_Alert_Flag,0.23293908846217387
+High_Risk_Flag,0.1795483436729956
+Incident_Flag,0.16603658402683882
+Access_Duration_Min,0.057036090637592844
+Unauthorized_Access,0.0
