@@ -1,0 +1,4 @@
+Building_ID,Total_Optimizations,Average_Optimizations,Total_Savings_Opportunity,Average_Cost_Reduction,Optimization_Category
+BLDG_A,5689,8.26,646852.32,13.19,High
+BLDG_B,5262,7.98,638946.22,13.07,High
+BLDG_C,5127,7.86,623803.37,12.95,High

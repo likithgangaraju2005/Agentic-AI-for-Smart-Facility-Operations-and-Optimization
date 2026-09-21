@@ -1,0 +1,4 @@
+Building_ID,Total_Operational_Cost,Average_Operational_Cost,Total_Energy_Cost,Total_Maintenance_Cost,Total_Security_Cost,Total_Administrative_Cost,Average_Cost_Reduction,Average_ROI,Average_Facility_Health,Average_Resource_Utilization,Total_Savings_Opportunity,Optimization_Count
+BLDG_A,6178297.67,8967.05,2843017.62,1404535.92,893770.11,1036974.02,13.19,36.92,78.51,70.94,646852.32,5689
+BLDG_B,5995310.14,9097.59,2767520.69,1394682.95,839464.96,993641.54,13.07,36.03,79.04,69.52,638946.22,5262
+BLDG_C,5930542.01,9095.92,2704194.31,1374149.44,852002.9,1000195.36,12.95,36.13,79.0,69.44,623803.37,5127

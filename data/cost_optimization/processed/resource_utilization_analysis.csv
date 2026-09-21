@@ -1,0 +1,4 @@
+Building_ID,Average_Resource_Utilization,Minimum_Resource_Utilization,Maximum_Resource_Utilization,Average_Vendor_Utilization
+BLDG_A,70.94,45.01,94.99,67.05
+BLDG_B,69.52,45.1,94.87,66.41
+BLDG_C,69.44,45.1,94.99,65.63
