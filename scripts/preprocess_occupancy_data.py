@@ -21,21 +21,18 @@ BASE_DIR = os.path.dirname(
         os.path.abspath(__file__)
     )
 )
-
 INPUT_PATH = os.path.join(
     BASE_DIR,
     "data",
     "occupancy",
     "occupancy_dataset.xlsx"
 )
-
 OUTPUT_DIR = os.path.join(
     BASE_DIR,
     "data",
     "occupancy",
     "processed"
 )
-
 OUTPUT_PATH = os.path.join(
     OUTPUT_DIR,
     "occupancy_processed.csv"
